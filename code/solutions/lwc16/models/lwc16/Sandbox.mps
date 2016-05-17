@@ -23,6 +23,7 @@
     <use id="c1c2a88a-323c-4605-a37d-9ab77a2ccbd2" name="com.mbeddr.mpsutil.suppresswarning" version="0" />
     <devkit ref="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
     <devkit ref="43d889ae-8e6a-4f6e-a649-d59342d8728d(com.mbeddr.statemachines)" />
+    <devkit ref="24565007-e59f-42fc-ac10-da3836deec1c(com.mbeddr.components)" />
   </languages>
   <imports>
     <import index="e1tx" ref="r:bd5ec23c-c294-47cc-a078-675c03abdb69(mbeddr.tutorial.main.defaultExtensions)" />
@@ -38,6 +39,11 @@
     <language id="7a060fae-09e0-4372-be36-6696d6554c0e" name="com.mbeddr.mpsutil.review.annotation">
       <concept id="8455208232410333108" name="com.mbeddr.mpsutil.review.annotation.structure.CommentAnnotationContainer" flags="ng" index="2f$52y">
         <child id="8455208232410333109" name="comments" index="2f$52z" />
+      </concept>
+    </language>
+    <language id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements">
+      <concept id="4185783222026475861" name="com.mbeddr.core.statements.structure.StatementList" flags="ng" index="3XIRFW">
+        <child id="4185783222026475862" name="statements" index="3XIRFZ" />
       </concept>
     </language>
     <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
@@ -90,12 +96,25 @@
       <concept id="3350625596579911728" name="com.mbeddr.doc.structure.Document" flags="ng" index="1_1swa">
         <property id="5572730672710143343" name="chapterStartIndex" index="yApLE" />
       </concept>
+      <concept id="3350625596579911760" name="com.mbeddr.doc.structure.EmptyDocContent" flags="ng" index="1_1sxE" />
     </language>
     <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base">
       <concept id="2642765975824060179" name="com.mbeddr.core.base.structure.SolutionRelativeDirPicker" flags="ng" index="9PVaO" />
       <concept id="6156524541422549000" name="com.mbeddr.core.base.structure.AbstractPicker" flags="ng" index="3N1QpV">
         <property id="9294901202237533" name="mayBeEmpty" index="3kgbRO" />
         <property id="2711621784026951428" name="pointOnlyToExistingFile" index="1RwFax" />
+      </concept>
+    </language>
+    <language id="6d11763d-483d-4b2b-8efc-09336c1b0001" name="com.mbeddr.core.modules">
+      <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
+        <child id="8967919205527146150" name="expression" index="2BFjQA" />
+      </concept>
+      <concept id="6437088627575722813" name="com.mbeddr.core.modules.structure.Module" flags="ng" index="N3F4X">
+        <child id="6437088627575722833" name="contents" index="N3F5h" />
+      </concept>
+      <concept id="6437088627575722830" name="com.mbeddr.core.modules.structure.ImplementationModule" flags="ng" index="N3F5e" />
+      <concept id="6437088627575722831" name="com.mbeddr.core.modules.structure.IModuleContent" flags="ng" index="N3F5f">
+        <property id="1317894735999272944" name="exported" index="2OOxQR" />
       </concept>
     </language>
     <language id="c788b046-2019-4656-8b60-8bb9bbb177b5" name="com.mbeddr.mpsutil.review">
@@ -111,6 +130,31 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="97d24244-51db-4e2e-97fc-7bd73b1f5f40" name="com.mbeddr.ext.components">
+      <concept id="5308710777891512019" name="com.mbeddr.ext.components.structure.Field" flags="ng" index="EbCE0" />
+      <concept id="5308710777891565561" name="com.mbeddr.ext.components.structure.FieldRef" flags="ng" index="EbZIE">
+        <reference id="5308710777891565562" name="field" index="EbZID" />
+      </concept>
+      <concept id="4491876417845649011" name="com.mbeddr.ext.components.structure.AtomicComponent" flags="ng" index="2EWCuY">
+        <reference id="4491876417845678669" name="baseComponent" index="2EWKI0" />
+      </concept>
+      <concept id="4491876417845641670" name="com.mbeddr.ext.components.structure.Runnable" flags="ng" index="2EWDwb">
+        <child id="4491876417845689763" name="body" index="2EWMhI" />
+      </concept>
+      <concept id="4491876417845474761" name="com.mbeddr.ext.components.structure.Component" flags="ng" index="2EX6K4">
+        <child id="6041318036221669720" name="contents" index="2RW2fA" />
+      </concept>
+    </language>
+    <language id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions">
+      <concept id="318113533128716675" name="com.mbeddr.core.expressions.structure.ITyped" flags="ng" index="2C2TGh">
+        <child id="318113533128716676" name="type" index="2C2TGm" />
+      </concept>
+      <concept id="4739982148980385695" name="com.mbeddr.core.expressions.structure.FloatType" flags="ng" index="3AreGT" />
+      <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
+        <property id="2941277002445651368" name="const" index="2c7vTL" />
+        <property id="2941277002448691247" name="volatile" index="2caQfQ" />
       </concept>
     </language>
   </registry>
@@ -146,7 +190,7 @@
       </node>
       <node concept="1_0VNX" id="zh_Ys$l7Cy" role="1_0VJ0">
         <property role="TrG5h" value="tabgraphnot" />
-        <property role="1_0VJr" value="Tabular Notation and Diagrammatic Notation" />
+        <property role="1_0VJr" value="Textual Notation, Tabular Notation, Diagrammatic Notation, and Switching Between Notations" />
         <node concept="1_0LV8" id="zh_Ys$lcmL" role="1_0VJ0">
           <node concept="19SGf9" id="zh_Ys$lcmM" role="1_0LWR">
             <node concept="19SUe$" id="zh_Ys$lcmN" role="19SJt6">
@@ -194,6 +238,45 @@
           <node concept="2NCZwO" id="zh_Ys$lglW" role="3z_lpI">
             <node concept="2NCMab" id="zh_Ys$lglZ" role="2NCMaf">
               <ref role="2NCMaa" to="e1tx:KfIhkXddlU" resolve="StaticVariability" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lgmH" role="1_0VJ0">
+        <property role="TrG5h" value="compprop" />
+        <property role="1_0VJr" value="Computed Properties" />
+        <node concept="1_0LV8" id="zh_Ys$lgnJ" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lgnK" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lgnL" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr unit test language indexes assert statements for being able to look up log statements with assert in the code. The indexes are not specified directly in the model, but rather computed properties, based on their position in the code: " />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lgnB" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lgnC" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lprt" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+            <node concept="2NCMab" id="zh_Ys$lpry" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:6GXPbpLjseN" resolve="testFlightAnalyzer" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lpsb" role="1_0VJ0">
+        <property role="TrG5h" value="compstruct" />
+        <property role="1_0VJr" value="Computed Structures" />
+        <node concept="1_1sxE" id="zh_Ys$lxpj" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lxpd" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lxpe" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lxph" role="2NCMaf">
+              <ref role="2NCMaa" node="zh_Ys$lxnu" resolve="ComponentsExample" />
             </node>
           </node>
         </node>
@@ -247,6 +330,39 @@
       <node concept="9PVaO" id="zh_Ys$l7Bu" role="9PVG_">
         <property role="1RwFax" value="true" />
         <property role="3kgbRO" value="false" />
+      </node>
+    </node>
+  </node>
+  <node concept="N3F5e" id="zh_Ys$lxnu">
+    <property role="TrG5h" value="ComponentsExample" />
+    <node concept="2EWCuY" id="zh_Ys$lxnw" role="N3F5h">
+      <property role="2OOxQR" value="true" />
+      <property role="TrG5h" value="A" />
+      <node concept="EbCE0" id="zh_Ys$lxnF" role="2RW2fA">
+        <property role="TrG5h" value="a" />
+        <node concept="3AreGT" id="zh_Ys$lxnE" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+    </node>
+    <node concept="2EWCuY" id="zh_Ys$lxnA" role="N3F5h">
+      <property role="2OOxQR" value="true" />
+      <property role="TrG5h" value="B" />
+      <ref role="2EWKI0" node="zh_Ys$lxnw" resolve="A" />
+      <node concept="2EWDwb" id="zh_Ys$lxnV" role="2RW2fA">
+        <property role="TrG5h" value="f" />
+        <node concept="3XIRFW" id="zh_Ys$lxnW" role="2EWMhI">
+          <node concept="2BFjQ_" id="zh_Ys$lxoM" role="3XIRFZ">
+            <node concept="EbZIE" id="zh_Ys$lxp0" role="2BFjQA">
+              <ref role="EbZID" node="zh_Ys$lxnF" resolve="a" />
+            </node>
+          </node>
+        </node>
+        <node concept="3AreGT" id="zh_Ys$lxog" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
       </node>
     </node>
   </node>
