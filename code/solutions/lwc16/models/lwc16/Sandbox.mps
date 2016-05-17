@@ -29,6 +29,25 @@
     <import index="8c4t" ref="r:6a63d759-341b-4a55-b0b8-859e3707a9ff(mbeddr.tutorial.main.math)" />
   </imports>
   <registry>
+    <language id="92f195b6-a209-4804-ad65-f5248ecd5873" name="com.mbeddr.mpsutil.margincell">
+      <concept id="1159656764131926609" name="com.mbeddr.mpsutil.margincell.structure.IMarginCellContent" flags="ng" index="3vooZZ">
+        <property id="8039098920897639409" name="attachedCellId" index="19LeSh" />
+        <reference id="8039098920897680033" name="attachedNode" index="19LoX1" />
+      </concept>
+    </language>
+    <language id="7a060fae-09e0-4372-be36-6696d6554c0e" name="com.mbeddr.mpsutil.review.annotation">
+      <concept id="8455208232410333108" name="com.mbeddr.mpsutil.review.annotation.structure.CommentAnnotationContainer" flags="ng" index="2f$52y">
+        <child id="8455208232410333109" name="comments" index="2f$52z" />
+      </concept>
+    </language>
+    <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
+      <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
+        <child id="2557074442922392302" name="words" index="19SJt6" />
+      </concept>
+      <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$">
+        <property id="2557074442922438158" name="escapedValue" index="19SUeA" />
+      </concept>
+    </language>
     <language id="2374bc90-7e37-41f1-a9c4-c2e35194c36a" name="com.mbeddr.doc">
       <concept id="6657644269295214799" name="com.mbeddr.doc.structure.IDocumentLike" flags="ng" index="G9hjZ">
         <reference id="6657644269295214800" name="config" index="G9hjw" />
@@ -58,6 +77,9 @@
       <concept id="6955693250238922834" name="com.mbeddr.doc.structure.ModelContentAsTextParagraph" flags="ng" index="3z_lpU">
         <property id="6955693250238922836" name="language" index="3z_lpW" />
       </concept>
+      <concept id="3350625596580089586" name="com.mbeddr.doc.structure.TextParagraph" flags="ng" index="1_0LV8">
+        <child id="3350625596580089613" name="text" index="1_0LWR" />
+      </concept>
       <concept id="3350625596580064249" name="com.mbeddr.doc.structure.IDocContentContainer" flags="ng" index="1_0VJ3">
         <child id="3350625596580064250" name="contents" index="1_0VJ0" />
       </concept>
@@ -76,7 +98,17 @@
         <property id="2711621784026951428" name="pointOnlyToExistingFile" index="1RwFax" />
       </concept>
     </language>
+    <language id="c788b046-2019-4656-8b60-8bb9bbb177b5" name="com.mbeddr.mpsutil.review">
+      <concept id="1159656764133526267" name="com.mbeddr.mpsutil.review.structure.ReviewNote" flags="ng" index="3vAitl">
+        <property id="5652920968054438504" name="created" index="3ajGZ3" />
+        <property id="5652920968054438487" name="creator" index="3ajGZW" />
+        <child id="5652920968054438510" name="note" index="3ajGZ5" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -92,6 +124,13 @@
       <node concept="1_0VNX" id="zh_Ys$l7Ct" role="1_0VJ0">
         <property role="TrG5h" value="mathsym" />
         <property role="1_0VJr" value="Mathematical Symbols" />
+        <node concept="1_0LV8" id="zh_Ys$lcmw" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lcmx" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lcmy" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr tutorial implements a langauge for writing mathematical formulae:" />
+            </node>
+          </node>
+        </node>
         <node concept="3z_lpU" id="zh_Ys$l7CA" role="1_0VJ0">
           <property role="3z_lpW" value="mbeddr" />
           <property role="3z_lpJ" value="true" />
@@ -106,8 +145,15 @@
         </node>
       </node>
       <node concept="1_0VNX" id="zh_Ys$l7Cy" role="1_0VJ0">
-        <property role="TrG5h" value="tabnot" />
-        <property role="1_0VJr" value="Tabular Notation" />
+        <property role="TrG5h" value="tabgraphnot" />
+        <property role="1_0VJr" value="Tabular Notation and Diagrammatic Notation" />
+        <node concept="1_0LV8" id="zh_Ys$lcmL" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lcmM" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lcmN" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr statemachine language can have three different projections, namely textual, tabular, and graphical (use Code --&gt; Projection or the editor hints to switch projections):" />
+            </node>
+          </node>
+        </node>
         <node concept="3z_lpU" id="zh_Ys$lclS" role="1_0VJ0">
           <property role="3z_lpW" value="mbeddr" />
           <property role="3z_lpJ" value="true" />
@@ -117,6 +163,37 @@
             </node>
             <node concept="2NCMab" id="zh_Ys$lcm1" role="2NCMaf">
               <ref role="2NCMaa" to="e1tx:6GXPbpLjxtH" resolve="FlightAnalyzer" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lcnQ" role="1_0VJ0">
+        <property role="TrG5h" value="metadata" />
+        <property role="1_0VJr" value="Generic Metadata Annotations" />
+        <node concept="1_0LV8" id="zh_Ys$lcot" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lcou" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lcov" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lcpj" role="1_0VJ0">
+        <property role="TrG5h" value="hiding" />
+        <property role="1_0VJr" value="Optional Hiding" />
+        <node concept="1_0LV8" id="zh_Ys$lgm6" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lgm7" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lgm8" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr variability language makes it possible to display (or omit) pieces of the model, based on a configuration of the feature model: " />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lglV" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lglW" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lglZ" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:KfIhkXddlU" resolve="StaticVariability" />
             </node>
           </node>
         </node>
@@ -148,6 +225,19 @@
     </node>
     <node concept="Wq1Bs" id="zh_Ys$l7BC" role="Wq1Bf">
       <property role="Wq1Bt" value="Markus Völter" />
+    </node>
+    <node concept="2f$52y" id="zh_Ys$lcoM" role="lGtFl">
+      <node concept="3vAitl" id="zh_Ys$lcoN" role="2f$52z">
+        <property role="3ajGZW" value="eug" />
+        <property role="3ajGZ3" value="May 17, 2016 3:26:21 PM" />
+        <property role="19LeSh" value="property_escapedValue_word0" />
+        <ref role="19LoX1" node="zh_Ys$lcov" />
+        <node concept="19SGf9" id="zh_Ys$lcoO" role="3ajGZ5">
+          <node concept="19SUe$" id="zh_Ys$lcoP" role="19SJt6">
+            <property role="19SUeA" value="Is there a ready example for the metadata annotation that we can plug in or should we make a MiniJava example as in the paper?" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="2SbYGP" id="zh_Ys$l7Bs">
