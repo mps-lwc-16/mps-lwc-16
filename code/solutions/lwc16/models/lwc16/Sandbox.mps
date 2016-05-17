@@ -49,9 +49,11 @@
       <concept id="1679452829930336984" name="com.mbeddr.core.statements.structure.CommentStatement" flags="ng" index="1QiMYF">
         <child id="8624890525768479139" name="textblock" index="3SJzmv" />
       </concept>
+      <concept id="4185783222026475238" name="com.mbeddr.core.statements.structure.LocalVariableDeclaration" flags="ng" index="3XIRlf" />
       <concept id="4185783222026475861" name="com.mbeddr.core.statements.structure.StatementList" flags="ng" index="3XIRFW">
         <child id="4185783222026475862" name="statements" index="3XIRFZ" />
       </concept>
+      <concept id="4185783222026464515" name="com.mbeddr.core.statements.structure.Statement" flags="ng" index="3XISUE" />
     </language>
     <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
       <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
@@ -218,13 +220,19 @@
       <concept id="2212975673976017893" name="com.mbeddr.core.expressions.structure.NumericLiteral" flags="ng" index="2hns93">
         <property id="2212975673976043696" name="value" index="2hmy$m" />
       </concept>
+      <concept id="5763383285156373020" name="com.mbeddr.core.expressions.structure.MultiExpression" flags="ng" index="2BOcij" />
       <concept id="318113533128716675" name="com.mbeddr.core.expressions.structure.ITyped" flags="ng" index="2C2TGh">
         <child id="318113533128716676" name="type" index="2C2TGm" />
       </concept>
+      <concept id="7892328519581699353" name="com.mbeddr.core.expressions.structure.VoidType" flags="ng" index="19Rifw" />
       <concept id="4739982148980385695" name="com.mbeddr.core.expressions.structure.FloatType" flags="ng" index="3AreGT" />
       <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
         <property id="2941277002445651368" name="const" index="2c7vTL" />
         <property id="2941277002448691247" name="volatile" index="2caQfQ" />
+      </concept>
+      <concept id="8860443239512128052" name="com.mbeddr.core.expressions.structure.BinaryExpression" flags="ng" index="3TlMgq">
+        <child id="8860443239512128064" name="left" index="3TlMhI" />
+        <child id="8860443239512128065" name="right" index="3TlMhJ" />
       </concept>
       <concept id="8860443239512128103" name="com.mbeddr.core.expressions.structure.NumberLiteral" flags="ng" index="3TlMh9" />
       <concept id="4375898003726285486" name="com.mbeddr.core.expressions.structure.PostIncrementExpression" flags="ng" index="3TM6Ey" />
@@ -440,7 +448,7 @@
         <node concept="1_0LV8" id="7T0_4mNu1IQ" role="1_0VJ0">
           <node concept="19SGf9" id="7T0_4mNu1IR" role="1_0LWR">
             <node concept="19SUe$" id="7T0_4mNu1IS" role="19SJt6">
-              <property role="19SUeA" value="MPS does not parse text and try to reconstruct references, but rather references specific nodes, associated with a specific concept. When ambiguity arises while adding a new node, a choice is presented to the user." />
+              <property role="19SUeA" value="MPS does not parse text and try to reconstruct references, but rather references specific nodes, associated with a specific concept. This means that every node knows its type, so explicit demarcation symbols are not required. Whenever ambiguity arises while adding a new node, a choice is presented to the user." />
             </node>
           </node>
         </node>
@@ -457,6 +465,36 @@
           <node concept="2NCZwO" id="7T0_4mNu1uY" role="3z_lpI">
             <node concept="2NCMab" id="7T0_4mNu1v1" role="2NCMaf">
               <ref role="2NCMaa" node="7T0_4mNu1o6" resolve="LanguageDemarcation" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="7T0_4mNu1NF" role="1_0VJ0">
+        <property role="TrG5h" value="DefaultFormatting" />
+        <property role="1_0VJr" value="Specification of default formatting" />
+        <node concept="1_0LV8" id="7T0_4mNu1NS" role="1_0VJ0">
+          <node concept="19SGf9" id="7T0_4mNu1NT" role="1_0LWR">
+            <node concept="19SUe$" id="7T0_4mNu1NU" role="19SJt6">
+              <property role="19SUeA" value="When no concrete syntax (editor) is specified, a default editor is provided for every concept." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="7T0_4mNu1PA" role="1_0VJ0">
+          <node concept="19SGf9" id="7T0_4mNu1PB" role="1_0LWR">
+            <node concept="19SUe$" id="7T0_4mNu1PC" role="19SJt6">
+              <property role="19SUeA" value="In all cases where an editor (projection) is specified, this can be considered a default formatting for a certain concept. Updating the projection will change the appearance of all models using that concept, but not change the content of these models." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="7T0_4mNua3z" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="7T0_4mNua3$" role="3z_lpI">
+            <node concept="2NCMab" id="7T0_4mNua3O" role="2NCMaf">
+              <ref role="2NCMaa" node="7T0_4mNu1S5" resolve="DefaultProjection" />
+            </node>
+            <node concept="2NCMab" id="7T0_4mNua3T" role="2NCMaf">
+              <ref role="2NCMaa" node="7T0_4mNu1TA" resolve="some_function" />
             </node>
           </node>
         </node>
@@ -622,6 +660,80 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="N3F5e" id="7T0_4mNu1S5">
+    <property role="TrG5h" value="DefaultProjection" />
+    <node concept="2NXPZ9" id="7T0_4mNu1Tp" role="N3F5h">
+      <property role="TrG5h" value="empty_1463516578209_15" />
+    </node>
+    <node concept="N3Fnx" id="7T0_4mNu1TA" role="N3F5h">
+      <property role="TrG5h" value="some_function" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="7T0_4mNu1TB" role="3XIRFX">
+        <node concept="3XIRlf" id="7T0_4mNu23k" role="3XIRFZ">
+          <property role="TrG5h" value="a" />
+          <node concept="26Vqpq" id="7T0_4mNu23i" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="3XIRlf" id="7T0_4mNu4wv" role="3XIRFZ">
+          <property role="TrG5h" value="b" />
+          <node concept="26Vqpq" id="7T0_4mNu4ww" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="3XISUE" id="7T0_4mNu22e" role="3XIRFZ" />
+        <node concept="1QiMYF" id="7T0_4mNu9Ta" role="3XIRFZ">
+          <node concept="OjmMv" id="7T0_4mNu9Tc" role="3SJzmv">
+            <node concept="19SGf9" id="7T0_4mNu9Td" role="OjmMu">
+              <node concept="19SUe$" id="7T0_4mNu9Te" role="19SJt6">
+                <property role="19SUeA" value="The defined editor for 2*3" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1_9egQ" id="7T0_4mNu8NC" role="3XIRFZ">
+          <node concept="2BOcij" id="7T0_4mNua4I" role="1_9egR">
+            <node concept="3TlMh9" id="7T0_4mNua4W" role="3TlMhJ">
+              <property role="2hmy$m" value="3" />
+            </node>
+            <node concept="3TlMh9" id="7T0_4mNua4D" role="3TlMhI">
+              <property role="2hmy$m" value="2" />
+            </node>
+          </node>
+        </node>
+        <node concept="3XISUE" id="7T0_4mNu96x" role="3XIRFZ" />
+        <node concept="1QiMYF" id="7T0_4mNu9UO" role="3XIRFZ">
+          <node concept="OjmMv" id="7T0_4mNu9UQ" role="3SJzmv">
+            <node concept="19SGf9" id="7T0_4mNu9UR" role="OjmMu">
+              <node concept="19SUe$" id="7T0_4mNu9US" role="19SJt6">
+                <property role="19SUeA" value=" The reflective (default) editor for 2*3. Right click the expression and select &quot;Show reflective editor&quot;" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1_9egQ" id="7T0_4mNua5s" role="3XIRFZ">
+          <node concept="2BOcij" id="7T0_4mNua5Q" role="1_9egR">
+            <node concept="3TlMh9" id="7T0_4mNua64" role="3TlMhJ">
+              <property role="2hmy$m" value="3" />
+            </node>
+            <node concept="3TlMh9" id="7T0_4mNua5r" role="3TlMhI">
+              <property role="2hmy$m" value="2" />
+            </node>
+          </node>
+        </node>
+        <node concept="3XISUE" id="7T0_4mNu9le" role="3XIRFZ" />
+      </node>
+      <node concept="19Rifw" id="7T0_4mNua1B" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="7T0_4mNu1Tv" role="N3F5h">
+      <property role="TrG5h" value="empty_1463516578658_16" />
     </node>
   </node>
 </model>
