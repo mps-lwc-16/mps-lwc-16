@@ -28,6 +28,7 @@
   <imports>
     <import index="e1tx" ref="r:bd5ec23c-c294-47cc-a078-675c03abdb69(mbeddr.tutorial.main.defaultExtensions)" />
     <import index="8c4t" ref="r:6a63d759-341b-4a55-b0b8-859e3707a9ff(mbeddr.tutorial.main.math)" />
+    <import index="7qwm" ref="r:5bb9f839-879d-4d8b-98b1-43aac3dcfbee(mbeddr.tutorial.main.plainC)" />
   </imports>
   <registry>
     <language id="92f195b6-a209-4804-ad65-f5248ecd5873" name="com.mbeddr.mpsutil.margincell">
@@ -55,6 +56,7 @@
       </concept>
     </language>
     <language id="2374bc90-7e37-41f1-a9c4-c2e35194c36a" name="com.mbeddr.doc">
+      <concept id="4317007310193476045" name="com.mbeddr.doc.structure.ScaleDownNotUp100" flags="ng" index="2bctqb" />
       <concept id="6657644269295214799" name="com.mbeddr.doc.structure.IDocumentLike" flags="ng" index="G9hjZ">
         <reference id="6657644269295214800" name="config" index="G9hjw" />
         <child id="126932837435370865" name="authors" index="Wq1Bf" />
@@ -64,6 +66,16 @@
       </concept>
       <concept id="2286331641395238583" name="com.mbeddr.doc.structure.ModelContentPointer" flags="ng" index="2NCZwO">
         <child id="2286331641395252236" name="elements" index="2NCMaf" />
+      </concept>
+      <concept id="6386504476136263187" name="com.mbeddr.doc.structure.ImageParagraph" flags="ng" index="2SaynC">
+        <property id="6386504476136358630" name="showImage" index="2Sbq$t" />
+        <child id="6386504476136278696" name="description" index="2SaI5j" />
+        <child id="6386504476136531838" name="resource" index="2SbwM5" />
+        <child id="8624890525767908695" name="sizeSpec" index="3SHJ_F" />
+      </concept>
+      <concept id="6386504476136521407" name="com.mbeddr.doc.structure.Resource" flags="ng" index="2Sb_l4">
+        <property id="6386504476136521408" name="fileName" index="2Sb_kV" />
+        <reference id="6386504476136521409" name="path" index="2Sb_kU" />
       </concept>
       <concept id="6386504476136472795" name="com.mbeddr.doc.structure.PathDefinition" flags="ng" index="2SbYGw">
         <child id="2642765975824057986" name="pathPicker" index="9PVG_" />
@@ -100,6 +112,9 @@
     </language>
     <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base">
       <concept id="2642765975824060179" name="com.mbeddr.core.base.structure.SolutionRelativeDirPicker" flags="ng" index="9PVaO" />
+      <concept id="8375407818529178006" name="com.mbeddr.core.base.structure.TextBlock" flags="ng" index="OjmMv">
+        <child id="8375407818529178007" name="text" index="OjmMu" />
+      </concept>
       <concept id="6156524541422549000" name="com.mbeddr.core.base.structure.AbstractPicker" flags="ng" index="3N1QpV">
         <property id="9294901202237533" name="mayBeEmpty" index="3kgbRO" />
         <property id="2711621784026951428" name="pointOnlyToExistingFile" index="1RwFax" />
@@ -281,10 +296,83 @@
           </node>
         </node>
       </node>
+      <node concept="1_0VNX" id="zh_Ys$lxvd" role="1_0VJ0">
+        <property role="TrG5h" value="skeled" />
+        <property role="1_0VJr" value="Skeleton Editing" />
+        <node concept="3z_lpU" id="zh_Ys$lxvS" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lxvT" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lxvW" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:7VsgA5L655o" resolve="BuildConfiguration (m.t.m.defaultExtensions)" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lxJI" role="1_0VJ0">
+        <property role="TrG5h" value="codeinprose" />
+        <property role="1_0VJr" value="Embedding Code in Prose" />
+        <node concept="3z_lpU" id="zh_Ys$lxKt" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lxKu" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lxL5" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lxLT" role="1_0VJ0">
+        <property role="TrG5h" value="blackboxes" />
+        <property role="1_0VJr" value="Embedding Blackboxes" />
+        <node concept="1_0LV8" id="zh_Ys$lxN3" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lxN4" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lxN5" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr documentation language allows insertion of pictures." />
+            </node>
+          </node>
+        </node>
+        <node concept="2SaynC" id="zh_Ys$lxMG" role="1_0VJ0">
+          <property role="TrG5h" value="exampleImage" />
+          <property role="2Sbq$t" value="true" />
+          <node concept="OjmMv" id="zh_Ys$lxMH" role="2SaI5j">
+            <node concept="19SGf9" id="zh_Ys$lxMI" role="OjmMu">
+              <node concept="19SUe$" id="zh_Ys$lxMJ" role="19SJt6">
+                <property role="19SUeA" value="picture from https://pixabay.com/en/small-plane-glider-sky-flying-40039/" />
+              </node>
+            </node>
+          </node>
+          <node concept="2bctqb" id="zh_Ys$lxMK" role="3SHJ_F" />
+          <node concept="2Sb_l4" id="zh_Ys$lxMS" role="2SbwM5">
+            <property role="2Sb_kV" value="glider.png" />
+            <ref role="2Sb_kU" node="zh_Ys$l7Bt" resolve="temp" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="1mvXsy" id="zh_Ys$l7Cg" role="1_0VJ0">
       <property role="TrG5h" value="evolution" />
-      <property role="1_0VJr" value="Evolution &amp; Reuse" />
+      <property role="1_0VJr" value="Evolution and Reuse" />
+      <node concept="1_0VNX" id="zh_Ys$lxNg" role="1_0VJ0">
+        <property role="TrG5h" value="langext" />
+        <property role="1_0VJr" value="Language Extension" />
+        <node concept="1_0LV8" id="zh_Ys$l$iN" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$l$iO" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$l$iP" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr statemachines language extends the base language. This makes it possible to intermix C commands with a statemachine:" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lzp1" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lzp2" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lzp5" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="1mvXsy" id="zh_Ys$l7Co" role="1_0VJ0">
       <property role="TrG5h" value="editing" />
