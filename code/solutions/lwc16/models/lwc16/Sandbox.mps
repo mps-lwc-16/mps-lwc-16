@@ -21,6 +21,7 @@
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
     <use id="0d04a6cc-773e-4069-b9b0-11884b2ff1c8" name="com.mbeddr.ext.units" version="1" />
     <use id="c1c2a88a-323c-4605-a37d-9ab77a2ccbd2" name="com.mbeddr.mpsutil.suppresswarning" version="0" />
+    <use id="a26a3aea-de54-4e8b-8b8f-f3eb079923b4" name="ExampleLanguage" version="-1" />
     <devkit ref="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
     <devkit ref="43d889ae-8e6a-4f6e-a649-d59342d8728d(com.mbeddr.statemachines)" />
     <devkit ref="24565007-e59f-42fc-ac10-da3836deec1c(com.mbeddr.components)" />
@@ -434,6 +435,84 @@
           <node concept="2NCZwO" id="zh_Ys$lzp2" role="3z_lpI">
             <node concept="2NCMab" id="zh_Ys$lzp5" role="2NCMaf">
               <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70rby" role="1_0VJ0">
+        <property role="TrG5h" value="langemb" />
+        <property role="1_0VJr" value="Language Embedding" />
+        <node concept="1_0LV8" id="30e67$70rbG" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70rbH" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70rbI" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70rcS" role="1_0VJ0">
+        <property role="TrG5h" value="gramres" />
+        <property role="1_0VJr" value="Beyond Grammar Restrictions" />
+        <node concept="1_0LV8" id="30e67$70toJ" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70toK" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70toL" role="19SJt6">
+              <property role="19SUeA" value="In C code in mbeddr, assert statements are restricted to tests only. Try to instantiate an assert statement in function1. That will not work. Then try to instantiate an assert statement in testCase. That will work." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="30e67$70tpn" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="30e67$70tpo" role="3z_lpI">
+            <node concept="2NCMab" id="30e67$70tp$" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
+            </node>
+            <node concept="2NCMab" id="30e67$70tpG" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7Lxz" resolve="function1" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="30e67$70tpM" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="30e67$70tqm" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="30e67$70tqn" role="3z_lpI">
+            <node concept="2NCMab" id="30e67$70tqH" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
+            </node>
+            <node concept="2NCMab" id="30e67$70tqP" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7HgD" resolve="testCase" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70trM" role="1_0VJ0">
+        <property role="TrG5h" value="synmig" />
+        <property role="1_0VJr" value="Syntax Migration" />
+        <node concept="1_0LV8" id="30e67$70Ds5" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70Ds6" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70Ds7" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70Duf" role="1_0VJ0">
+        <property role="TrG5h" value="strmig" />
+        <property role="1_0VJr" value="Structure Migration" />
+        <node concept="1_0LV8" id="30e67$70DvN" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70DvO" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70DvP" role="19SJt6">
+              <property role="19SUeA" value="Migrations in structure are handled in MPS by means of migration scripts." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="30e67$70Dvb" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70Dvc" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70Dvd" role="19SJt6">
+              <property role="19SUeA" value="com.mbeddr.core.unittest contains an example of a non-trivial migration script" />
             </node>
           </node>
         </node>

@@ -10,6 +10,7 @@
     <dependency reexport="false">b87ff58e-456e-4d51-9ed6-4090f4e7b51c(mbeddr.tutorial.main)</dependency>
   </dependencies>
   <languageVersions>
+    <language id="a26a3aea-de54-4e8b-8b8f-f3eb079923b4" fqName="ExampleLanguage" version="-1" />
     <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" fqName="com.mbeddr.core.base" version="3" />
     <language id="2d7fadf5-33f6-4e80-a78f-0f739add2bde" fqName="com.mbeddr.core.buildconfig" version="1" />
     <language id="b2da2e1a-b542-47f5-9be0-4dc21efe74a4" fqName="com.mbeddr.core.checks" version="0" />
