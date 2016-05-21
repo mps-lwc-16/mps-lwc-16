@@ -6,6 +6,9 @@
       <modulePath path="$PROJECT_DIR$/_spreferences/PlatformTemplates/module.msd" folder="_spreferences" />
       <modulePath path="$PROJECT_DIR$/_spreferences/TypeSizeConfiguration/module.msd" folder="_spreferences" />
       <modulePath path="$PROJECT_DIR$/languages/ExampleLanguage/ExampleLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/lwc2016.mps.minisql.baselangextension/lwc2016.mps.minisql.baselangextension.mpl" folder="minisql" />
+      <modulePath path="$PROJECT_DIR$/languages/lwv2016.mps.minisql/lwc2016.mps.minisql.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/lwv2016.mps.minisql/sandbox/lwc2016.mps.minisql.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/lwc16/lwc16.msd" folder="" />
     </projectModules>
   </component>
