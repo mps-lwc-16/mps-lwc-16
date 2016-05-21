@@ -65,6 +65,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="d7297ac3-2e86-48c8-8760-2400854e319f(lwc16)" version="0" />
+    <module reference="b87ff58e-456e-4d51-9ed6-4090f4e7b51c(mbeddr.tutorial.main)" version="0" />
   </dependencyVersions>
 </solution>
 
