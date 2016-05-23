@@ -57,9 +57,10 @@
       </concept>
     </language>
     <language id="87892e40-0466-4436-b202-b9638c83e7b5" name="lwc2016.mps.minisql">
-      <concept id="8834046930926523036" name="lwc2016.mps.minisql.structure.SqlExpression" flags="ng" index="25AohW" />
       <concept id="8834046930926522849" name="lwc2016.mps.minisql.structure.Select" flags="ng" index="25Aos1">
+        <reference id="8834046930926523034" name="table" index="25AohU" />
         <child id="8834046930926523069" name="expression" index="25Aoht" />
+        <child id="5669571689495191199" name="fieldConditions" index="3UlCfQ" />
       </concept>
       <concept id="8834046930926522850" name="lwc2016.mps.minisql.structure.TableDefinition" flags="ng" index="25Aos2">
         <child id="8834046930926522954" name="columns" index="25AoiE" />
@@ -78,6 +79,14 @@
       <concept id="8834046930926580964" name="lwc2016.mps.minisql.structure.BigInt" flags="ng" index="25AI84" />
       <concept id="8834046930926580951" name="lwc2016.mps.minisql.structure.VarChar" flags="ng" index="25AI8R">
         <property id="8834046930926580952" name="size" index="25AI8S" />
+      </concept>
+      <concept id="5669571689495152772" name="lwc2016.mps.minisql.structure.Everything" flags="ng" index="3UlxnH" />
+      <concept id="5669571689495191004" name="lwc2016.mps.minisql.structure.FieldCondition" flags="ng" index="3UlC2P">
+        <reference id="5669571689495191143" name="field" index="3UlCce" />
+        <child id="5669571689495191059" name="expression" index="3UlCdU" />
+      </concept>
+      <concept id="5669571689495212064" name="lwc2016.mps.minisql.structure.NumberLiteral" flags="ng" index="3UlQP9">
+        <property id="5669571689495212327" name="value" index="3UlQLe" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -131,7 +140,14 @@
             <node concept="17QB3L" id="7EoPI3Z0QjJ" role="1tU5fm" />
             <node concept="25AZmp" id="7EoPI3Z0QtY" role="33vP2m">
               <node concept="25Aos1" id="7EoPI3Z0QuD" role="25AZlM">
-                <node concept="25AohW" id="7EoPI3Z0QuF" role="25Aoht" />
+                <ref role="25AohU" node="7EoPI3Z0BqZ" resolve="Authors" />
+                <node concept="3UlC2P" id="4UInmAOYiZA" role="3UlCfQ">
+                  <ref role="3UlCce" node="7EoPI3Z0IaZ" resolve="author_id" />
+                  <node concept="3UlQP9" id="4UInmAOYlZH" role="3UlCdU">
+                    <property role="3UlQLe" value="10" />
+                  </node>
+                </node>
+                <node concept="3UlxnH" id="4UInmAOYdOi" role="25Aoht" />
               </node>
             </node>
           </node>

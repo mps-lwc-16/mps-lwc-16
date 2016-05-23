@@ -70,6 +70,12 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7EoPI3Z0las" resolve="SqlExpression" />
     </node>
+    <node concept="1TJgyj" id="4UInmAOYdUv" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="fieldConditions" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="4UInmAOYdRs" resolve="FieldCondition" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7EoPI3Z0l7y">
     <property role="1pbfSe" value="2040146114" />
@@ -203,6 +209,40 @@
       <property role="20kJfa" value="referred" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="7EoPI3Z0l7z" resolve="ColumnDefinition" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4UInmAOY4y4">
+    <property role="1pbfSe" value="61253101" />
+    <property role="3GE5qa" value="expressions" />
+    <property role="TrG5h" value="Everything" />
+    <property role="34LRSv" value="*" />
+    <ref role="1TJDcQ" node="7EoPI3Z0las" resolve="SqlExpression" />
+  </node>
+  <node concept="1TIwiD" id="4UInmAOYdRs">
+    <property role="1pbfSe" value="61291333" />
+    <property role="TrG5h" value="FieldCondition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4UInmAOYdTB" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="field" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7EoPI3Z0l7z" resolve="ColumnDefinition" />
+    </node>
+    <node concept="1TJgyj" id="4UInmAOYdSj" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="expression" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7EoPI3Z0las" resolve="SqlExpression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4UInmAOYj0w">
+    <property role="1pbfSe" value="61312393" />
+    <property role="3GE5qa" value="expressions" />
+    <property role="TrG5h" value="NumberLiteral" />
+    <ref role="1TJDcQ" node="7EoPI3Z0las" resolve="SqlExpression" />
+    <node concept="1TJgyi" id="4UInmAOYj4B" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>
