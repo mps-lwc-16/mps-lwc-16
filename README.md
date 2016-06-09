@@ -17,24 +17,13 @@ To set up an environment in which you can run the solution in this archive:
    * Navigate to `File > Settings > Build, Execution & Deployment > Path Variables`
    * Add (or update) the variable `mbeddr.github.core.home` to the path containing your mbeddr source files
 
-Currently used versions
-----------------------
-MPS generic distribution:
-http://download.jetbrains.com/mps/33/MPS-3.3.4.zip
-
-Mbeddr plugins (extract to MPS dir, make sure that plugins directory is filled)
-https://github.com/mbeddr/mbeddr.core/releases/download/nightly-81/com.mbeddr.allInOne.zip
-
-Mbeddr source code (make sure to set the mbeddr.core.
-https://github.com/mbeddr/mbeddr.core/archive/nightly-81.zip
-
-Testing version
+Versions and download links
 ---------------
 MPS generic distribution:
 http://download.jetbrains.com/mps/33/MPS-3.3.5.zip
 
 Mbeddr plugins (extract to MPS dir, make sure that plugins directory is filled)
-https://github.com/mbeddr/mbeddr.core/releases/download/nightly-93/com.mbeddr.allInOne.zip
+https://github.com/mbeddr/mbeddr.core/releases/download/nightly-94/com.mbeddr.allInOne.zip
 
 Mbeddr source code (make sure to set the `mbeddr.github.core.home`):
-https://github.com/mbeddr/mbeddr.core/archive/nightly-93.zip
+https://github.com/mbeddr/mbeddr.core/archive/nightly-94.zip
