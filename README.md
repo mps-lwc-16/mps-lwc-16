@@ -11,19 +11,10 @@ Set up environment
 ------------------
 This solution has been developed in MPS, using mostly mbeddr languages for demonstration purposes.
 To set up an environment in which you can run the solution in this archive:
- * download the MPS generic distribution (see below for currently used versions) and unzip it to a folder of your choice
- * download the mbeddr build (see below for currently used versions) and unzip it to your MPS directory
- * add the top-level of your mbeddr.core sources (see below for currently used versions) as project library
+ * download the [MPS generic distribution 3.3.5](http://download.jetbrains.com/mps/33/MPS-3.3.5.zip) and unzip it to a folder of your choice
+ * download the [mbeddr nightly-94 allInOne build](https://github.com/mbeddr/mbeddr.core/releases/download/nightly-94/com.mbeddr.allInOne.zip) and unzip it to your MPS directory. Check that the plugins subdirectory contains the mbeddr plugins.
+ * download [mbeddr.core nightly-94 source](https://github.com/mbeddr/mbeddr.core/archive/nightly-94.zip), unzip it, and add it as project library
    * Navigate to `File > Settings > Build, Execution & Deployment > Path Variables`
    * Add (or update) the variable `mbeddr.github.core.home` to the path containing your mbeddr source files
-
-Versions and download links
----------------
-MPS generic distribution:
-http://download.jetbrains.com/mps/33/MPS-3.3.5.zip
-
-Mbeddr plugins (extract to MPS dir, make sure that plugins directory is filled)
-https://github.com/mbeddr/mbeddr.core/releases/download/nightly-94/com.mbeddr.allInOne.zip
-
-Mbeddr source code (make sure to set the `mbeddr.github.core.home`):
-https://github.com/mbeddr/mbeddr.core/archive/nightly-94.zip
+   * Navigate to `File > Settings > Build, Execution & Deployment > Project Libraries`
+   * Add a library with name `mbeddr.core` and the path to your mbeddr source files
