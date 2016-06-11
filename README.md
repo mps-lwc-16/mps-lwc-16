@@ -9,7 +9,7 @@ The code directory contains the implementation of the challenges and the paper d
 
 Set up environment
 ------------------
-This solution has been developed in mbeddr nightly build 81 and MPS 3.3.4.
+This solution has been developed in MPS, using mostly mbeddr languages for demonstration purposes.
 To set up an environment in which you can run the solution in this archive:
  * download the MPS generic distribution (see below for currently used versions) and unzip it to a folder of your choice
  * download the mbeddr build (see below for currently used versions) and unzip it to your MPS directory
