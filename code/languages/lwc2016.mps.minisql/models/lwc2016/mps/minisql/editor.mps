@@ -246,8 +246,10 @@
         <node concept="3F0ifn" id="7EoPI3Z0lb8" role="3EZMnx">
           <property role="3F0ifm" value="SELECT" />
         </node>
-        <node concept="3F1sOY" id="7EoPI3Z0lbe" role="3EZMnx">
+        <node concept="3F2HdR" id="1_gGZIlEuGS" role="3EZMnx">
+          <property role="2czwfO" value="," />
           <ref role="1NtTu8" to="7583:7EoPI3Z0laX" />
+          <node concept="2iRfu4" id="1_gGZIlEuGU" role="2czzBx" />
         </node>
         <node concept="2iRfu4" id="7EoPI3Z0lb4" role="2iSdaV" />
       </node>

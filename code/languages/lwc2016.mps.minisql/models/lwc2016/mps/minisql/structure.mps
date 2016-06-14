@@ -66,8 +66,8 @@
     </node>
     <node concept="1TJgyj" id="7EoPI3Z0laX" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="expression" />
-      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="expressions" />
+      <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="7EoPI3Z0las" resolve="SqlExpression" />
     </node>
     <node concept="1TJgyj" id="4UInmAOYdUv" role="1TKVEi">

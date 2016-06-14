@@ -18,7 +18,15 @@
       <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
         <property id="1186403713874" name="color" index="Vb096" />
       </concept>
+      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
+        <property id="1186403771423" name="style" index="Vbekb" />
+      </concept>
       <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
+      <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
+        <property id="1186414551515" name="flag" index="VOm3f" />
+      </concept>
+      <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
+      <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
@@ -51,6 +59,39 @@
         <ref role="1NtTu8" to="u246:7EoPI3Z0Mei" />
       </node>
       <node concept="2iRfu4" id="7EoPI3Z0Me4" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1_gGZIlEfQB">
+    <ref role="1XX52x" to="u246:1_gGZIlEfQv" resolve="ExpressionInSql" />
+    <node concept="3EZMnI" id="1_gGZIlEfQD" role="2wV5jI">
+      <node concept="3F0ifn" id="1_gGZIlEfQK" role="3EZMnx">
+        <property role="3F0ifm" value="`" />
+        <node concept="Vb9p2" id="1_gGZIlEfYo" role="3F10Kt">
+          <property role="Vbekb" value="BOLD" />
+        </node>
+        <node concept="VechU" id="1_gGZIlEfRR" role="3F10Kt">
+          <property role="Vb096" value="red" />
+        </node>
+        <node concept="11LMrY" id="1_gGZIlEfTC" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="1_gGZIlEfQY" role="3EZMnx">
+        <ref role="1NtTu8" to="u246:1_gGZIlEfQw" />
+      </node>
+      <node concept="3F0ifn" id="1_gGZIlEfQQ" role="3EZMnx">
+        <property role="3F0ifm" value="`" />
+        <node concept="Vb9p2" id="1_gGZIlEfY8" role="3F10Kt">
+          <property role="Vbekb" value="BOLD" />
+        </node>
+        <node concept="VechU" id="1_gGZIlEfWi" role="3F10Kt">
+          <property role="Vb096" value="red" />
+        </node>
+        <node concept="11L4FC" id="1_gGZIlEfVm" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="1_gGZIlEfQG" role="2iSdaV" />
     </node>
   </node>
 </model>
