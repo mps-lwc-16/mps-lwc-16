@@ -17,4 +17,4 @@ editing:
 	pdflatex --output-directory=build/ LWCEditing.tex
 
 clean:
-	rm build/*
+	rm build/*.bbl build/*.aux build/*.log build/*.pdf build/*.blg
