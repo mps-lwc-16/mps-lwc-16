@@ -30,6 +30,8 @@
     <import index="e1tx" ref="r:bd5ec23c-c294-47cc-a078-675c03abdb69(mbeddr.tutorial.main.defaultExtensions)" />
     <import index="8c4t" ref="r:6a63d759-341b-4a55-b0b8-859e3707a9ff(mbeddr.tutorial.main.math)" />
     <import index="7qwm" ref="r:5bb9f839-879d-4d8b-98b1-43aac3dcfbee(mbeddr.tutorial.main.plainC)" />
+    <import index="u246" ref="r:58dfd6c5-a989-4e92-95a0-01777ac12a16(lwc2016.mps.minisql.baselangextension.structure)" />
+    <import index="bipj" ref="r:21d2eb1e-577c-40cd-a6a2-02b904a24b1d(lwv2016.mps.minisql.sandbox)" />
   </imports>
   <registry>
     <language id="92f195b6-a209-4804-ad65-f5248ecd5873" name="com.mbeddr.mpsutil.margincell">
@@ -103,6 +105,9 @@
       </concept>
       <concept id="6955693250238922834" name="com.mbeddr.doc.structure.ModelContentAsTextParagraph" flags="ng" index="3z_lpU">
         <property id="6955693250238922836" name="language" index="3z_lpW" />
+      </concept>
+      <concept id="6955693250238922838" name="com.mbeddr.doc.structure.ModelContentRefWord" flags="ng" index="3z_lpY">
+        <child id="6955693250238922839" name="modelContentPtr" index="3z_lpZ" />
       </concept>
       <concept id="3350625596580089586" name="com.mbeddr.doc.structure.TextParagraph" flags="ng" index="1_0LV8">
         <child id="3350625596580089613" name="text" index="1_0LWR" />
@@ -445,7 +450,29 @@
         <node concept="1_0LV8" id="30e67$70rbG" role="1_0VJ0">
           <node concept="19SGf9" id="30e67$70rbH" role="1_0LWR">
             <node concept="19SUe$" id="30e67$70rbI" role="19SJt6">
-              <property role="19SUeA" value="todo" />
+              <property role="19SUeA" value="It is possible to embed SQL code in BaseLanguage expressions and viceversa" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="b9Kl1N43zc" role="1_0VJ0">
+          <node concept="19SGf9" id="b9Kl1N43zd" role="1_0LWR">
+            <node concept="19SUe$" id="b9Kl1N46Oy" role="19SJt6" />
+            <node concept="3z_lpY" id="b9Kl1N46Ow" role="19SJt6">
+              <node concept="2NCZwO" id="b9Kl1N46Ox" role="3z_lpZ">
+                <node concept="2NCMab" id="b9Kl1N47cc" role="2NCMaf">
+                  <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
+                </node>
+              </node>
+            </node>
+            <node concept="19SUe$" id="b9Kl1N46Oz" role="19SJt6" />
+          </node>
+        </node>
+        <node concept="3z_lpU" id="b9Kl1N472_" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="b9Kl1N472B" role="3z_lpI">
+            <node concept="2NCMab" id="b9Kl1N47Pn" role="2NCMaf">
+              <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
             </node>
           </node>
         </node>

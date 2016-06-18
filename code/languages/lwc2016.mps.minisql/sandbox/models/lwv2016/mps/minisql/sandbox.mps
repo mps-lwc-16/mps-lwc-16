@@ -45,9 +45,6 @@
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
-      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
-        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
-      </concept>
       <concept id="1164991038168" name="jetbrains.mps.baseLanguage.structure.ThrowStatement" flags="nn" index="YS8fn">
         <child id="1164991057263" name="throwable" index="YScLw" />
       </concept>
@@ -164,18 +161,8 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
   </registry>
@@ -255,60 +242,44 @@
       <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="1_gGZIlEnZ0" role="3clF47">
-        <node concept="3cpWs6" id="1_gGZIlFaKG" role="3cqZAp">
-          <node concept="2YIFZM" id="1_gGZIlFbmh" role="3cqZAk">
-            <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
-            <ref role="37wK5l" to="wyt6:~String.format(java.lang.String,java.lang.Object...):java.lang.String" resolve="format" />
-            <node concept="Xl_RD" id="1_gGZIlFbp$" role="37wK5m">
-              <property role="Xl_RC" value="Executing '%s'" />
-            </node>
-            <node concept="37vLTw" id="1_gGZIlFc2j" role="37wK5m">
-              <ref role="3cqZAo" node="1_gGZIlEo1R" resolve="sqlCode" />
+        <node concept="SfApY" id="1_gGZIlEojq" role="3cqZAp">
+          <node concept="3clFbS" id="1_gGZIlEojr" role="SfCbr">
+            <node concept="3cpWs6" id="1_gGZIlEpyN" role="3cqZAp">
+              <node concept="2OqwBi" id="1_gGZIlEo8N" role="3cqZAk">
+                <node concept="2OqwBi" id="1_gGZIlEo5E" role="2Oq$k0">
+                  <node concept="37vLTw" id="1_gGZIlEo4j" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1_gGZIlEnEq" resolve="connection" />
+                  </node>
+                  <node concept="liA8E" id="1_gGZIlEo7l" role="2OqNvi">
+                    <ref role="37wK5l" to="zj7m:~Connection.createStatement():java.sql.Statement" resolve="createStatement" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1_gGZIlEoaP" role="2OqNvi">
+                  <ref role="37wK5l" to="zj7m:~Statement.executeQuery(java.lang.String):java.sql.ResultSet" resolve="executeQuery" />
+                  <node concept="37vLTw" id="1_gGZIlEodd" role="37wK5m">
+                    <ref role="3cqZAo" node="1_gGZIlEo1R" resolve="sqlCode" />
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
-        </node>
-        <node concept="1X3_iC" id="1_gGZIlFcnC" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="SfApY" id="1_gGZIlEojq" role="8Wnug">
-            <node concept="3clFbS" id="1_gGZIlEojr" role="SfCbr">
-              <node concept="3cpWs6" id="1_gGZIlEpyN" role="3cqZAp">
-                <node concept="2OqwBi" id="1_gGZIlEo8N" role="3cqZAk">
-                  <node concept="2OqwBi" id="1_gGZIlEo5E" role="2Oq$k0">
-                    <node concept="37vLTw" id="1_gGZIlEo4j" role="2Oq$k0">
-                      <ref role="3cqZAo" node="1_gGZIlEnEq" resolve="connection" />
-                    </node>
-                    <node concept="liA8E" id="1_gGZIlEo7l" role="2OqNvi">
-                      <ref role="37wK5l" to="zj7m:~Connection.createStatement():java.sql.Statement" resolve="createStatement" />
-                    </node>
-                  </node>
-                  <node concept="liA8E" id="1_gGZIlEoaP" role="2OqNvi">
-                    <ref role="37wK5l" to="zj7m:~Statement.executeQuery(java.lang.String):java.sql.ResultSet" resolve="executeQuery" />
-                    <node concept="37vLTw" id="1_gGZIlEodd" role="37wK5m">
-                      <ref role="3cqZAo" node="1_gGZIlEo1R" resolve="sqlCode" />
+          <node concept="TDmWw" id="1_gGZIlEojm" role="TEbGg">
+            <node concept="3clFbS" id="1_gGZIlEojn" role="TDEfX">
+              <node concept="YS8fn" id="1_gGZIlEomG" role="3cqZAp">
+                <node concept="2ShNRf" id="1_gGZIlEonx" role="YScLw">
+                  <node concept="1pGfFk" id="1_gGZIlEptv" role="2ShVmc">
+                    <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
+                    <node concept="37vLTw" id="1_gGZIlEpuQ" role="37wK5m">
+                      <ref role="3cqZAo" node="1_gGZIlEojo" resolve="e" />
                     </node>
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="TDmWw" id="1_gGZIlEojm" role="TEbGg">
-              <node concept="3clFbS" id="1_gGZIlEojn" role="TDEfX">
-                <node concept="YS8fn" id="1_gGZIlEomG" role="3cqZAp">
-                  <node concept="2ShNRf" id="1_gGZIlEonx" role="YScLw">
-                    <node concept="1pGfFk" id="1_gGZIlEptv" role="2ShVmc">
-                      <ref role="37wK5l" to="wyt6:~RuntimeException.&lt;init&gt;(java.lang.Throwable)" resolve="RuntimeException" />
-                      <node concept="37vLTw" id="1_gGZIlEpuQ" role="37wK5m">
-                        <ref role="3cqZAo" node="1_gGZIlEojo" resolve="e" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3cpWsn" id="1_gGZIlEojo" role="TDEfY">
-                <property role="TrG5h" value="e" />
-                <node concept="3uibUv" id="1_gGZIlEojp" role="1tU5fm">
-                  <ref role="3uigEE" to="zj7m:~SQLException" resolve="SQLException" />
-                </node>
+            <node concept="3cpWsn" id="1_gGZIlEojo" role="TDEfY">
+              <property role="TrG5h" value="e" />
+              <node concept="3uibUv" id="1_gGZIlEojp" role="1tU5fm">
+                <ref role="3uigEE" to="zj7m:~SQLException" resolve="SQLException" />
               </node>
             </node>
           </node>
