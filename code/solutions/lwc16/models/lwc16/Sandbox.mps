@@ -82,6 +82,9 @@
     </language>
     <language id="2374bc90-7e37-41f1-a9c4-c2e35194c36a" name="com.mbeddr.doc">
       <concept id="4317007310193476045" name="com.mbeddr.doc.structure.ScaleDownNotUp100" flags="ng" index="2bctqb" />
+      <concept id="6165313375055797476" name="com.mbeddr.doc.structure.FormattedText" flags="ng" index="$DsGX">
+        <child id="6165313375055797477" name="text" index="$DsGW" />
+      </concept>
       <concept id="6657644269295214799" name="com.mbeddr.doc.structure.IDocumentLike" flags="ng" index="G9hjZ">
         <reference id="6657644269295214800" name="config" index="G9hjw" />
         <child id="126932837435370865" name="authors" index="Wq1Bf" />
@@ -112,6 +115,7 @@
         <property id="126932837435370852" name="email" index="Wq1Bq" />
         <property id="126932837435370851" name="name" index="Wq1Bt" />
       </concept>
+      <concept id="4457500422381571986" name="com.mbeddr.doc.structure.CodeFormattedText" flags="ng" index="1jUjqm" />
       <concept id="4208238404730191274" name="com.mbeddr.doc.structure.Chapter" flags="ng" index="1mvXsy" />
       <concept id="6955693250238922820" name="com.mbeddr.doc.structure.AbstractModelContentParagraph" flags="ng" index="3z_lpG">
         <property id="6955693250238922823" name="showContents" index="3z_lpJ" />
@@ -375,6 +379,63 @@
           <node concept="2NCZwO" id="7T0_4mNu1uY" role="3z_lpI">
             <node concept="2NCMab" id="7T0_4mNu1v1" role="2NCMaf">
               <ref role="2NCMaa" node="7T0_4mNu1o6" resolve="LanguageDemarcation" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="1zKhy7PAPOi" role="1_0VJ0">
+        <property role="TrG5h" value="DelayedDecisions" />
+        <property role="1_0VJr" value="Delayed Decisions" />
+        <node concept="1_0LV8" id="1zKhy7PAPP3" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAPP4" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAPP5" role="19SJt6">
+              <property role="19SUeA" value="At node insertion a defined concept must be inserted. However, it is possible to restructure the concepts as you type. For example to enter a function here you can type " />
+            </node>
+            <node concept="1jUjqm" id="1zKhy7PAPPb" role="19SJt6">
+              <node concept="19SGf9" id="1zKhy7PAPPc" role="$DsGW">
+                <node concept="19SUe$" id="1zKhy7PAPPd" role="19SJt6">
+                  <property role="19SUeA" value="int16 myfunc(" />
+                </node>
+              </node>
+            </node>
+            <node concept="19SUe$" id="1zKhy7PAPPa" role="19SJt6">
+              <property role="19SUeA" value=" to enter a function. After entering " />
+            </node>
+            <node concept="1jUjqm" id="1zKhy7PAPPk" role="19SJt6">
+              <node concept="19SGf9" id="1zKhy7PAPPl" role="$DsGW">
+                <node concept="19SUe$" id="1zKhy7PAPPm" role="19SJt6">
+                  <property role="19SUeA" value="int16 myfunc" />
+                </node>
+              </node>
+            </node>
+            <node concept="19SUe$" id="1zKhy7PAPPj" role="19SJt6">
+              <property role="19SUeA" value=" the concept is still a variable declaration. Entering the " />
+            </node>
+            <node concept="1jUjqm" id="1zKhy7PAPPw" role="19SJt6">
+              <node concept="19SGf9" id="1zKhy7PAPPx" role="$DsGW">
+                <node concept="19SUe$" id="1zKhy7PAPPy" role="19SJt6">
+                  <property role="19SUeA" value="(" />
+                </node>
+              </node>
+            </node>
+            <node concept="19SUe$" id="1zKhy7PAPPz" role="19SJt6">
+              <property role="19SUeA" value=" transforms the node into a function." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="1zKhy7PAPUi" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAPUj" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAPUk" role="19SJt6">
+              <property role="19SUeA" value="Similarly, " />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="1zKhy7PAPQU" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="1zKhy7PAPQV" role="3z_lpI">
+            <node concept="2NCMab" id="1zKhy7PAPRD" role="2NCMaf">
+              <ref role="2NCMaa" node="1zKhy7PAPQB" resolve="EditingScratchpad" />
             </node>
           </node>
         </node>
@@ -1181,6 +1242,18 @@
         <property role="2caQfQ" value="false" />
         <property role="2c7vTL" value="false" />
       </node>
+    </node>
+  </node>
+  <node concept="N3F5e" id="1zKhy7PAPQB">
+    <property role="TrG5h" value="EditingScratchpad" />
+    <node concept="2NXPZ9" id="1zKhy7PAPQC" role="N3F5h">
+      <property role="TrG5h" value="empty_1466531380399_14" />
+    </node>
+    <node concept="2NXPZ9" id="1zKhy7PAPU9" role="N3F5h">
+      <property role="TrG5h" value="empty_1466531514394_21" />
+    </node>
+    <node concept="2NXPZ9" id="1zKhy7PAPRM" role="N3F5h">
+      <property role="TrG5h" value="empty_1466531421298_17" />
     </node>
   </node>
 </model>
