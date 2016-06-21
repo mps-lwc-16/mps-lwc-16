@@ -309,6 +309,29 @@
           <property role="TrG5h" value="empty_-1" />
         </node>
       </node>
+      <node concept="1_0VNX" id="1zKhy7PAOv6" role="1_0VJ0">
+        <property role="TrG5h" value="CopyPaste" />
+        <property role="1_0VJr" value="Copy paste" />
+        <node concept="1_0LV8" id="1zKhy7PAOvC" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAOvD" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAOvE" role="19SJt6">
+              <property role="19SUeA" value="It is possible to select, copy, and paste nodes across any language boundaries. However selection of nodes must follow the tree structure. So it is possible to copy 5 full statements from a selection. It is also possible to copy a node which has a component (separate language) containing a statemachine (separate language) containing c code (separate language). It is not possible to start selection halfway a node." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="1zKhy7PAOUv" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="1zKhy7PAOUw" role="3z_lpI">
+            <node concept="2NCMab" id="1zKhy7PAOV2" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+            <node concept="2NCMab" id="1zKhy7PAOV7" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:6GXPbpLjxtH" resolve="FlightAnalyzer" />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1_0VNX" id="7T0_4mNu1ug" role="1_0VJ0">
         <property role="1_0VJr" value="Language Demarcation" />
         <property role="TrG5h" value="LanguageDemarcation" />
@@ -1072,7 +1095,7 @@
       <node concept="OjmMv" id="1zKhy7PAIow" role="2B_H8o">
         <node concept="19SGf9" id="1zKhy7PAIox" role="OjmMu">
           <node concept="19SUe$" id="1zKhy7PAIoy" role="19SJt6">
-            <property role="19SUeA" value="3. An example of an incomplete C expression&#10;Closing the expression at the right side will trigger a tree re-structuring&#10;This behaviour is specifically implemented to facilitate easier expression editing" />
+            <property role="19SUeA" value="3. An example of an incomplete C expression&#10;Closing the expression at the right side will trigger a tree re-structuring&#10;This behaviour is specifically implemented to facilitate easier expression editing. " />
           </node>
         </node>
       </node>
