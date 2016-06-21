@@ -168,6 +168,9 @@
       <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
         <child id="8967919205527146150" name="expression" index="2BFjQA" />
       </concept>
+      <concept id="8105003328814797298" name="com.mbeddr.core.modules.structure.IFunctionLike" flags="ng" index="2H9T1B">
+        <child id="5708867820623310661" name="arguments" index="1UOdpc" />
+      </concept>
       <concept id="6437088627575722813" name="com.mbeddr.core.modules.structure.Module" flags="ng" index="N3F4X">
         <child id="6437088627575722833" name="contents" index="N3F5h" />
       </concept>
@@ -179,6 +182,7 @@
         <child id="4185783222026475860" name="body" index="3XIRFX" />
       </concept>
       <concept id="8934095934011938595" name="com.mbeddr.core.modules.structure.EmptyModuleContent" flags="ng" index="2NXPZ9" />
+      <concept id="7892328519581704407" name="com.mbeddr.core.modules.structure.Argument" flags="ng" index="19RgSI" />
       <concept id="5950410542643524492" name="com.mbeddr.core.modules.structure.FunctionCall" flags="ng" index="3O_q_g">
         <reference id="5950410542643524493" name="function" index="3O_q_h" />
       </concept>
@@ -227,21 +231,31 @@
       </concept>
     </language>
     <language id="97d24244-51db-4e2e-97fc-7bd73b1f5f40" name="com.mbeddr.ext.components">
-      <concept id="5308710777891512019" name="com.mbeddr.ext.components.structure.Field" flags="ng" index="EbCE0" />
-      <concept id="5308710777891565561" name="com.mbeddr.ext.components.structure.FieldRef" flags="ng" index="EbZIE">
-        <reference id="5308710777891565562" name="field" index="EbZID" />
-      </concept>
-      <concept id="4491876417845649011" name="com.mbeddr.ext.components.structure.AtomicComponent" flags="ng" index="2EWCuY">
-        <reference id="4491876417845678669" name="baseComponent" index="2EWKI0" />
-      </concept>
+      <concept id="4491876417845649011" name="com.mbeddr.ext.components.structure.AtomicComponent" flags="ng" index="2EWCuY" />
+      <concept id="4491876417845641677" name="com.mbeddr.ext.components.structure.OperationTrigger" flags="ng" index="2EWDw0" />
       <concept id="4491876417845641670" name="com.mbeddr.ext.components.structure.Runnable" flags="ng" index="2EWDwb">
+        <child id="4491876417845643892" name="trigger" index="2EWDeT" />
         <child id="4491876417845689763" name="body" index="2EWMhI" />
+      </concept>
+      <concept id="4491876417845628840" name="com.mbeddr.ext.components.structure.ProvidedPort" flags="ng" index="2EWHp_" />
+      <concept id="4491876417845683828" name="com.mbeddr.ext.components.structure.OperationParameter" flags="ng" index="2EWNYT" />
+      <concept id="4491876417845484930" name="com.mbeddr.ext.components.structure.Port" flags="ng" index="2EX0hf">
+        <reference id="4491876417845484932" name="intf" index="2EX0h9" />
+      </concept>
+      <concept id="4491876417845484924" name="com.mbeddr.ext.components.structure.Operation" flags="ng" index="2EX0iL" />
+      <concept id="4491876417845484922" name="com.mbeddr.ext.components.structure.ClientServerInterface" flags="ng" index="2EX0iR">
+        <child id="4491876417845484926" name="contents" index="2EX0iN" />
       </concept>
       <concept id="4491876417845474761" name="com.mbeddr.ext.components.structure.Component" flags="ng" index="2EX6K4">
         <child id="6041318036221669720" name="contents" index="2RW2fA" />
       </concept>
+      <concept id="4514118643321588318" name="com.mbeddr.ext.components.structure.IOperationTriggerLike" flags="ng" index="1ZwTiz">
+        <reference id="4514118643321619583" name="calledOperation" index="1ZwxE2" />
+        <reference id="4514118643321592184" name="providedPort" index="1ZwSu5" />
+      </concept>
     </language>
     <language id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions">
+      <concept id="8463282783691618440" name="com.mbeddr.core.expressions.structure.Int32tType" flags="ng" index="26Vqph" />
       <concept id="8463282783691618435" name="com.mbeddr.core.expressions.structure.Int16tType" flags="ng" index="26Vqpq" />
       <concept id="3005510381523579442" name="com.mbeddr.core.expressions.structure.UnaryExpression" flags="ng" index="2aKSnQ">
         <child id="7254843406768839760" name="expression" index="1_9fRO" />
@@ -258,6 +272,7 @@
       </concept>
       <concept id="7892328519581699353" name="com.mbeddr.core.expressions.structure.VoidType" flags="ng" index="19Rifw" />
       <concept id="4739982148980385695" name="com.mbeddr.core.expressions.structure.FloatType" flags="ng" index="3AreGT" />
+      <concept id="8860443239512128058" name="com.mbeddr.core.expressions.structure.BooleanType" flags="ng" index="3TlMgk" />
       <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
         <property id="2941277002445651368" name="const" index="2c7vTL" />
         <property id="2941277002448691247" name="volatile" index="2caQfQ" />
@@ -534,33 +549,81 @@
   </node>
   <node concept="N3F5e" id="zh_Ys$lxnu">
     <property role="TrG5h" value="ComponentsExample" />
-    <node concept="2EWCuY" id="zh_Ys$lxnw" role="N3F5h">
+    <node concept="2EX0iR" id="6pYKx1vDILs" role="N3F5h">
       <property role="2OOxQR" value="true" />
       <property role="TrG5h" value="A" />
-      <node concept="EbCE0" id="zh_Ys$lxnF" role="2RW2fA">
-        <property role="TrG5h" value="a" />
-        <node concept="3AreGT" id="6pYKx1vDtfp" role="2C2TGm">
+      <node concept="2EX0iL" id="6pYKx1vDILC" role="2EX0iN">
+        <property role="TrG5h" value="f" />
+        <node concept="3AreGT" id="6pYKx1vDILG" role="2C2TGm">
           <property role="2caQfQ" value="false" />
           <property role="2c7vTL" value="false" />
+        </node>
+        <node concept="2EWNYT" id="6pYKx1vDILW" role="1UOdpc">
+          <property role="TrG5h" value="a" />
+          <node concept="26Vqph" id="6pYKx1vDILV" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="2EWNYT" id="6pYKx1vDIM6" role="1UOdpc">
+          <property role="TrG5h" value="b" />
+          <node concept="3AreGT" id="6pYKx1vDIM4" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="2EWNYT" id="6pYKx1vDIMk" role="1UOdpc">
+          <property role="TrG5h" value="c" />
+          <node concept="3TlMgk" id="6pYKx1vDIMi" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
         </node>
       </node>
     </node>
-    <node concept="2EWCuY" id="zh_Ys$lxnA" role="N3F5h">
+    <node concept="2NXPZ9" id="6pYKx1vDIN6" role="N3F5h">
+      <property role="TrG5h" value="empty_1466542199582_27" />
+    </node>
+    <node concept="2EWCuY" id="6pYKx1vDIMT" role="N3F5h">
       <property role="2OOxQR" value="true" />
       <property role="TrG5h" value="B" />
-      <ref role="2EWKI0" node="zh_Ys$lxnw" resolve="A" />
-      <node concept="2EWDwb" id="zh_Ys$lxnV" role="2RW2fA">
-        <property role="TrG5h" value="f" />
-        <node concept="3XIRFW" id="zh_Ys$lxnW" role="2EWMhI">
-          <node concept="2BFjQ_" id="zh_Ys$lxoM" role="3XIRFZ">
-            <node concept="EbZIE" id="zh_Ys$lxp0" role="2BFjQA">
-              <ref role="EbZID" node="zh_Ys$lxnF" resolve="a" />
-            </node>
-          </node>
+      <node concept="2EWHp_" id="6pYKx1vDQ6P" role="2RW2fA">
+        <property role="TrG5h" value="a" />
+        <ref role="2EX0h9" node="6pYKx1vDILs" resolve="A" />
+      </node>
+      <node concept="2EWDwb" id="6pYKx1vDQ8c" role="2RW2fA">
+        <property role="TrG5h" value="a_f" />
+        <node concept="3XIRFW" id="6pYKx1vDQ8d" role="2EWMhI">
+          <node concept="3XISUE" id="6pYKx1vDQ8e" role="3XIRFZ" />
         </node>
-        <node concept="3AreGT" id="zh_Ys$lxog" role="2C2TGm">
+        <node concept="2EWDw0" id="6pYKx1vDQ8n" role="2EWDeT">
+          <ref role="1ZwSu5" node="6pYKx1vDQ6P" resolve="a" />
+          <ref role="1ZwxE2" node="6pYKx1vDILC" resolve="f" />
+        </node>
+        <node concept="3AreGT" id="6pYKx1vDQ8p" role="2C2TGm">
           <property role="2caQfQ" value="false" />
           <property role="2c7vTL" value="false" />
+        </node>
+        <node concept="19RgSI" id="6pYKx1vDQ8q" role="1UOdpc">
+          <property role="TrG5h" value="a" />
+          <node concept="26Vqph" id="6pYKx1vDQ8r" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="19RgSI" id="6pYKx1vDQ8s" role="1UOdpc">
+          <property role="TrG5h" value="b" />
+          <node concept="3AreGT" id="6pYKx1vDQ8t" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="19RgSI" id="6pYKx1vDQ8u" role="1UOdpc">
+          <property role="TrG5h" value="c" />
+          <node concept="3TlMgk" id="6pYKx1vDQ8v" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
         </node>
       </node>
     </node>
@@ -872,12 +935,9 @@
         <node concept="1_0LV8" id="6pYKx1vDtfb" role="1_0VJ0">
           <node concept="19SGf9" id="6pYKx1vDtfc" role="1_0LWR">
             <node concept="19SUe$" id="6pYKx1vDtfd" role="19SJt6">
-              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures." />
+              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures. The component B provides interface a, and the runnable a_f is triggered by operation a.f. When you execute the &quot;synchronize&quot; intention on a_f, it will get the same arguments as a.f automatically and its name will be updated consistently to a_f." />
             </node>
           </node>
-        </node>
-        <node concept="1_1sxE" id="zh_Ys$lxpj" role="1_0VJ0">
-          <property role="TrG5h" value="empty_-1" />
         </node>
         <node concept="3z_lpU" id="zh_Ys$lxpd" role="1_0VJ0">
           <property role="3z_lpW" value="mbeddr" />
