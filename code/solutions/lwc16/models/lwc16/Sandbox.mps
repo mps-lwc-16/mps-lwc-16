@@ -33,6 +33,7 @@
     <import index="u246" ref="r:58dfd6c5-a989-4e92-95a0-01777ac12a16(lwc2016.mps.minisql.baselangextension.structure)" />
     <import index="bipj" ref="r:21d2eb1e-577c-40cd-a6a2-02b904a24b1d(lwv2016.mps.minisql.sandbox)" />
     <import index="iwll" ref="r:79ed4c17-66fc-4c5a-bff7-46990b4e0c5d(mbeddr.tutorial.main.req)" />
+    <import index="a56z" ref="r:90f5ad96-7961-4ff0-9b18-de176e0349ba(mps-lwc-16.__spreferences.PlatformTemplates)" />
   </imports>
   <registry>
     <language id="92f195b6-a209-4804-ad65-f5248ecd5873" name="com.mbeddr.mpsutil.margincell">
@@ -65,6 +66,20 @@
       </concept>
       <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$">
         <property id="2557074442922438158" name="escapedValue" index="19SUeA" />
+      </concept>
+    </language>
+    <language id="2d7fadf5-33f6-4e80-a78f-0f739add2bde" name="com.mbeddr.core.buildconfig">
+      <concept id="7717755763392524104" name="com.mbeddr.core.buildconfig.structure.BuildConfiguration" flags="ng" index="2v9HqL">
+        <child id="5323740605968447026" name="target" index="2AWWZH" />
+      </concept>
+      <concept id="5323740605968447022" name="com.mbeddr.core.buildconfig.structure.DesktopPlatform" flags="ng" index="2AWWZL">
+        <property id="5323740605968447025" name="compilerOptions" index="2AWWZI" />
+        <property id="5323740605968447024" name="compiler" index="2AWWZJ" />
+        <property id="3963667026125442601" name="gdb" index="3r8Kw1" />
+        <property id="3963667026125442676" name="make" index="3r8Kxs" />
+      </concept>
+      <concept id="2736179788492003936" name="com.mbeddr.core.buildconfig.structure.IDebuggablePlatform" flags="ng" index="1FkSt_">
+        <property id="2736179788492003937" name="debugOptions" index="1FkSt$" />
       </concept>
     </language>
     <language id="2374bc90-7e37-41f1-a9c4-c2e35194c36a" name="com.mbeddr.doc">
@@ -125,10 +140,19 @@
       </concept>
       <concept id="3350625596579911760" name="com.mbeddr.doc.structure.EmptyDocContent" flags="ng" index="1_1sxE" />
     </language>
+    <language id="2693fc71-9b0e-4b05-ab13-f57227d675f2" name="com.mbeddr.core.util">
+      <concept id="4459718605982051949" name="com.mbeddr.core.util.structure.ReportingConfiguration" flags="ng" index="2Q9Fgs">
+        <child id="4459718605982051999" name="strategy" index="2Q9FjI" />
+      </concept>
+      <concept id="4459718605982051980" name="com.mbeddr.core.util.structure.PrintfReportingStrategy" flags="ng" index="2Q9FjX" />
+    </language>
     <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base">
       <concept id="2642765975824060179" name="com.mbeddr.core.base.structure.SolutionRelativeDirPicker" flags="ng" index="9PVaO" />
       <concept id="8375407818529178006" name="com.mbeddr.core.base.structure.TextBlock" flags="ng" index="OjmMv">
         <child id="8375407818529178007" name="text" index="OjmMu" />
+      </concept>
+      <concept id="4459718605982007337" name="com.mbeddr.core.base.structure.IConfigurationContainer" flags="ng" index="2Q9xDo">
+        <child id="4459718605982007338" name="configurationItems" index="2Q9xDr" />
       </concept>
       <concept id="6156524541422549000" name="com.mbeddr.core.base.structure.AbstractPicker" flags="ng" index="3N1QpV">
         <property id="9294901202237533" name="mayBeEmpty" index="3kgbRO" />
@@ -142,9 +166,6 @@
       <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
         <child id="8967919205527146150" name="expression" index="2BFjQA" />
       </concept>
-      <concept id="8105003328814797298" name="com.mbeddr.core.modules.structure.IFunctionLike" flags="ng" index="2H9T1B">
-        <child id="5708867820623310661" name="arguments" index="1UOdpc" />
-      </concept>
       <concept id="6437088627575722813" name="com.mbeddr.core.modules.structure.Module" flags="ng" index="N3F4X">
         <child id="6437088627575722833" name="contents" index="N3F5h" />
       </concept>
@@ -156,7 +177,6 @@
         <child id="4185783222026475860" name="body" index="3XIRFX" />
       </concept>
       <concept id="8934095934011938595" name="com.mbeddr.core.modules.structure.EmptyModuleContent" flags="ng" index="2NXPZ9" />
-      <concept id="7892328519581704407" name="com.mbeddr.core.modules.structure.Argument" flags="ng" index="19RgSI" />
       <concept id="5950410542643524492" name="com.mbeddr.core.modules.structure.FunctionCall" flags="ng" index="3O_q_g">
         <reference id="5950410542643524493" name="function" index="3O_q_h" />
       </concept>
@@ -174,6 +194,9 @@
       </concept>
       <concept id="1786180596061383227" name="com.mbeddr.ext.statemachines.structure.StatemachineVarRef" flags="ng" index="349IfM">
         <reference id="1786180596061383228" name="var" index="349IfP" />
+      </concept>
+      <concept id="4709703140582114943" name="com.mbeddr.ext.statemachines.structure.StatemachineConfigItem" flags="ng" index="3yF7LM">
+        <property id="4709703140582114945" name="triggerAsConst" index="3yF7Mc" />
       </concept>
       <concept id="1270667558200936379" name="com.mbeddr.ext.statemachines.structure.AbstractTransition" flags="ng" index="1zz5ri">
         <reference id="1270667558201034238" name="targetState" index="1zztin" />
@@ -730,23 +753,6 @@
     <node concept="2EWCuY" id="zh_Ys$lxnw" role="N3F5h">
       <property role="2OOxQR" value="true" />
       <property role="TrG5h" value="A" />
-      <node concept="2EWDwb" id="6pYKx1vDtfw" role="2RW2fA">
-        <property role="TrG5h" value="f" />
-        <node concept="3XIRFW" id="6pYKx1vDtfx" role="2EWMhI">
-          <node concept="3XISUE" id="6pYKx1vDtfy" role="3XIRFZ" />
-        </node>
-        <node concept="3AreGT" id="6pYKx1vDtfG" role="2C2TGm">
-          <property role="2caQfQ" value="false" />
-          <property role="2c7vTL" value="false" />
-        </node>
-        <node concept="19RgSI" id="6pYKx1vDtfK" role="1UOdpc">
-          <property role="TrG5h" value="x" />
-          <node concept="26Vqpq" id="6pYKx1vDtfJ" role="2C2TGm">
-            <property role="2caQfQ" value="false" />
-            <property role="2c7vTL" value="false" />
-          </node>
-        </node>
-      </node>
       <node concept="EbCE0" id="zh_Ys$lxnF" role="2RW2fA">
         <property role="TrG5h" value="a" />
         <node concept="3AreGT" id="6pYKx1vDtfp" role="2C2TGm">
@@ -933,6 +939,21 @@
     </node>
     <node concept="2NXPZ9" id="7T0_4mNu1Tv" role="N3F5h">
       <property role="TrG5h" value="empty_1463516578658_16" />
+    </node>
+  </node>
+  <node concept="2v9HqL" id="6pYKx1vDHk$">
+    <node concept="2AWWZL" id="6pYKx1vDHkB" role="2AWWZH">
+      <property role="2AWWZJ" value="gcc" />
+      <property role="3r8Kw1" value="gdb" />
+      <property role="3r8Kxs" value="make" />
+      <property role="2AWWZI" value="-std=c99" />
+      <property role="1FkSt$" value="-g" />
+    </node>
+    <node concept="3yF7LM" id="6pYKx1vDHwX" role="2Q9xDr">
+      <property role="3yF7Mc" value="true" />
+    </node>
+    <node concept="2Q9Fgs" id="6pYKx1vDHLq" role="2Q9xDr">
+      <node concept="2Q9FjX" id="6pYKx1vDHLr" role="2Q9FjI" />
     </node>
   </node>
 </model>
