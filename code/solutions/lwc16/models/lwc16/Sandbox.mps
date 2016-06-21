@@ -332,6 +332,26 @@
           </node>
         </node>
       </node>
+      <node concept="1_0VNX" id="1zKhy7PAPi_" role="1_0VJ0">
+        <property role="TrG5h" value="Restructuring" />
+        <property role="1_0VJr" value="Restructuring" />
+        <node concept="1_0LV8" id="1zKhy7PAPrt" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAPru" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAPrv" role="19SJt6">
+              <property role="19SUeA" value="The following example shows the mbeddr implementation of restructuring in the expressionMissingAParenthesis function:" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="1zKhy7PAPjk" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="1zKhy7PAPjl" role="3z_lpI">
+            <node concept="2NCMab" id="1zKhy7PAPjq" role="2NCMaf">
+              <ref role="2NCMaa" node="6jHW8qmQZrn" resolve="EditingIncompletePrograms" />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1_0VNX" id="7T0_4mNu1ug" role="1_0VJ0">
         <property role="1_0VJr" value="Language Demarcation" />
         <property role="TrG5h" value="LanguageDemarcation" />
@@ -1095,7 +1115,7 @@
       <node concept="OjmMv" id="1zKhy7PAIow" role="2B_H8o">
         <node concept="19SGf9" id="1zKhy7PAIox" role="OjmMu">
           <node concept="19SUe$" id="1zKhy7PAIoy" role="19SJt6">
-            <property role="19SUeA" value="3. An example of an incomplete C expression&#10;Closing the expression at the right side will trigger a tree re-structuring&#10;This behaviour is specifically implemented to facilitate easier expression editing. " />
+            <property role="19SUeA" value="3. An example of an incomplete C expression&#10;Closing the expression at the right side will trigger a restructuring action&#10;This behaviour is specifically implemented to facilitate easier expression editing. " />
           </node>
         </node>
       </node>
@@ -1110,24 +1130,24 @@
             <property role="2caQfQ" value="false" />
             <property role="2c7vTL" value="false" />
           </node>
-          <node concept="2BOcil" id="1zKhy7PAK6Q" role="3XIe9u">
-            <node concept="2BOciq" id="1zKhy7PAK6R" role="3TlMhI">
-              <node concept="3TlMh9" id="1zKhy7PAK6S" role="3TlMhI">
+          <node concept="2BOcil" id="1zKhy7PAPqT" role="3XIe9u">
+            <node concept="2BOciq" id="1zKhy7PAPqU" role="3TlMhI">
+              <node concept="3TlMh9" id="1zKhy7PAPqV" role="3TlMhI">
                 <property role="2hmy$m" value="5" />
               </node>
-              <node concept="3TlMh9" id="1zKhy7PAK6T" role="3TlMhJ">
+              <node concept="3TlMh9" id="1zKhy7PAPqW" role="3TlMhJ">
                 <property role="2hmy$m" value="4" />
-                <node concept="y$OdM" id="1zKhy7PAK5G" role="lGtFl">
+                <node concept="y$OdM" id="1zKhy7PAPpJ" role="lGtFl">
                   <property role="y$PlX" value="(" />
                   <property role="y$Pl2" value="true" />
                 </node>
               </node>
             </node>
-            <node concept="2BOcih" id="1zKhy7PAK6U" role="3TlMhJ">
-              <node concept="3TlMh9" id="1zKhy7PAK6V" role="3TlMhI">
+            <node concept="2BOcih" id="1zKhy7PAPqX" role="3TlMhJ">
+              <node concept="3TlMh9" id="1zKhy7PAPqY" role="3TlMhI">
                 <property role="2hmy$m" value="4" />
               </node>
-              <node concept="3TlMh9" id="1zKhy7PAK6W" role="3TlMhJ">
+              <node concept="3TlMh9" id="1zKhy7PAPqZ" role="3TlMhJ">
                 <property role="2hmy$m" value="3" />
               </node>
             </node>
