@@ -40,13 +40,19 @@
       <concept id="8455208232410333108" name="com.mbeddr.mpsutil.review.annotation.structure.CommentAnnotationContainer" flags="ng" index="2f$52y" />
     </language>
     <language id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements">
+      <concept id="6275792049641600983" name="com.mbeddr.core.statements.structure.IfStatement" flags="ng" index="c0U19">
+        <child id="6275792049641600984" name="condition" index="c0U16" />
+        <child id="6275792049641600985" name="thenPart" index="c0U17" />
+      </concept>
       <concept id="7254843406768833938" name="com.mbeddr.core.statements.structure.ExpressionStatement" flags="ng" index="1_9egQ">
         <child id="7254843406768833939" name="expr" index="1_9egR" />
       </concept>
       <concept id="1679452829930336984" name="com.mbeddr.core.statements.structure.CommentStatement" flags="ng" index="1QiMYF">
         <child id="8624890525768479139" name="textblock" index="3SJzmv" />
       </concept>
-      <concept id="4185783222026475238" name="com.mbeddr.core.statements.structure.LocalVariableDeclaration" flags="ng" index="3XIRlf" />
+      <concept id="4185783222026475238" name="com.mbeddr.core.statements.structure.LocalVariableDeclaration" flags="ng" index="3XIRlf">
+        <child id="4185783222026502647" name="init" index="3XIe9u" />
+      </concept>
       <concept id="4185783222026475861" name="com.mbeddr.core.statements.structure.StatementList" flags="ng" index="3XIRFW">
         <child id="4185783222026475862" name="statements" index="3XIRFZ" />
       </concept>
@@ -239,7 +245,10 @@
       <concept id="2212975673976017893" name="com.mbeddr.core.expressions.structure.NumericLiteral" flags="ng" index="2hns93">
         <property id="2212975673976043696" name="value" index="2hmy$m" />
       </concept>
+      <concept id="5763383285156373022" name="com.mbeddr.core.expressions.structure.DivExpression" flags="ng" index="2BOcih" />
       <concept id="5763383285156373020" name="com.mbeddr.core.expressions.structure.MultiExpression" flags="ng" index="2BOcij" />
+      <concept id="5763383285156373018" name="com.mbeddr.core.expressions.structure.MinusExpression" flags="ng" index="2BOcil" />
+      <concept id="5763383285156373013" name="com.mbeddr.core.expressions.structure.PlusExpression" flags="ng" index="2BOciq" />
       <concept id="318113533128716675" name="com.mbeddr.core.expressions.structure.ITyped" flags="ng" index="2C2TGh">
         <child id="318113533128716676" name="type" index="2C2TGm" />
       </concept>
@@ -253,8 +262,15 @@
         <child id="8860443239512128064" name="left" index="3TlMhI" />
         <child id="8860443239512128065" name="right" index="3TlMhJ" />
       </concept>
+      <concept id="8860443239512128050" name="com.mbeddr.core.expressions.structure.Expression" flags="ng" index="3TlMgs" />
       <concept id="8860443239512128103" name="com.mbeddr.core.expressions.structure.NumberLiteral" flags="ng" index="3TlMh9" />
       <concept id="4375898003726285486" name="com.mbeddr.core.expressions.structure.PostIncrementExpression" flags="ng" index="3TM6Ey" />
+    </language>
+    <language id="b4f35ed8-45af-4efa-abe4-00ac26956e69" name="com.mbeddr.mpsutil.grammarcells.runtimelang">
+      <concept id="5083944728301309881" name="com.mbeddr.mpsutil.grammarcells.runtimelang.structure.ArbitraryTextAnnotation" flags="ng" index="y$OdM">
+        <property id="5083944728301312393" name="left" index="y$Pl2" />
+        <property id="5083944728301312438" name="text" index="y$PlX" />
+      </concept>
     </language>
   </registry>
   <node concept="1_1swa" id="zh_Ys$l5mx">
@@ -264,6 +280,35 @@
     <node concept="1mvXsy" id="zh_Ys$l7Co" role="1_0VJ0">
       <property role="TrG5h" value="editing" />
       <property role="1_0VJr" value="Editing" />
+      <node concept="1_0VNX" id="6jHW8qmQZoC" role="1_0VJ0">
+        <property role="TrG5h" value="EditingIncompletePrograms" />
+        <property role="1_0VJr" value="Editing Incomplete Programs" />
+        <node concept="1_0LV8" id="1zKhy7PAMcx" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAMcy" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAMcz" role="19SJt6">
+              <property role="19SUeA" value="It is not possible to arbitrarily type text and have it parsed" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="1zKhy7PAMco" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="1_1sxE" id="1zKhy7PAMci" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="1zKhy7PAMbJ" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="1zKhy7PAMbK" role="3z_lpI">
+            <node concept="2NCMab" id="1zKhy7PAMcg" role="2NCMaf">
+              <ref role="2NCMaa" node="6jHW8qmQZrn" resolve="EditingIncompletePrograms" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="1zKhy7PAO7Y" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+      </node>
       <node concept="1_0VNX" id="7T0_4mNu1ug" role="1_0VJ0">
         <property role="1_0VJr" value="Language Demarcation" />
         <property role="TrG5h" value="LanguageDemarcation" />
@@ -974,6 +1019,124 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="N3F5e" id="6jHW8qmQZrn">
+    <property role="TrG5h" value="EditingIncompletePrograms" />
+    <node concept="2B_Gvg" id="6jHW8qmQZu1" role="N3F5h">
+      <node concept="OjmMv" id="6jHW8qmQZu3" role="2B_H8o">
+        <node concept="19SGf9" id="6jHW8qmQZu4" role="OjmMu">
+          <node concept="19SUe$" id="6jHW8qmQZu5" role="19SJt6">
+            <property role="19SUeA" value="1. Syntactically correct, but incomplete function since it's missing a return statement." />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnx" id="6jHW8qmQZsC" role="N3F5h">
+      <property role="TrG5h" value="missingReturn" />
+      <node concept="26Vqpq" id="6jHW8qmQZtu" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="3XIRFW" id="6jHW8qmQZsE" role="3XIRFX" />
+    </node>
+    <node concept="2NXPZ9" id="6jHW8qmQZtO" role="N3F5h">
+      <property role="TrG5h" value="empty_1466528876419_11" />
+    </node>
+    <node concept="2B_Gvg" id="1zKhy7PAImd" role="N3F5h">
+      <node concept="OjmMv" id="1zKhy7PAImf" role="2B_H8o">
+        <node concept="19SGf9" id="1zKhy7PAImg" role="OjmMu">
+          <node concept="19SUe$" id="1zKhy7PAImh" role="19SJt6">
+            <property role="19SUeA" value="2. A function missing its type and its name and a condition within a guard. It is fine to have &quot;gaps&quot; in your concepts and still persist them." />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnx" id="6jHW8qmQZur" role="N3F5h">
+      <node concept="19Rifw" id="6jHW8qmQZus" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="3XIRFW" id="6jHW8qmQZut" role="3XIRFX">
+        <node concept="c0U19" id="1zKhy7PAMcP" role="3XIRFZ">
+          <node concept="3XIRFW" id="1zKhy7PAMcQ" role="c0U17" />
+          <node concept="3TlMgs" id="1zKhy7PAMcR" role="c0U16" />
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="1zKhy7PAIm_" role="N3F5h">
+      <property role="TrG5h" value="empty_1466529050059_2" />
+    </node>
+    <node concept="2B_Gvg" id="1zKhy7PAIou" role="N3F5h">
+      <node concept="OjmMv" id="1zKhy7PAIow" role="2B_H8o">
+        <node concept="19SGf9" id="1zKhy7PAIox" role="OjmMu">
+          <node concept="19SUe$" id="1zKhy7PAIoy" role="19SJt6">
+            <property role="19SUeA" value="3. An example of an incomplete C expression&#10;Closing the expression at the right side will trigger a tree re-structuring&#10;This behaviour is specifically implemented to facilitate easier expression editing" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnx" id="1zKhy7PAItJ" role="N3F5h">
+      <property role="TrG5h" value="expressionMissingAParenthesis" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="1zKhy7PAItL" role="3XIRFX">
+        <node concept="3XIRlf" id="1zKhy7PAIuM" role="3XIRFZ">
+          <property role="TrG5h" value="a" />
+          <node concept="26Vqpq" id="1zKhy7PAIuK" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+          <node concept="2BOcil" id="1zKhy7PAK6Q" role="3XIe9u">
+            <node concept="2BOciq" id="1zKhy7PAK6R" role="3TlMhI">
+              <node concept="3TlMh9" id="1zKhy7PAK6S" role="3TlMhI">
+                <property role="2hmy$m" value="5" />
+              </node>
+              <node concept="3TlMh9" id="1zKhy7PAK6T" role="3TlMhJ">
+                <property role="2hmy$m" value="4" />
+                <node concept="y$OdM" id="1zKhy7PAK5G" role="lGtFl">
+                  <property role="y$PlX" value="(" />
+                  <property role="y$Pl2" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="2BOcih" id="1zKhy7PAK6U" role="3TlMhJ">
+              <node concept="3TlMh9" id="1zKhy7PAK6V" role="3TlMhI">
+                <property role="2hmy$m" value="4" />
+              </node>
+              <node concept="3TlMh9" id="1zKhy7PAK6W" role="3TlMhJ">
+                <property role="2hmy$m" value="3" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="19Rifw" id="1zKhy7PAIt_" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="1zKhy7PAIs1" role="N3F5h">
+      <property role="TrG5h" value="empty_1466529115740_8" />
+    </node>
+    <node concept="2B_Gvg" id="1zKhy7PAIne" role="N3F5h">
+      <node concept="OjmMv" id="1zKhy7PAIng" role="2B_H8o">
+        <node concept="19SGf9" id="1zKhy7PAInh" role="OjmMu">
+          <node concept="19SUe$" id="1zKhy7PAIni" role="19SJt6">
+            <property role="19SUeA" value="4. It is not possible to make a syntactically incorrect construct such as a function missing a closing bracket. The concept editor is fully shown." />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnx" id="1zKhy7PANgC" role="N3F5h">
+      <property role="TrG5h" value="cannotDeleteOnlyClosingBracket" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="1zKhy7PANgE" role="3XIRFX">
+        <node concept="3XISUE" id="1zKhy7PANgF" role="3XIRFZ" />
+      </node>
+      <node concept="19Rifw" id="1zKhy7PAN2a" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
       </node>
     </node>
   </node>
