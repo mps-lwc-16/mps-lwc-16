@@ -32,6 +32,7 @@
     <import index="7qwm" ref="r:5bb9f839-879d-4d8b-98b1-43aac3dcfbee(mbeddr.tutorial.main.plainC)" />
     <import index="u246" ref="r:58dfd6c5-a989-4e92-95a0-01777ac12a16(lwc2016.mps.minisql.baselangextension.structure)" />
     <import index="bipj" ref="r:21d2eb1e-577c-40cd-a6a2-02b904a24b1d(lwv2016.mps.minisql.sandbox)" />
+    <import index="iwll" ref="r:79ed4c17-66fc-4c5a-bff7-46990b4e0c5d(mbeddr.tutorial.main.req)" />
   </imports>
   <registry>
     <language id="92f195b6-a209-4804-ad65-f5248ecd5873" name="com.mbeddr.mpsutil.margincell">
@@ -424,7 +425,7 @@
         <node concept="1_0LV8" id="zh_Ys$lxN3" role="1_0VJ0">
           <node concept="19SGf9" id="zh_Ys$lxN4" role="1_0LWR">
             <node concept="19SUe$" id="zh_Ys$lxN5" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr documentation language allows insertion of pictures." />
+              <property role="19SUeA" value="The mbeddr documentation language allows insertion of pictures. This is because MPS allows insertion of any type of icon in an editor." />
             </node>
           </node>
         </node>
@@ -472,10 +473,17 @@
       <node concept="1_0VNX" id="30e67$70rby" role="1_0VJ0">
         <property role="TrG5h" value="langemb" />
         <property role="1_0VJr" value="Language Embedding" />
-        <node concept="1_0LV8" id="30e67$70rbG" role="1_0VJ0">
-          <node concept="19SGf9" id="30e67$70rbH" role="1_0LWR">
-            <node concept="19SUe$" id="30e67$70rbI" role="19SJt6">
-              <property role="19SUeA" value="It is possible to embed SQL code in BaseLanguage expressions and viceversa" />
+        <node concept="1_0LV8" id="6pYKx1vDtrg" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDtrh" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDtri" role="19SJt6">
+              <property role="19SUeA" value="MPS has modeled a language that looks very similar to java, which is called BaseLanguage. This language has constructs like classes, for-loops, if-statements, etc." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="6pYKx1vDtr$" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDtr_" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDtrA" role="19SJt6">
+              <property role="19SUeA" value="We have modeled SQL as a DSL within MPS and made interfaces to BaseLanguage, so that it is possible to embed SQL code in BaseLanguage expressions and viceversa." />
             </node>
           </node>
         </node>
@@ -498,6 +506,42 @@
           <node concept="2NCZwO" id="b9Kl1N472B" role="3z_lpI">
             <node concept="2NCMab" id="b9Kl1N47Pn" role="2NCMaf">
               <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="6pYKx1vDttC" role="1_0VJ0">
+        <property role="TrG5h" value="extcomp" />
+        <property role="1_0VJr" value="Extension Composition" />
+        <node concept="1_0LV8" id="6pYKx1vD$4q" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vD$4r" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vD$4s" role="19SJt6">
+              <property role="19SUeA" value="One of the many examples from mbeddr language composition is the composition of multiple language: requirements language for writing requirements, decision tables language to express decisions and intermixing them with code from mbeddr C." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="6pYKx1vD$4f" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="6pYKx1vD$3T" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="6pYKx1vD$3U" role="3z_lpI">
+            <node concept="2NCMab" id="6pYKx1vD$9k" role="2NCMaf">
+              <ref role="2NCMaa" to="iwll:1fAuj8TwdSV" resolve="FlightJudgementRules" />
+            </node>
+            <node concept="2NCMab" id="6pYKx1vD$9q" role="2NCMaf">
+              <ref role="2NCMaa" to="iwll:1fAuj8TwdSY" resolve="InFlightPoints" />
+            </node>
+            <node concept="2NCMab" id="6pYKx1vD$9y" role="2NCMaf">
+              <ref role="2NCMaa" to="iwll:2A5UqXKRpLH" resolve="priceDep" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="6pYKx1vD$3x" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vD$3y" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vD$3z" role="19SJt6">
+              <property role="19SUeA" value="" />
             </node>
           </node>
         </node>
@@ -554,6 +598,13 @@
       <node concept="1_0VNX" id="30e67$70Duf" role="1_0VJ0">
         <property role="TrG5h" value="strmig" />
         <property role="1_0VJr" value="Structure Migration" />
+        <node concept="1_0LV8" id="6pYKx1vD$9J" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vD$9K" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vD$9L" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
         <node concept="1_0LV8" id="30e67$70DvN" role="1_0VJ0">
           <node concept="19SGf9" id="30e67$70DvO" role="1_0LWR">
             <node concept="19SUe$" id="30e67$70DvP" role="19SJt6">
