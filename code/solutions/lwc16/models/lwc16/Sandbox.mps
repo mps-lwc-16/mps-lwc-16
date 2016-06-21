@@ -36,16 +36,8 @@
     <import index="a56z" ref="r:90f5ad96-7961-4ff0-9b18-de176e0349ba(mps-lwc-16.__spreferences.PlatformTemplates)" />
   </imports>
   <registry>
-    <language id="92f195b6-a209-4804-ad65-f5248ecd5873" name="com.mbeddr.mpsutil.margincell">
-      <concept id="1159656764131926609" name="com.mbeddr.mpsutil.margincell.structure.IMarginCellContent" flags="ng" index="3vooZZ">
-        <property id="8039098920897639409" name="attachedCellId" index="19LeSh" />
-        <reference id="8039098920897680033" name="attachedNode" index="19LoX1" />
-      </concept>
-    </language>
     <language id="7a060fae-09e0-4372-be36-6696d6554c0e" name="com.mbeddr.mpsutil.review.annotation">
-      <concept id="8455208232410333108" name="com.mbeddr.mpsutil.review.annotation.structure.CommentAnnotationContainer" flags="ng" index="2f$52y">
-        <child id="8455208232410333109" name="comments" index="2f$52z" />
-      </concept>
+      <concept id="8455208232410333108" name="com.mbeddr.mpsutil.review.annotation.structure.CommentAnnotationContainer" flags="ng" index="2f$52y" />
     </language>
     <language id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements">
       <concept id="7254843406768833938" name="com.mbeddr.core.statements.structure.ExpressionStatement" flags="ng" index="1_9egQ">
@@ -216,13 +208,6 @@
         <child id="4643433264760912612" name="init" index="2cfFcn" />
       </concept>
     </language>
-    <language id="c788b046-2019-4656-8b60-8bb9bbb177b5" name="com.mbeddr.mpsutil.review">
-      <concept id="1159656764133526267" name="com.mbeddr.mpsutil.review.structure.ReviewNote" flags="ng" index="3vAitl">
-        <property id="5652920968054438504" name="created" index="3ajGZ3" />
-        <property id="5652920968054438487" name="creator" index="3ajGZW" />
-        <child id="5652920968054438510" name="note" index="3ajGZ5" />
-      </concept>
-    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
@@ -274,376 +259,8 @@
   </registry>
   <node concept="1_1swa" id="zh_Ys$l5mx">
     <property role="yApLE" value="1" />
-    <property role="TrG5h" value="MPSSolutionLWC2016" />
+    <property role="TrG5h" value="Editing" />
     <ref role="G9hjw" node="zh_Ys$l7Bs" resolve="MPSSolutionLWC2016Config" />
-    <node concept="1mvXsy" id="zh_Ys$l7Ca" role="1_0VJ0">
-      <property role="TrG5h" value="notation" />
-      <property role="1_0VJr" value="Notation" />
-      <node concept="1_0VNX" id="zh_Ys$l7Ct" role="1_0VJ0">
-        <property role="TrG5h" value="mathsym" />
-        <property role="1_0VJr" value="Mathematical Symbols" />
-        <node concept="1_0LV8" id="zh_Ys$lcmw" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lcmx" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lcmy" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr tutorial implements a langauge for writing mathematical formulae:" />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$l7CA" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$l7CB" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lclv" role="2NCMaf">
-              <ref role="2NCMaa" to="8c4t:4r1mNB_vx3b" resolve="HelloMath" />
-            </node>
-            <node concept="2NCMab" id="zh_Ys$lclO" role="2NCMaf">
-              <ref role="2NCMaa" to="8c4t:66PbkE$SwpG" resolve="sumOfProductsOfLogs" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$l7Cy" role="1_0VJ0">
-        <property role="TrG5h" value="tabgraphnot" />
-        <property role="1_0VJr" value="Textual Notation, Tabular Notation, Diagrammatic Notation, and Switching Between Notations" />
-        <node concept="1_0LV8" id="zh_Ys$lcmL" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lcmM" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lcmN" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr statemachine language can have three different projections, namely textual, tabular, and graphical (use Code --&gt; Projection or the editor hints to switch projections):" />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lclS" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lclT" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lclW" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
-            </node>
-            <node concept="2NCMab" id="zh_Ys$lcm1" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:6GXPbpLjxtH" resolve="FlightAnalyzer" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lcnQ" role="1_0VJ0">
-        <property role="TrG5h" value="metadata" />
-        <property role="1_0VJr" value="Generic Metadata Annotations" />
-        <node concept="1_0LV8" id="zh_Ys$lcot" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lcou" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lcov" role="19SJt6">
-              <property role="19SUeA" value="todo" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lcpj" role="1_0VJ0">
-        <property role="TrG5h" value="hiding" />
-        <property role="1_0VJr" value="Optional Hiding" />
-        <node concept="1_0LV8" id="zh_Ys$lgm6" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lgm7" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lgm8" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr variability language makes it possible to display (or omit) pieces of the model, based on a configuration of the feature model: " />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lglV" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lglW" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lglZ" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:KfIhkXddlU" resolve="StaticVariability" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lgmH" role="1_0VJ0">
-        <property role="TrG5h" value="compprop" />
-        <property role="1_0VJr" value="Computed Properties" />
-        <node concept="1_0LV8" id="zh_Ys$lgnJ" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lgnK" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lgnL" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr unit test language indexes assert statements for being able to look up log statements with assert in the code. The indexes are not specified directly in the model, but rather computed properties, based on their position in the code: " />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lgnB" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lgnC" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lprt" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
-            </node>
-            <node concept="2NCMab" id="zh_Ys$lpry" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:6GXPbpLjseN" resolve="testFlightAnalyzer" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lpsb" role="1_0VJ0">
-        <property role="TrG5h" value="compstruct" />
-        <property role="1_0VJr" value="Computed Structures" />
-        <node concept="1_0LV8" id="6pYKx1vDtfb" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vDtfc" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vDtfd" role="19SJt6">
-              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures." />
-            </node>
-          </node>
-        </node>
-        <node concept="1_1sxE" id="zh_Ys$lxpj" role="1_0VJ0">
-          <property role="TrG5h" value="empty_-1" />
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lxpd" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lxpe" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lxph" role="2NCMaf">
-              <ref role="2NCMaa" node="zh_Ys$lxnu" resolve="ComponentsExample" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lxvd" role="1_0VJ0">
-        <property role="TrG5h" value="skeled" />
-        <property role="1_0VJr" value="Skeleton Editing" />
-        <node concept="1_0LV8" id="6pYKx1vDthi" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vDthj" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vDthk" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr build language is an example of bigger structures with skeletons that can be edited. You make a build configuration, make some course-grained choices on what you want (gcc, microcontroller, custom), and then you have a skeleton in which the details can be filled in." />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lxvS" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lxvT" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lxvW" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:7VsgA5L655o" resolve="BuildConfiguration (m.t.m.defaultExtensions)" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lxJI" role="1_0VJ0">
-        <property role="TrG5h" value="codeinprose" />
-        <property role="1_0VJr" value="Embedding Code in Prose" />
-        <node concept="1_0LV8" id="6pYKx1vDthx" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vDthy" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vDthz" role="19SJt6">
-              <property role="19SUeA" value="The example below makes it possible to embed entire prose (including references) in comments of an mbeddr C listing. The best example of code in prose is this presentation: the entire document is written in mbeddr doc language and there are pieces of code embedded to make a presentation of the MPS LWC 2016 case possible." />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lxKt" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lxKu" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lxL5" role="2NCMaf">
-              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="zh_Ys$lxLT" role="1_0VJ0">
-        <property role="TrG5h" value="blackboxes" />
-        <property role="1_0VJr" value="Embedding Blackboxes" />
-        <node concept="1_0LV8" id="zh_Ys$lxN3" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lxN4" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lxN5" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr documentation language allows insertion of pictures. This is because MPS allows insertion of any type of icon in an editor." />
-            </node>
-          </node>
-        </node>
-        <node concept="2SaynC" id="zh_Ys$lxMG" role="1_0VJ0">
-          <property role="TrG5h" value="exampleImage" />
-          <property role="2Sbq$t" value="true" />
-          <node concept="OjmMv" id="zh_Ys$lxMH" role="2SaI5j">
-            <node concept="19SGf9" id="zh_Ys$lxMI" role="OjmMu">
-              <node concept="19SUe$" id="zh_Ys$lxMJ" role="19SJt6">
-                <property role="19SUeA" value="picture from https://pixabay.com/en/small-plane-glider-sky-flying-40039/" />
-              </node>
-            </node>
-          </node>
-          <node concept="2bctqb" id="zh_Ys$lxMK" role="3SHJ_F" />
-          <node concept="2Sb_l4" id="zh_Ys$lxMS" role="2SbwM5">
-            <property role="2Sb_kV" value="glider.png" />
-            <ref role="2Sb_kU" node="zh_Ys$l7Bt" resolve="temp" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1mvXsy" id="zh_Ys$l7Cg" role="1_0VJ0">
-      <property role="TrG5h" value="evolution" />
-      <property role="1_0VJr" value="Evolution and Reuse" />
-      <node concept="1_0VNX" id="zh_Ys$lxNg" role="1_0VJ0">
-        <property role="TrG5h" value="langext" />
-        <property role="1_0VJr" value="Language Extension" />
-        <node concept="1_0LV8" id="zh_Ys$l$iN" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$l$iO" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$l$iP" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr statemachines language extends the base language. This makes it possible to intermix C commands with a statemachine:" />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="zh_Ys$lzp1" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="zh_Ys$lzp2" role="3z_lpI">
-            <node concept="2NCMab" id="zh_Ys$lzp5" role="2NCMaf">
-              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="30e67$70rby" role="1_0VJ0">
-        <property role="TrG5h" value="langemb" />
-        <property role="1_0VJr" value="Language Embedding" />
-        <node concept="1_0LV8" id="6pYKx1vDtrg" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vDtrh" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vDtri" role="19SJt6">
-              <property role="19SUeA" value="MPS has modeled a language that looks very similar to java, which is called BaseLanguage. This language has constructs like classes, for-loops, if-statements, etc." />
-            </node>
-          </node>
-        </node>
-        <node concept="1_0LV8" id="6pYKx1vDtr$" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vDtr_" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vDtrA" role="19SJt6">
-              <property role="19SUeA" value="We have modeled SQL as a DSL within MPS and made interfaces to BaseLanguage, so that it is possible to embed SQL code in BaseLanguage expressions and viceversa." />
-            </node>
-          </node>
-        </node>
-        <node concept="1_0LV8" id="b9Kl1N43zc" role="1_0VJ0">
-          <node concept="19SGf9" id="b9Kl1N43zd" role="1_0LWR">
-            <node concept="19SUe$" id="b9Kl1N46Oy" role="19SJt6" />
-            <node concept="3z_lpY" id="b9Kl1N46Ow" role="19SJt6">
-              <node concept="2NCZwO" id="b9Kl1N46Ox" role="3z_lpZ">
-                <node concept="2NCMab" id="b9Kl1N47cc" role="2NCMaf">
-                  <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
-                </node>
-              </node>
-            </node>
-            <node concept="19SUe$" id="b9Kl1N46Oz" role="19SJt6" />
-          </node>
-        </node>
-        <node concept="3z_lpU" id="b9Kl1N472_" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="b9Kl1N472B" role="3z_lpI">
-            <node concept="2NCMab" id="b9Kl1N47Pn" role="2NCMaf">
-              <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="6pYKx1vDttC" role="1_0VJ0">
-        <property role="TrG5h" value="extcomp" />
-        <property role="1_0VJr" value="Extension Composition" />
-        <node concept="1_0LV8" id="6pYKx1vD$4q" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vD$4r" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vD$4s" role="19SJt6">
-              <property role="19SUeA" value="One of the many examples from mbeddr language composition is the composition of multiple language: requirements language for writing requirements, decision tables language to express decisions and intermixing them with code from mbeddr C." />
-            </node>
-          </node>
-        </node>
-        <node concept="1_1sxE" id="6pYKx1vD$4f" role="1_0VJ0">
-          <property role="TrG5h" value="empty_-1" />
-        </node>
-        <node concept="3z_lpU" id="6pYKx1vD$3T" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="6pYKx1vD$3U" role="3z_lpI">
-            <node concept="2NCMab" id="6pYKx1vD$9k" role="2NCMaf">
-              <ref role="2NCMaa" to="iwll:1fAuj8TwdSV" resolve="FlightJudgementRules" />
-            </node>
-            <node concept="2NCMab" id="6pYKx1vD$9q" role="2NCMaf">
-              <ref role="2NCMaa" to="iwll:1fAuj8TwdSY" resolve="InFlightPoints" />
-            </node>
-            <node concept="2NCMab" id="6pYKx1vD$9y" role="2NCMaf">
-              <ref role="2NCMaa" to="iwll:2A5UqXKRpLH" resolve="priceDep" />
-            </node>
-          </node>
-        </node>
-        <node concept="1_0LV8" id="6pYKx1vD$3x" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vD$3y" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vD$3z" role="19SJt6">
-              <property role="19SUeA" value="" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="30e67$70rcS" role="1_0VJ0">
-        <property role="TrG5h" value="gramres" />
-        <property role="1_0VJr" value="Beyond Grammar Restrictions" />
-        <node concept="1_0LV8" id="30e67$70toJ" role="1_0VJ0">
-          <node concept="19SGf9" id="30e67$70toK" role="1_0LWR">
-            <node concept="19SUe$" id="30e67$70toL" role="19SJt6">
-              <property role="19SUeA" value="In C code in mbeddr, assert statements are restricted to tests only. Try to instantiate an assert statement in function1. That will not work. Then try to instantiate an assert statement in testCase. That will work." />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="30e67$70tpn" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="30e67$70tpo" role="3z_lpI">
-            <node concept="2NCMab" id="30e67$70tp$" role="2NCMaf">
-              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
-            </node>
-            <node concept="2NCMab" id="30e67$70tpG" role="2NCMaf">
-              <ref role="2NCMaa" to="7qwm:5N4UbPS7Lxz" resolve="function1" />
-            </node>
-          </node>
-        </node>
-        <node concept="1_1sxE" id="30e67$70tpM" role="1_0VJ0">
-          <property role="TrG5h" value="empty_-1" />
-        </node>
-        <node concept="3z_lpU" id="30e67$70tqm" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="30e67$70tqn" role="3z_lpI">
-            <node concept="2NCMab" id="30e67$70tqH" role="2NCMaf">
-              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
-            </node>
-            <node concept="2NCMab" id="30e67$70tqP" role="2NCMaf">
-              <ref role="2NCMaa" to="7qwm:5N4UbPS7HgD" resolve="testCase" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="30e67$70trM" role="1_0VJ0">
-        <property role="TrG5h" value="synmig" />
-        <property role="1_0VJr" value="Syntax Migration" />
-        <node concept="1_0LV8" id="30e67$70Ds5" role="1_0VJ0">
-          <node concept="19SGf9" id="30e67$70Ds6" role="1_0LWR">
-            <node concept="19SUe$" id="30e67$70Ds7" role="19SJt6">
-              <property role="19SUeA" value="todo" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1_0VNX" id="30e67$70Duf" role="1_0VJ0">
-        <property role="TrG5h" value="strmig" />
-        <property role="1_0VJr" value="Structure Migration" />
-        <node concept="1_0LV8" id="6pYKx1vD$9J" role="1_0VJ0">
-          <node concept="19SGf9" id="6pYKx1vD$9K" role="1_0LWR">
-            <node concept="19SUe$" id="6pYKx1vD$9L" role="19SJt6">
-              <property role="19SUeA" value="todo" />
-            </node>
-          </node>
-        </node>
-        <node concept="1_0LV8" id="30e67$70DvN" role="1_0VJ0">
-          <node concept="19SGf9" id="30e67$70DvO" role="1_0LWR">
-            <node concept="19SUe$" id="30e67$70DvP" role="19SJt6">
-              <property role="19SUeA" value="Migrations in structure are handled in MPS by means of migration scripts." />
-            </node>
-          </node>
-        </node>
-        <node concept="1_0LV8" id="30e67$70Dvb" role="1_0VJ0">
-          <node concept="19SGf9" id="30e67$70Dvc" role="1_0LWR">
-            <node concept="19SUe$" id="30e67$70Dvd" role="19SJt6">
-              <property role="19SUeA" value="com.mbeddr.core.unittest contains an example of a non-trivial migration script" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="1mvXsy" id="zh_Ys$l7Co" role="1_0VJ0">
       <property role="TrG5h" value="editing" />
       <property role="1_0VJr" value="Editing" />
@@ -724,19 +341,7 @@
     <node concept="Wq1Bs" id="zh_Ys$l7BC" role="Wq1Bf">
       <property role="Wq1Bt" value="Markus Völter" />
     </node>
-    <node concept="2f$52y" id="zh_Ys$lcoM" role="lGtFl">
-      <node concept="3vAitl" id="zh_Ys$lcoN" role="2f$52z">
-        <property role="3ajGZW" value="eug" />
-        <property role="3ajGZ3" value="May 17, 2016 3:26:21 PM" />
-        <property role="19LeSh" value="property_escapedValue_word0" />
-        <ref role="19LoX1" node="zh_Ys$lcov" />
-        <node concept="19SGf9" id="zh_Ys$lcoO" role="3ajGZ5">
-          <node concept="19SUe$" id="zh_Ys$lcoP" role="19SJt6">
-            <property role="19SUeA" value="Is there a ready example for the metadata annotation that we can plug in or should we make a MiniJava example as in the paper?" />
-          </node>
-        </node>
-      </node>
-    </node>
+    <node concept="2f$52y" id="zh_Ys$lcoM" role="lGtFl" />
   </node>
   <node concept="2SbYGP" id="zh_Ys$l7Bs">
     <property role="TrG5h" value="MPSSolutionLWC2016Config" />
@@ -954,6 +559,422 @@
     </node>
     <node concept="2Q9Fgs" id="6pYKx1vDHLq" role="2Q9xDr">
       <node concept="2Q9FjX" id="6pYKx1vDHLr" role="2Q9FjI" />
+    </node>
+  </node>
+  <node concept="1_1swa" id="6pYKx1vDIzj">
+    <property role="yApLE" value="1" />
+    <property role="TrG5h" value="Notation" />
+    <ref role="G9hjw" node="zh_Ys$l7Bs" resolve="MPSSolutionLWC2016Config" />
+    <node concept="Wq1Bs" id="6pYKx1vDIC9" role="Wq1Bf">
+      <property role="Wq1Bt" value="Remi Bosman" />
+      <property role="Wq1Bq" value="r" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDICa" role="Wq1Bf">
+      <property role="Wq1Bt" value="Kolja Dummann" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDICb" role="Wq1Bf">
+      <property role="Wq1Bt" value="Federico Tomassetti" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDICc" role="Wq1Bf">
+      <property role="Wq1Bt" value="Eugen Schindler" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDICd" role="Wq1Bf">
+      <property role="Wq1Bt" value="Klemens Schindler" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDICe" role="Wq1Bf">
+      <property role="Wq1Bt" value="Markus Völter" />
+    </node>
+    <node concept="1mvXsy" id="zh_Ys$l7Ca" role="1_0VJ0">
+      <property role="TrG5h" value="notation" />
+      <property role="1_0VJr" value="Notation" />
+      <node concept="1_0VNX" id="zh_Ys$l7Ct" role="1_0VJ0">
+        <property role="TrG5h" value="mathsym" />
+        <property role="1_0VJr" value="Mathematical Symbols" />
+        <node concept="1_0LV8" id="zh_Ys$lcmw" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lcmx" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lcmy" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr tutorial implements a langauge for writing mathematical formulae:" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$l7CA" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$l7CB" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lclv" role="2NCMaf">
+              <ref role="2NCMaa" to="8c4t:4r1mNB_vx3b" resolve="HelloMath" />
+            </node>
+            <node concept="2NCMab" id="zh_Ys$lclO" role="2NCMaf">
+              <ref role="2NCMaa" to="8c4t:66PbkE$SwpG" resolve="sumOfProductsOfLogs" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$l7Cy" role="1_0VJ0">
+        <property role="TrG5h" value="tabgraphnot" />
+        <property role="1_0VJr" value="Textual Notation, Tabular Notation, Diagrammatic Notation, and Switching Between Notations" />
+        <node concept="1_0LV8" id="zh_Ys$lcmL" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lcmM" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lcmN" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr statemachine language can have three different projections, namely textual, tabular, and graphical (use Code --&gt; Projection or the editor hints to switch projections):" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lclS" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lclT" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lclW" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+            <node concept="2NCMab" id="zh_Ys$lcm1" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:6GXPbpLjxtH" resolve="FlightAnalyzer" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lcnQ" role="1_0VJ0">
+        <property role="TrG5h" value="metadata" />
+        <property role="1_0VJr" value="Generic Metadata Annotations" />
+        <node concept="1_0LV8" id="zh_Ys$lcot" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lcou" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lcov" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lcpj" role="1_0VJ0">
+        <property role="TrG5h" value="hiding" />
+        <property role="1_0VJr" value="Optional Hiding" />
+        <node concept="1_0LV8" id="zh_Ys$lgm6" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lgm7" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lgm8" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr variability language makes it possible to display (or omit) pieces of the model, based on a configuration of the feature model: " />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lglV" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lglW" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lglZ" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:KfIhkXddlU" resolve="StaticVariability" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lgmH" role="1_0VJ0">
+        <property role="TrG5h" value="compprop" />
+        <property role="1_0VJr" value="Computed Properties" />
+        <node concept="1_0LV8" id="zh_Ys$lgnJ" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lgnK" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lgnL" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr unit test language indexes assert statements for being able to look up log statements with assert in the code. The indexes are not specified directly in the model, but rather computed properties, based on their position in the code: " />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lgnB" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lgnC" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lprt" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+            <node concept="2NCMab" id="zh_Ys$lpry" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:6GXPbpLjseN" resolve="testFlightAnalyzer" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lpsb" role="1_0VJ0">
+        <property role="TrG5h" value="compstruct" />
+        <property role="1_0VJr" value="Computed Structures" />
+        <node concept="1_0LV8" id="6pYKx1vDtfb" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDtfc" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDtfd" role="19SJt6">
+              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="zh_Ys$lxpj" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lxpd" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lxpe" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lxph" role="2NCMaf">
+              <ref role="2NCMaa" node="zh_Ys$lxnu" resolve="ComponentsExample" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lxvd" role="1_0VJ0">
+        <property role="TrG5h" value="skeled" />
+        <property role="1_0VJr" value="Skeleton Editing" />
+        <node concept="1_0LV8" id="6pYKx1vDthi" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDthj" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDthk" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr build language is an example of bigger structures with skeletons that can be edited. You make a build configuration, make some course-grained choices on what you want (gcc, microcontroller, custom), and then you have a skeleton in which the details can be filled in." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lxvS" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lxvT" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lxvW" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:7VsgA5L655o" resolve="BuildConfiguration (m.t.m.defaultExtensions)" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lxJI" role="1_0VJ0">
+        <property role="TrG5h" value="codeinprose" />
+        <property role="1_0VJr" value="Embedding Code in Prose" />
+        <node concept="1_0LV8" id="6pYKx1vDthx" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDthy" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDthz" role="19SJt6">
+              <property role="19SUeA" value="The example below makes it possible to embed entire prose (including references) in comments of an mbeddr C listing. The best example of code in prose is this presentation: the entire document is written in mbeddr doc language and there are pieces of code embedded to make a presentation of the MPS LWC 2016 case possible." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lxKt" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lxKu" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lxL5" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="zh_Ys$lxLT" role="1_0VJ0">
+        <property role="TrG5h" value="blackboxes" />
+        <property role="1_0VJr" value="Embedding Blackboxes" />
+        <node concept="1_0LV8" id="zh_Ys$lxN3" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$lxN4" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$lxN5" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr documentation language allows insertion of pictures. This is because MPS allows insertion of any type of icon in an editor." />
+            </node>
+          </node>
+        </node>
+        <node concept="2SaynC" id="zh_Ys$lxMG" role="1_0VJ0">
+          <property role="TrG5h" value="exampleImage" />
+          <property role="2Sbq$t" value="true" />
+          <node concept="OjmMv" id="zh_Ys$lxMH" role="2SaI5j">
+            <node concept="19SGf9" id="zh_Ys$lxMI" role="OjmMu">
+              <node concept="19SUe$" id="zh_Ys$lxMJ" role="19SJt6">
+                <property role="19SUeA" value="picture from https://pixabay.com/en/small-plane-glider-sky-flying-40039/" />
+              </node>
+            </node>
+          </node>
+          <node concept="2bctqb" id="zh_Ys$lxMK" role="3SHJ_F" />
+          <node concept="2Sb_l4" id="zh_Ys$lxMS" role="2SbwM5">
+            <property role="2Sb_kV" value="glider.png" />
+            <ref role="2Sb_kU" node="zh_Ys$l7Bt" resolve="temp" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1_1swa" id="6pYKx1vDIA_">
+    <property role="yApLE" value="1" />
+    <property role="TrG5h" value="EvolutionAndReuse" />
+    <ref role="G9hjw" node="zh_Ys$l7Bs" resolve="MPSSolutionLWC2016Config" />
+    <node concept="Wq1Bs" id="6pYKx1vDIBX" role="Wq1Bf">
+      <property role="Wq1Bt" value="Remi Bosman" />
+      <property role="Wq1Bq" value="r" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDIBY" role="Wq1Bf">
+      <property role="Wq1Bt" value="Kolja Dummann" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDIBZ" role="Wq1Bf">
+      <property role="Wq1Bt" value="Federico Tomassetti" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDIC0" role="Wq1Bf">
+      <property role="Wq1Bt" value="Eugen Schindler" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDIC1" role="Wq1Bf">
+      <property role="Wq1Bt" value="Klemens Schindler" />
+    </node>
+    <node concept="Wq1Bs" id="6pYKx1vDIC2" role="Wq1Bf">
+      <property role="Wq1Bt" value="Markus Völter" />
+    </node>
+    <node concept="1mvXsy" id="zh_Ys$l7Cg" role="1_0VJ0">
+      <property role="TrG5h" value="evolution" />
+      <property role="1_0VJr" value="Evolution and Reuse" />
+      <node concept="1_0VNX" id="zh_Ys$lxNg" role="1_0VJ0">
+        <property role="TrG5h" value="langext" />
+        <property role="1_0VJr" value="Language Extension" />
+        <node concept="1_0LV8" id="zh_Ys$l$iN" role="1_0VJ0">
+          <node concept="19SGf9" id="zh_Ys$l$iO" role="1_0LWR">
+            <node concept="19SUe$" id="zh_Ys$l$iP" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr statemachines language extends the base language. This makes it possible to intermix C commands with a statemachine:" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="zh_Ys$lzp1" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="zh_Ys$lzp2" role="3z_lpI">
+            <node concept="2NCMab" id="zh_Ys$lzp5" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70rby" role="1_0VJ0">
+        <property role="TrG5h" value="langemb" />
+        <property role="1_0VJr" value="Language Embedding" />
+        <node concept="1_0LV8" id="6pYKx1vDtrg" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDtrh" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDtri" role="19SJt6">
+              <property role="19SUeA" value="MPS has modeled a language that looks very similar to java, which is called BaseLanguage. This language has constructs like classes, for-loops, if-statements, etc." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="6pYKx1vDtr$" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDtr_" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDtrA" role="19SJt6">
+              <property role="19SUeA" value="We have modeled SQL as a DSL within MPS and made interfaces to BaseLanguage, so that it is possible to embed SQL code in BaseLanguage expressions and viceversa." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="b9Kl1N43zc" role="1_0VJ0">
+          <node concept="19SGf9" id="b9Kl1N43zd" role="1_0LWR">
+            <node concept="19SUe$" id="b9Kl1N46Oy" role="19SJt6" />
+            <node concept="3z_lpY" id="b9Kl1N46Ow" role="19SJt6">
+              <node concept="2NCZwO" id="b9Kl1N46Ox" role="3z_lpZ">
+                <node concept="2NCMab" id="b9Kl1N47cc" role="2NCMaf">
+                  <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
+                </node>
+              </node>
+            </node>
+            <node concept="19SUe$" id="b9Kl1N46Oz" role="19SJt6" />
+          </node>
+        </node>
+        <node concept="3z_lpU" id="b9Kl1N472_" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="b9Kl1N472B" role="3z_lpI">
+            <node concept="2NCMab" id="b9Kl1N47Pn" role="2NCMaf">
+              <ref role="2NCMaa" to="bipj:7EoPI3Z0Qd6" resolve="AClassUsingSql" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="6pYKx1vDttC" role="1_0VJ0">
+        <property role="TrG5h" value="extcomp" />
+        <property role="1_0VJr" value="Extension Composition" />
+        <node concept="1_0LV8" id="6pYKx1vD$4q" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vD$4r" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vD$4s" role="19SJt6">
+              <property role="19SUeA" value="One of the many examples from mbeddr language composition is the composition of multiple language: requirements language for writing requirements, decision tables language to express decisions and intermixing them with code from mbeddr C." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="6pYKx1vD$4f" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="6pYKx1vD$3T" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="6pYKx1vD$3U" role="3z_lpI">
+            <node concept="2NCMab" id="6pYKx1vD$9k" role="2NCMaf">
+              <ref role="2NCMaa" to="iwll:1fAuj8TwdSV" resolve="FlightJudgementRules" />
+            </node>
+            <node concept="2NCMab" id="6pYKx1vD$9q" role="2NCMaf">
+              <ref role="2NCMaa" to="iwll:1fAuj8TwdSY" resolve="InFlightPoints" />
+            </node>
+            <node concept="2NCMab" id="6pYKx1vD$9y" role="2NCMaf">
+              <ref role="2NCMaa" to="iwll:2A5UqXKRpLH" resolve="priceDep" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="6pYKx1vD$3x" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vD$3y" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vD$3z" role="19SJt6">
+              <property role="19SUeA" value="" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70rcS" role="1_0VJ0">
+        <property role="TrG5h" value="gramres" />
+        <property role="1_0VJr" value="Beyond Grammar Restrictions" />
+        <node concept="1_0LV8" id="30e67$70toJ" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70toK" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70toL" role="19SJt6">
+              <property role="19SUeA" value="In C code in mbeddr, assert statements are restricted to tests only. Try to instantiate an assert statement in function1. That will not work. Then try to instantiate an assert statement in testCase. That will work." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="30e67$70tpn" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="30e67$70tpo" role="3z_lpI">
+            <node concept="2NCMab" id="30e67$70tp$" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
+            </node>
+            <node concept="2NCMab" id="30e67$70tpG" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7Lxz" resolve="function1" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="30e67$70tpM" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="3z_lpU" id="30e67$70tqm" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="30e67$70tqn" role="3z_lpI">
+            <node concept="2NCMab" id="30e67$70tqH" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7DO2" resolve="EditingUsability" />
+            </node>
+            <node concept="2NCMab" id="30e67$70tqP" role="2NCMaf">
+              <ref role="2NCMaa" to="7qwm:5N4UbPS7HgD" resolve="testCase" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70trM" role="1_0VJ0">
+        <property role="TrG5h" value="synmig" />
+        <property role="1_0VJr" value="Syntax Migration" />
+        <node concept="1_0LV8" id="30e67$70Ds5" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70Ds6" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70Ds7" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="30e67$70Duf" role="1_0VJ0">
+        <property role="TrG5h" value="strmig" />
+        <property role="1_0VJr" value="Structure Migration" />
+        <node concept="1_0LV8" id="6pYKx1vD$9J" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vD$9K" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vD$9L" role="19SJt6">
+              <property role="19SUeA" value="todo" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="30e67$70DvN" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70DvO" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70DvP" role="19SJt6">
+              <property role="19SUeA" value="Migrations in structure are handled in MPS by means of migration scripts." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="30e67$70Dvb" role="1_0VJ0">
+          <node concept="19SGf9" id="30e67$70Dvc" role="1_0LWR">
+            <node concept="19SUe$" id="30e67$70Dvd" role="19SJt6">
+              <property role="19SUeA" value="com.mbeddr.core.unittest contains an example of a non-trivial migration script" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
