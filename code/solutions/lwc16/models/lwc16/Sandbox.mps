@@ -141,6 +141,9 @@
       <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
         <child id="8967919205527146150" name="expression" index="2BFjQA" />
       </concept>
+      <concept id="8105003328814797298" name="com.mbeddr.core.modules.structure.IFunctionLike" flags="ng" index="2H9T1B">
+        <child id="5708867820623310661" name="arguments" index="1UOdpc" />
+      </concept>
       <concept id="6437088627575722813" name="com.mbeddr.core.modules.structure.Module" flags="ng" index="N3F4X">
         <child id="6437088627575722833" name="contents" index="N3F5h" />
       </concept>
@@ -152,6 +155,7 @@
         <child id="4185783222026475860" name="body" index="3XIRFX" />
       </concept>
       <concept id="8934095934011938595" name="com.mbeddr.core.modules.structure.EmptyModuleContent" flags="ng" index="2NXPZ9" />
+      <concept id="7892328519581704407" name="com.mbeddr.core.modules.structure.Argument" flags="ng" index="19RgSI" />
       <concept id="5950410542643524492" name="com.mbeddr.core.modules.structure.FunctionCall" flags="ng" index="3O_q_g">
         <reference id="5950410542643524493" name="function" index="3O_q_h" />
       </concept>
@@ -354,6 +358,13 @@
       <node concept="1_0VNX" id="zh_Ys$lpsb" role="1_0VJ0">
         <property role="TrG5h" value="compstruct" />
         <property role="1_0VJr" value="Computed Structures" />
+        <node concept="1_0LV8" id="6pYKx1vDtfb" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDtfc" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDtfd" role="19SJt6">
+              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures." />
+            </node>
+          </node>
+        </node>
         <node concept="1_1sxE" id="zh_Ys$lxpj" role="1_0VJ0">
           <property role="TrG5h" value="empty_-1" />
         </node>
@@ -370,6 +381,13 @@
       <node concept="1_0VNX" id="zh_Ys$lxvd" role="1_0VJ0">
         <property role="TrG5h" value="skeled" />
         <property role="1_0VJr" value="Skeleton Editing" />
+        <node concept="1_0LV8" id="6pYKx1vDthi" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDthj" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDthk" role="19SJt6">
+              <property role="19SUeA" value="The mbeddr build language is an example of bigger structures with skeletons that can be edited. You make a build configuration, make some course-grained choices on what you want (gcc, microcontroller, custom), and then you have a skeleton in which the details can be filled in." />
+            </node>
+          </node>
+        </node>
         <node concept="3z_lpU" id="zh_Ys$lxvS" role="1_0VJ0">
           <property role="3z_lpW" value="mbeddr" />
           <property role="3z_lpJ" value="true" />
@@ -383,6 +401,13 @@
       <node concept="1_0VNX" id="zh_Ys$lxJI" role="1_0VJ0">
         <property role="TrG5h" value="codeinprose" />
         <property role="1_0VJr" value="Embedding Code in Prose" />
+        <node concept="1_0LV8" id="6pYKx1vDthx" role="1_0VJ0">
+          <node concept="19SGf9" id="6pYKx1vDthy" role="1_0LWR">
+            <node concept="19SUe$" id="6pYKx1vDthz" role="19SJt6">
+              <property role="19SUeA" value="The example below makes it possible to embed entire prose (including references) in comments of an mbeddr C listing. The best example of code in prose is this presentation: the entire document is written in mbeddr doc language and there are pieces of code embedded to make a presentation of the MPS LWC 2016 case possible." />
+            </node>
+          </node>
+        </node>
         <node concept="3z_lpU" id="zh_Ys$lxKt" role="1_0VJ0">
           <property role="3z_lpW" value="mbeddr" />
           <property role="3z_lpJ" value="true" />
@@ -654,9 +679,26 @@
     <node concept="2EWCuY" id="zh_Ys$lxnw" role="N3F5h">
       <property role="2OOxQR" value="true" />
       <property role="TrG5h" value="A" />
+      <node concept="2EWDwb" id="6pYKx1vDtfw" role="2RW2fA">
+        <property role="TrG5h" value="f" />
+        <node concept="3XIRFW" id="6pYKx1vDtfx" role="2EWMhI">
+          <node concept="3XISUE" id="6pYKx1vDtfy" role="3XIRFZ" />
+        </node>
+        <node concept="3AreGT" id="6pYKx1vDtfG" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+        <node concept="19RgSI" id="6pYKx1vDtfK" role="1UOdpc">
+          <property role="TrG5h" value="x" />
+          <node concept="26Vqpq" id="6pYKx1vDtfJ" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+      </node>
       <node concept="EbCE0" id="zh_Ys$lxnF" role="2RW2fA">
         <property role="TrG5h" value="a" />
-        <node concept="3AreGT" id="zh_Ys$lxnE" role="2C2TGm">
+        <node concept="3AreGT" id="6pYKx1vDtfp" role="2C2TGm">
           <property role="2caQfQ" value="false" />
           <property role="2c7vTL" value="false" />
         </node>
