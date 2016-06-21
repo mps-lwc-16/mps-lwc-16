@@ -440,6 +440,36 @@
           </node>
         </node>
       </node>
+      <node concept="1_0VNX" id="1zKhy7PAQjh" role="1_0VJ0">
+        <property role="TrG5h" value="EndUserDefinedFormatting" />
+        <property role="1_0VJr" value="End-user Defined Formatting" />
+        <node concept="1_0LV8" id="1zKhy7PAQlR" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAQlS" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAQlT" role="19SJt6">
+              <property role="19SUeA" value="It is possible to make languages that give some formatting control to the end user. A simple example is to allow a whitespace concept in places where you can enter statements. A more elaborate example is a diagram editor where a user can move around visual elements freely:" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="1zKhy7PAQsk" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="1zKhy7PAQsl" role="3z_lpI">
+            <node concept="2NCMab" id="1zKhy7PAQt2" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:4usdeMNVnYi" resolve="StateMachines" />
+            </node>
+            <node concept="2NCMab" id="1zKhy7PAQt7" role="2NCMaf">
+              <ref role="2NCMaa" to="e1tx:6GXPbpLjxtH" resolve="FlightAnalyzer" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="1zKhy7PAQpL" role="1_0VJ0">
+          <node concept="19SGf9" id="1zKhy7PAQpM" role="1_0LWR">
+            <node concept="19SUe$" id="1zKhy7PAQpN" role="19SJt6">
+              <property role="19SUeA" value="Also, if a user wants a different default presentation (similar to pretty-printing) it is possible to extend a language and override the default editor for a concept in the same way as seen in the above custom presentations of the state machine." />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1_0VNX" id="7T0_4mNu1NF" role="1_0VJ0">
         <property role="TrG5h" value="DefaultFormatting" />
         <property role="1_0VJr" value="Specification of default formatting" />
@@ -1246,9 +1276,6 @@
   </node>
   <node concept="N3F5e" id="1zKhy7PAPQB">
     <property role="TrG5h" value="EditingScratchpad" />
-    <node concept="2NXPZ9" id="1zKhy7PAPQC" role="N3F5h">
-      <property role="TrG5h" value="empty_1466531380399_14" />
-    </node>
     <node concept="2NXPZ9" id="1zKhy7PAPU9" role="N3F5h">
       <property role="TrG5h" value="empty_1466531514394_21" />
     </node>
