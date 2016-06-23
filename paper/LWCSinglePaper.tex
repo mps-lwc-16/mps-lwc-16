@@ -88,7 +88,37 @@ TODO: Summarize results of MPS in previous challenges
 
 \subsubsection{Language extension: modularly extend a language with new syntactic constructs}
 
-The mbeddr statemachines language extends the base language. This makes it possible to intermix C commands with a statemachine.
+In this section, we are going to describe the mbeddr language for state
+machines with event-driven execution. The mbeddr state machines extends
+the base language from MPS. This enables a seamless integration between
+C code and state machine specifications.
+
+State machines are a mathematical model of computation often used in embedded software
+for describing discrete behaviour through state transitions. Its characterizing
+ingredients are states, transitions and events. At any given time, a state
+machine is in a state and it can be transitioned from one state to another.
+A transition in a state machine is triggered by an event. These events
+are usually provided by the environment, and, hence, the state machine
+needs to have a way to interact with the environment. Besides events,
+transitions can also have different guard expressions that need to hold when
+the event arrives, for the transitions to be triggered.
+
+We are now going to describe the implementation of state machines in mbeddr.
+
+In mbeddr, the state machine language is packaged in a language module and it
+extends the base language of MPS. The \emph{StateMachine} concept extends
+\emph{BaseConcept}, which means that the state machine will be a program node,
+as \emph{BaseConcept} is the concept from which all other concepts are derived.
+The state machine language also implements the \emph{IModuleContent} interface,
+which means that they can be top-level components in modules. Modules in mbeddr C
+introduce basic program modularization, visibility control and namespaces \cite{voelter2013mbeddr}.
+
+Moreover, the state machine itself embeds arbitrary code in the actions
+and in the guards. The actions are statement lists and the guards are expressions.
+
+In the next paragraphs, we are going to present excerpts from a state machine for
+judging flights. The state machine awards points for successful
+takeoff and landing and for speed flown \cite{voelter2014generic}.
 
 \subsubsection{Language embedding: embed a separate language inside another}
 \subsubsection{Extension composition: combine independently developed extensions}
