@@ -36,6 +36,56 @@
     <import index="a56z" ref="r:90f5ad96-7961-4ff0-9b18-de176e0349ba(mps-lwc-16.__spreferences.PlatformTemplates)" />
   </imports>
   <registry>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
+        <property id="8606350594693632173" name="isTransient" index="eg7rD" />
+        <property id="1240249534625" name="isVolatile" index="34CwA1" />
+      </concept>
+      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
+      <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
+        <property id="1176718929932" name="isFinal" index="3TUv4t" />
+      </concept>
+      <concept id="1092119917967" name="jetbrains.mps.baseLanguage.structure.MulExpression" flags="nn" index="17qRlL" />
+      <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
+        <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
+      </concept>
+      <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
+      <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
+        <child id="5680397130376446158" name="type" index="1tU5fm" />
+      </concept>
+      <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
+        <property id="4276006055363816570" name="isSynchronized" index="od$2w" />
+        <property id="1181808852946" name="isFinal" index="DiZV1" />
+        <child id="1068580123133" name="returnType" index="3clF45" />
+        <child id="1068580123134" name="parameter" index="3clF46" />
+        <child id="1068580123135" name="body" index="3clF47" />
+      </concept>
+      <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_">
+        <property id="1178608670077" name="isAbstract" index="1EzhhJ" />
+      </concept>
+      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
+        <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
+        <child id="1068581517676" name="expression" index="3cqZAk" />
+      </concept>
+      <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
+        <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
+      </concept>
+      <concept id="7812454656619025416" name="jetbrains.mps.baseLanguage.structure.MethodDeclaration" flags="ng" index="1rXfSm">
+        <property id="8355037393041754995" name="isNative" index="2aFKle" />
+      </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
+      </concept>
+      <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
+        <child id="1178549979242" name="visibility" index="1B3o_S" />
+      </concept>
+      <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
+    </language>
     <language id="7a060fae-09e0-4372-be36-6696d6554c0e" name="com.mbeddr.mpsutil.review.annotation">
       <concept id="8455208232410333108" name="com.mbeddr.mpsutil.review.annotation.structure.CommentAnnotationContainer" flags="ng" index="2f$52y" />
     </language>
@@ -186,6 +236,7 @@
       <concept id="5950410542643524492" name="com.mbeddr.core.modules.structure.FunctionCall" flags="ng" index="3O_q_g">
         <reference id="5950410542643524493" name="function" index="3O_q_h" />
       </concept>
+      <concept id="6610873504380335822" name="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" flags="ng" index="1S7NMz" />
     </language>
     <language id="564e97d6-8fb7-41f5-bfc1-c7ed376efd62" name="com.mbeddr.ext.statemachines">
       <concept id="4643433264760980253" name="com.mbeddr.ext.statemachines.structure.InEvent" flags="ng" index="2cfOFI" />
@@ -305,7 +356,14 @@
         <node concept="1_0LV8" id="1zKhy7PAMcx" role="1_0VJ0">
           <node concept="19SGf9" id="1zKhy7PAMcy" role="1_0LWR">
             <node concept="19SUe$" id="1zKhy7PAMcz" role="19SJt6">
-              <property role="19SUeA" value="It is not possible to arbitrarily type text and have it parsed" />
+              <property role="19SUeA" value="It is not possible to arbitrarily type and remove text regardless of the model/program structure. A node, for example an if statement, must have a complete skeleton. However it is possible to leave content out (e.g. remove  the guard and body in the if statement)." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="p7TAWbcSAd" role="1_0VJ0">
+          <node concept="19SGf9" id="p7TAWbcSAe" role="1_0LWR">
+            <node concept="19SUe$" id="p7TAWbcSAf" role="19SJt6">
+              <property role="19SUeA" value="So it is possible to edit and persist incomplete programs, but the limitation is that every node that is inserted must have a full &quot;skeleton&quot;. It is not possible to remove things such as the bracket of an if statement, because this is actually not part of the model contents, only of the presentation (concrete syntax). " />
             </node>
           </node>
         </node>
@@ -350,6 +408,27 @@
             </node>
           </node>
         </node>
+        <node concept="1_0LV8" id="p7TAWbcSAF" role="1_0VJ0">
+          <node concept="19SGf9" id="p7TAWbcSAG" role="1_0LWR">
+            <node concept="19SUe$" id="p7TAWbcSAH" role="19SJt6">
+              <property role="19SUeA" value="You can also copy parts of a text-like langauge into a text editor. The textual content will be in the text document, but layout information and whitespace may vary: " />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="p7TAWbcUDr" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="p7TAWbcUDs" role="3z_lpI">
+            <node concept="2NCMab" id="p7TAWbcUDJ" role="2NCMaf">
+              <ref role="2NCMaa" node="p7TAWbcUp8" resolve="TestClass" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="p7TAWbcUD8" role="1_0VJ0">
+          <node concept="19SGf9" id="p7TAWbcUD9" role="1_0LWR">
+            <node concept="19SUe$" id="p7TAWbcUDa" role="19SJt6" />
+          </node>
+        </node>
       </node>
       <node concept="1_0VNX" id="1zKhy7PAPi_" role="1_0VJ0">
         <property role="TrG5h" value="Restructuring" />
@@ -357,7 +436,7 @@
         <node concept="1_0LV8" id="1zKhy7PAPrt" role="1_0VJ0">
           <node concept="19SGf9" id="1zKhy7PAPru" role="1_0LWR">
             <node concept="19SUe$" id="1zKhy7PAPrv" role="19SJt6">
-              <property role="19SUeA" value="The following example shows the mbeddr implementation of restructuring in the expressionMissingAParenthesis function:" />
+              <property role="19SUeA" value="The following example shows the mbeddr implementation of restructuring in the expressionMissingAParenthesis function. Typing a closing parenthesis (at any position) will restructure the tree to match arithmetic precedence rules:" />
             </node>
           </node>
         </node>
@@ -377,14 +456,14 @@
         <node concept="1_0LV8" id="7T0_4mNu1IQ" role="1_0VJ0">
           <node concept="19SGf9" id="7T0_4mNu1IR" role="1_0LWR">
             <node concept="19SUe$" id="7T0_4mNu1IS" role="19SJt6">
-              <property role="19SUeA" value="MPS does not parse text and try to reconstruct references, but rather references specific nodes, associated with a specific concept. This means that every node knows its type, so explicit demarcation symbols are not required. Whenever ambiguity arises while adding a new node, a choice is presented to the user." />
+              <property role="19SUeA" value="MPS does not parse text and try to reconstruct references, but rather references specific nodes. Nodes have unique identifiers and carry information such as their concept. This means that every node knows its type, so explicit demarcation symbols are not required. Whenever ambiguity arises while adding a new node, a choice is presented to the user." />
             </node>
           </node>
         </node>
         <node concept="1_0LV8" id="7T0_4mNu1Gv" role="1_0VJ0">
           <node concept="19SGf9" id="7T0_4mNu1Gw" role="1_0LWR">
             <node concept="19SUe$" id="7T0_4mNu1Gx" role="19SJt6">
-              <property role="19SUeA" value="This example shows how references are resolved over language boundaries (c module, containing a state machine, containing c statements):" />
+              <property role="19SUeA" value="Below example shows how references are resolved over language boundaries (c module, containing a state machine, containing c statements). This example uses the same name (&quot;some_name&quot;) for a state, an integer, a function, and a statemachine event. Ctrl+clicking on the references shows that all references point to the correct declaration." />
             </node>
           </node>
         </node>
@@ -455,6 +534,36 @@
           </node>
         </node>
       </node>
+      <node concept="1_0VNX" id="7T0_4mNu1NF" role="1_0VJ0">
+        <property role="TrG5h" value="DefaultFormatting" />
+        <property role="1_0VJr" value="Specification of default formatting" />
+        <node concept="1_0LV8" id="7T0_4mNu1NS" role="1_0VJ0">
+          <node concept="19SGf9" id="7T0_4mNu1NT" role="1_0LWR">
+            <node concept="19SUe$" id="7T0_4mNu1NU" role="19SJt6">
+              <property role="19SUeA" value="When no concrete syntax (editor) is specified, a default editor is provided for every concept." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="7T0_4mNu1PA" role="1_0VJ0">
+          <node concept="19SGf9" id="7T0_4mNu1PB" role="1_0LWR">
+            <node concept="19SUe$" id="7T0_4mNu1PC" role="19SJt6">
+              <property role="19SUeA" value="In all cases where an editor (projection) is specified, this can be considered a default formatting for a certain concept. Updating the projection will change the appearance of all models using that concept, but not change the content of these models." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="7T0_4mNua3z" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="7T0_4mNua3$" role="3z_lpI">
+            <node concept="2NCMab" id="7T0_4mNua3O" role="2NCMaf">
+              <ref role="2NCMaa" node="7T0_4mNu1S5" resolve="DefaultProjection" />
+            </node>
+            <node concept="2NCMab" id="7T0_4mNua3T" role="2NCMaf">
+              <ref role="2NCMaa" node="7T0_4mNu1TA" resolve="some_function" />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1_0VNX" id="1zKhy7PAQjh" role="1_0VJ0">
         <property role="TrG5h" value="EndUserDefinedFormatting" />
         <property role="1_0VJr" value="End-user Defined Formatting" />
@@ -485,35 +594,8 @@
           </node>
         </node>
       </node>
-      <node concept="1_0VNX" id="7T0_4mNu1NF" role="1_0VJ0">
-        <property role="TrG5h" value="DefaultFormatting" />
-        <property role="1_0VJr" value="Specification of default formatting" />
-        <node concept="1_0LV8" id="7T0_4mNu1NS" role="1_0VJ0">
-          <node concept="19SGf9" id="7T0_4mNu1NT" role="1_0LWR">
-            <node concept="19SUe$" id="7T0_4mNu1NU" role="19SJt6">
-              <property role="19SUeA" value="When no concrete syntax (editor) is specified, a default editor is provided for every concept." />
-            </node>
-          </node>
-        </node>
-        <node concept="1_0LV8" id="7T0_4mNu1PA" role="1_0VJ0">
-          <node concept="19SGf9" id="7T0_4mNu1PB" role="1_0LWR">
-            <node concept="19SUe$" id="7T0_4mNu1PC" role="19SJt6">
-              <property role="19SUeA" value="In all cases where an editor (projection) is specified, this can be considered a default formatting for a certain concept. Updating the projection will change the appearance of all models using that concept, but not change the content of these models." />
-            </node>
-          </node>
-        </node>
-        <node concept="3z_lpU" id="7T0_4mNua3z" role="1_0VJ0">
-          <property role="3z_lpW" value="mbeddr" />
-          <property role="3z_lpJ" value="true" />
-          <node concept="2NCZwO" id="7T0_4mNua3$" role="3z_lpI">
-            <node concept="2NCMab" id="7T0_4mNua3O" role="2NCMaf">
-              <ref role="2NCMaa" node="7T0_4mNu1S5" resolve="DefaultProjection" />
-            </node>
-            <node concept="2NCMab" id="7T0_4mNua3T" role="2NCMaf">
-              <ref role="2NCMaa" node="7T0_4mNu1TA" resolve="some_function" />
-            </node>
-          </node>
-        </node>
+      <node concept="1_1sxE" id="p7TAWbcV4I" role="1_0VJ0">
+        <property role="TrG5h" value="empty_-1" />
       </node>
     </node>
     <node concept="Wq1Bs" id="zh_Ys$l7Bv" role="Wq1Bf">
@@ -1336,12 +1418,124 @@
   </node>
   <node concept="N3F5e" id="1zKhy7PAPQB">
     <property role="TrG5h" value="EditingScratchpad" />
-    <node concept="2NXPZ9" id="1zKhy7PAPU9" role="N3F5h">
-      <property role="TrG5h" value="empty_1466531514394_21" />
+    <node concept="2B_Gvg" id="p7TAWbcUJ9" role="N3F5h">
+      <node concept="OjmMv" id="p7TAWbcUJb" role="2B_H8o">
+        <node concept="19SGf9" id="p7TAWbcUJc" role="OjmMu">
+          <node concept="19SUe$" id="p7TAWbcUJd" role="19SJt6">
+            <property role="19SUeA" value="incomplete" />
+          </node>
+        </node>
+      </node>
     </node>
-    <node concept="2NXPZ9" id="1zKhy7PAPRM" role="N3F5h">
-      <property role="TrG5h" value="empty_1466531421298_17" />
+    <node concept="2NXPZ9" id="p7TAWbcUGH" role="N3F5h">
+      <property role="TrG5h" value="empty_1466766653359_8" />
     </node>
+    <node concept="2B_Gvg" id="p7TAWbcUJJ" role="N3F5h">
+      <node concept="OjmMv" id="p7TAWbcUJL" role="2B_H8o">
+        <node concept="19SGf9" id="p7TAWbcUJM" role="OjmMu">
+          <node concept="19SUe$" id="p7TAWbcUJN" role="19SJt6">
+            <property role="19SUeA" value="Variable  declartion without name" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1S7NMz" id="p7TAWbcUH4" role="N3F5h">
+      <node concept="26Vqpq" id="p7TAWbcUH2" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="2B_Gvg" id="p7TAWbcUKt" role="N3F5h">
+      <node concept="OjmMv" id="p7TAWbcUKv" role="2B_H8o">
+        <node concept="19SGf9" id="p7TAWbcUKw" role="OjmMu">
+          <node concept="19SUe$" id="p7TAWbcUKx" role="19SJt6">
+            <property role="19SUeA" value="Variable  declaration with name" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1S7NMz" id="p7TAWbcUHw" role="N3F5h">
+      <property role="TrG5h" value="myfunc" />
+      <node concept="26Vqpq" id="p7TAWbcUHu" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="2B_Gvg" id="p7TAWbcULj" role="N3F5h">
+      <node concept="OjmMv" id="p7TAWbcULl" role="2B_H8o">
+        <node concept="19SGf9" id="p7TAWbcULm" role="OjmMu">
+          <node concept="19SUe$" id="p7TAWbcULn" role="19SJt6">
+            <property role="19SUeA" value="Function" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="N3Fnx" id="p7TAWbcUIi" role="N3F5h">
+      <property role="TrG5h" value="myfunc" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="p7TAWbcUIk" role="3XIRFX">
+        <node concept="3XISUE" id="p7TAWbcUIl" role="3XIRFZ" />
+      </node>
+      <node concept="26Vqpq" id="p7TAWbcUHY" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+    </node>
+    <node concept="2B_Gvg" id="p7TAWbcUMG" role="N3F5h">
+      <node concept="OjmMv" id="p7TAWbcUMI" role="2B_H8o">
+        <node concept="19SGf9" id="p7TAWbcUMJ" role="OjmMu">
+          <node concept="19SUe$" id="p7TAWbcUMK" role="19SJt6">
+            <property role="19SUeA" value="Try  it yourself by typing &quot;int16 myfunc(&quot; while watching the type in the inspector" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="p7TAWbcUMf" role="N3F5h">
+      <property role="TrG5h" value="empty_1466766813963_17" />
+    </node>
+    <node concept="2NXPZ9" id="p7TAWbcUNh" role="N3F5h">
+      <property role="TrG5h" value="empty_1466766884815_18" />
+    </node>
+    <node concept="2NXPZ9" id="p7TAWbcUG4" role="N3F5h">
+      <property role="TrG5h" value="empty_1466766614744_7" />
+    </node>
+  </node>
+  <node concept="312cEu" id="p7TAWbcUp8">
+    <property role="TrG5h" value="TestClass" />
+    <node concept="312cEg" id="p7TAWbcUpD" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="a" />
+      <property role="3TUv4t" value="false" />
+      <node concept="10Oyi0" id="p7TAWbcUpu" role="1tU5fm" />
+    </node>
+    <node concept="2tJIrI" id="p7TAWbcUCx" role="jymVt" />
+    <node concept="3clFb_" id="p7TAWbcUqB" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="TrG5h" value="doubleNumber" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="p7TAWbcUqE" role="3clF47">
+        <node concept="3cpWs6" id="p7TAWbcUrl" role="3cqZAp">
+          <node concept="17qRlL" id="p7TAWbcUvN" role="3cqZAk">
+            <node concept="37vLTw" id="p7TAWbcUw0" role="3uHU7w">
+              <ref role="3cqZAo" node="p7TAWbcUqX" resolve="aNumber" />
+            </node>
+            <node concept="37vLTw" id="p7TAWbcUrM" role="3uHU7B">
+              <ref role="3cqZAo" node="p7TAWbcUqX" resolve="aNumber" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="10Oyi0" id="p7TAWbcUqq" role="3clF45" />
+      <node concept="37vLTG" id="p7TAWbcUqX" role="3clF46">
+        <property role="TrG5h" value="aNumber" />
+        <node concept="10Oyi0" id="p7TAWbcUqW" role="1tU5fm" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="p7TAWbcUCO" role="jymVt" />
+    <node concept="3Tm1VV" id="p7TAWbcUp9" role="1B3o_S" />
   </node>
 </model>
 
