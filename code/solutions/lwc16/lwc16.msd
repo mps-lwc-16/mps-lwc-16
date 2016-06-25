@@ -10,7 +10,6 @@
     <dependency reexport="false">b87ff58e-456e-4d51-9ed6-4090f4e7b51c(mbeddr.tutorial.main)</dependency>
     <dependency reexport="false">f2367687-a1c2-40f4-be01-3a0bfbc01d1e(lwc2016.mps.minisql.baselangextension)</dependency>
     <dependency reexport="false">d76ca540-d6a6-41fc-9884-65e9778481ea(lwc2016.mps.minisql.sandbox)</dependency>
-    <dependency reexport="false">~_PreferencesModule#mps-lwc-16.__spreferences.PlatformTemplates(mps-lwc-16.__spreferences.PlatformTemplates)</dependency>
   </dependencies>
   <languageVersions>
     <language id="a26a3aea-de54-4e8b-8b8f-f3eb079923b4" fqName="ExampleLanguage" version="-1" />
@@ -83,7 +82,6 @@
     <module reference="f2367687-a1c2-40f4-be01-3a0bfbc01d1e(lwc2016.mps.minisql.baselangextension)" version="0" />
     <module reference="d76ca540-d6a6-41fc-9884-65e9778481ea(lwc2016.mps.minisql.sandbox)" version="0" />
     <module reference="b87ff58e-456e-4d51-9ed6-4090f4e7b51c(mbeddr.tutorial.main)" version="0" />
-    <module reference="~_PreferencesModule#mps-lwc-16.__spreferences.PlatformTemplates(mps-lwc-16.__spreferences.PlatformTemplates)" version="0" />
   </dependencyVersions>
 </solution>
 

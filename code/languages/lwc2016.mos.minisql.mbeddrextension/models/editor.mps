@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:7c6f600f-2fe4-4afa-9149-2965024ef3b0(lwc2016.mps.minisql.baselangextension.editor)">
+<model ref="r:c3fbb350-ac04-4b21-8a1f-2119cda2f7f8(lwc2016.mos.minisql.mbeddrextension.editor)">
   <persistence version="9" />
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="u246" ref="r:58dfd6c5-a989-4e92-95a0-01777ac12a16(lwc2016.mps.minisql.baselangextension.structure)" implicit="true" />
+    <import index="u246" ref="r:58dfd6c5-a989-4e92-95a0-01777ac12a16(lwc2016.mps.minisql.baselangextension.structure)" />
+    <import index="muxh" ref="r:87a97e2c-f02d-4697-90ca-a555a54724fb(lwc2016.mos.minisql.mbeddrextension.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -46,26 +47,11 @@
       </concept>
     </language>
   </registry>
-  <node concept="24kQdi" id="7EoPI3Z0MdZ">
-    <ref role="1XX52x" to="u246:7EoPI3Z0MdT" resolve="SqlCode" />
-    <node concept="3EZMnI" id="7EoPI3Z0Me1" role="2wV5jI">
-      <node concept="3F0ifn" id="7EoPI3Z0Me8" role="3EZMnx">
-        <property role="3F0ifm" value="sqlCode:" />
-        <node concept="VechU" id="7EoPI3Z0Mfc" role="3F10Kt">
-          <property role="Vb096" value="lightGray" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="7EoPI3Z0Mek" role="3EZMnx">
-        <ref role="1NtTu8" to="u246:7EoPI3Z0Mei" />
-      </node>
-      <node concept="2iRfu4" id="7EoPI3Z0Me4" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="1_gGZIlEfQB">
-    <ref role="1XX52x" to="u246:1_gGZIlEfQv" resolve="ExpressionInSql" />
+  <node concept="24kQdi" id="2yO5KJWbem4">
+    <ref role="1XX52x" to="muxh:1_gGZIlEfQv" resolve="ExpressionInSql" />
     <node concept="3EZMnI" id="1_gGZIlEfQD" role="2wV5jI">
       <node concept="3F0ifn" id="1_gGZIlEfQK" role="3EZMnx">
-        <property role="3F0ifm" value="j`" />
+        <property role="3F0ifm" value="c`" />
         <node concept="Vb9p2" id="1_gGZIlEfYo" role="3F10Kt">
           <property role="Vbekb" value="BOLD" />
         </node>
@@ -77,7 +63,7 @@
         </node>
       </node>
       <node concept="3F1sOY" id="1_gGZIlEfQY" role="3EZMnx">
-        <ref role="1NtTu8" to="u246:1_gGZIlEfQw" />
+        <ref role="1NtTu8" to="muxh:1_gGZIlEfQw" />
       </node>
       <node concept="3F0ifn" id="1_gGZIlEfQQ" role="3EZMnx">
         <property role="3F0ifm" value="`" />
@@ -92,6 +78,21 @@
         </node>
       </node>
       <node concept="2iRfu4" id="1_gGZIlEfQG" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2yO5KJWbeym">
+    <ref role="1XX52x" to="muxh:7EoPI3Z0MdT" resolve="SqlCode" />
+    <node concept="3EZMnI" id="7EoPI3Z0Me1" role="2wV5jI">
+      <node concept="3F0ifn" id="7EoPI3Z0Me8" role="3EZMnx">
+        <property role="3F0ifm" value="sqlCode:" />
+        <node concept="VechU" id="7EoPI3Z0Mfc" role="3F10Kt">
+          <property role="Vb096" value="lightGray" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="7EoPI3Z0Mek" role="3EZMnx">
+        <ref role="1NtTu8" to="muxh:7EoPI3Z0Mei" />
+      </node>
+      <node concept="2iRfu4" id="7EoPI3Z0Me4" role="2iSdaV" />
     </node>
   </node>
 </model>
