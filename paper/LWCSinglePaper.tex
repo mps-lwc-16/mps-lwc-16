@@ -1,5 +1,7 @@
 \documentclass[preprint,numbers,10pt]{sigplanconf}
 
+\usepackage{graphicx}
+
 \begin{document}
 
 \title{Language Workbench Challenge 2016: Jetbrains MetaProgramming System}
@@ -103,22 +105,45 @@ needs to have a way to interact with the environment. Besides events,
 transitions can also have different guard expressions that need to hold when
 the event arrives, for the transitions to be triggered.
 
-We are now going to describe the implementation of state machines in mbeddr.
+We are now going to describe the extension of mbeddr with new syntactic notations for state machines.
 
 In mbeddr, the state machine language is packaged in a language module and it
 extends the base language of MPS. The \emph{StateMachine} concept extends
-\emph{BaseConcept}, which means that the state machine will be a program node,
+\emph{BaseConcept}, which means that the state machine is a program node,
 as \emph{BaseConcept} is the concept from which all other concepts are derived.
 The state machine language also implements the \emph{IModuleContent} interface,
-which means that they can be top-level components in modules. Modules in mbeddr C
+which means that they can be top-level components in modules or can be inside of any
+container that expects \emph{IModuleContent} children. Modules in mbeddr C
 introduce basic program modularization, visibility control and namespaces \cite{voelter2013mbeddr}.
-
-Moreover, the state machine itself embeds arbitrary code in the actions
-and in the guards. The actions are statement lists and the guards are expressions.
 
 In the next paragraphs, we are going to present excerpts from a state machine for
 judging flights. The state machine awards points for successful
 takeoff and landing and for speed flown \cite{voelter2014generic}.
+
+The state machine adds custom notation for specifying the state machine. The textual
+form of the state machine can be seen in Figure \ref{HFAT}. The figure depicts a hierarchical state machine
+that computes the points for a flight.
+In addition, because textual forms can live alongside graphical and tabular forms in MPS, 
+the state machine can be viewed in table form and graphical form as well alongside the piece of C code
+where it is used. Figure \ref{HFATab} shows the same state machine for flight analyzes in tabular form.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[scale=0.5]{figures/HierarchicalFlightAnalyzerT}
+\caption{Hierarchical flight analyzer state machine - textual notation}
+\label{HFAT}
+\end{figure}
+
+\begin{figure*}[ht!]
+\centering
+\includegraphics[scale=0.55]{figures/HierarchicalFlightAnalyzerTab}
+\caption{Hierarchical flight analyzer state machine - tabular notation}
+\label{HFATab}
+\end{figure*}
+
+Moreover, the state machine itself embeds arbitrary code in the actions
+and in the guards. The actions are statement lists and the guards are expressions.
+For instance, look at the guards and actions in Figure \ref{HFAT}; they contain mbeddr C expression.
 
 \subsubsection{Language embedding: embed a separate language inside another}
 \subsubsection{Extension composition: combine independently developed extensions}
