@@ -135,6 +135,10 @@ This subsection addresses four of the challenge items at once:
 
 \subsection{Assumptions}
 
+Our solutions are presented making references to the two main language families developed for MPS.
+First of all we have the BaseLanguage, which is an implementation of Java built from Jetbrains and shipped with MPS. Several extensions are distributed with MPS, including extensions to support lambdas, manipulation of sequences, expressions to access MPS concepts and models, etc.
+Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to the the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in were different contexts.
+
 \subsection{Implementation}
 
 \subsubsection{Language extension: modularly extend a language with new syntactic constructs}
@@ -198,6 +202,9 @@ To demonstrate the flexibility of this approach we have also embedded our MiniSQ
 \end{figure}
 
 \subsubsection{Extension composition: combine independently developed extensions}
+
+
+
 \subsubsection{Beyond grammar restrictions: disallow constructs in certain scopes, without modeling this in the (abstract) syntax}
 \subsubsection{Syntax migration: support migrating programs when concrete syntax changes}
 \subsubsection{Structure migration: support migrating programs when abstract syntax changes}
