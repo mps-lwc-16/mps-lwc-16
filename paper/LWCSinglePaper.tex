@@ -1,8 +1,10 @@
 \documentclass[preprint,numbers,10pt]{sigplanconf}
 
+\usepackage{hyperref}
+
 \begin{document}
 
-\title{Language Workbench Challenge 2016: Jetbrains MetaProgramming System}
+\title{Language Workbench Challenge 2016: the Jetbrains MetaProgramming System}
 
 \authorinfo{Eugen Schindler}{}{eugenschindler@gmail.com}
 \authorinfo{Klemens Schindler}{}{klemensschindler@gmail.com}
@@ -22,15 +24,37 @@
 
 \section{Introduction}
 
-The Jetbrains MetaProgramming System is a mature Language Workbench based on projectional editing. While other Language Workbenches are based on projectional editing Jetbrains MPS is arguably the most mature, with a growing user base.
+In this paper, we are going to discuss how the Jetbrains MetaProgramming System can be used to address the problems presented in the Language Workbench Challenge 2016 (LWC'16).
 
-TODO: Describe how MPS does w.r.t. the feature model presented in Erdweg2015
+The Jetbrains MetaProgramming System (MPS) is a mature Language Workbench based on projectional editing. While other Language Workbenches are based on projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+ \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is arguably the most mature, with a growing user base.
+
+We believe that one key feature to make MPS successful is its flexibility. By using a powerful and flexible Language Workbench such MPS we, as Language Engineers, can provide languages and corresponding tools that support a significant overhaul of the processes of an organization. It is frequently the case that such processes involve very different kinds of users with very different backgrounds, experiences, and needs. Therefore a complete solution could potentially encompass different aspects of the internal processes, providing different views and a variety of tools such as simulators, debuggers, code-generators, and more.
+
+The ability to support different notations, to process models in different ways, to perform validation and support testing: all these features and others are necessary to build solutions as complete as demanded in real-life scenarios.
+
+Considering the comparison of Language Workbenches features presented in \cite{erdweg2015evaluating} we can see that MPS is among the most complete Language Workbenches. Other tools with a comparable level of completeness are \emph{MetaEdit+} and the \emph{Whole Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many areas it is strictly confined to the textual notation and this limitation set it apart from multi-notation Language Workbenches such as MPS.
+
+With respect to the feature model presented in \cite{erdweg2015evaluating} the only features missing in MPS are \emph{Free-form editing} and \emph{Live translation}.
+
+\subsection{Jetbrains MPS in previous challenges}
 
 TODO: Summarize results of MPS in previous challenges
 
+\subsection{Problems presented in the LWC'16}
+
+The problems identified for the LWC'16 permit to evaluate very different aspects of a Language Workbench. By addressing all three of them we aim to offer a complete picture of the potentialities (and possibly the limitations) offered by MPS.
+
+The first problem is regarding \textbf{Notation}. By addressing this problem we aim to demonstrate how MPS can support several, very different notations. Notations are particularly relevant because they are the most visible aspect of languages. In many cases, Language Workbenches are used to create Domain Specific Languages. Such languages are intended to appeal a specific category of subjects. This category could be familiar with specific notations, not necessarily textual. Being able to support the notations of preference of the target audience can be a key element to winning users support. 
+
+The second problem considers \textbf{Evolution and Reuse}. These are characteristics which are absolutely crucial for the maintenance of a solution in the long run. Any mature engineering approach should consider the whole lifecycle of the proposed solution. The evolution is particularly important for languages because they are tools used to represent knowledge, probably the most valuable asset for many companies. By being able to evolve languages we can preserve the investment done in building models using those languages. Reuse is another key element because it permits to significantly reduce the cost of developing complex solutions. For example, several projects based on MPS benefit from reusing languages provided as part of the \emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}}.
+
+Finally, the third problem is about \textbf{Editing}. This aspect is particularly relevant for projectional editors because they usually require users to part from the traditional textual editing experience. This transition requires significant training and it can be a cause of resistance. By improving the editing experience we can reduce this risk. While the usability of the MPS editors have been previously deemed positive by users \cite{Voelter2014} we believe is still an aspect which needs to be emphasized. By addressing this particular problem we aim to prove the progresses of MPS in this area and highlight possible necessary improvements still needed.
+
 \subsection{Structure of the paper}
 
-\cite{erdweg2015evaluating}
+In the rest of the paper we are going to present our proposed solutions to the three different problems (\emph{Notation, Evolution and Reuse, and Editing}). For each problem we will start by describing the assumptions, then we will discuss the implementation, separately for each point, and after that we will analyze each problem according to this schema: Variants, Usability, Impact, Composability, Limitations, Uses and examples, Effort (best-effort), Other comments, Artifact.
+
+Finally, we will draw our conclusions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -191,6 +215,12 @@ takeoff and landing and for speed flown \cite{voelter2014generic}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Conclusions}
+
+The Jetbrains MetaProgramming System has significantly evolved during the years. Nowadays it is a powerful and flexible tool that can be used to address all the common Language Engineering challenge.
+
+\textbf{Notation}
+\textbf{Evolution and Reuse}
+\textbf{Editing}
 
 %% We are using the command `bibtex' from within the directory `build', thus we need
 %% to go back from this directory and look for the bibliography file.
