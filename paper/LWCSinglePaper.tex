@@ -157,7 +157,7 @@ the event arrives, for the transitions to be triggered.
 We are now going to describe the implementation of state machines in mbeddr.
 
 In mbeddr, the state machine language is packaged in a language module and it
-extends the base language of MPS. The \emph{StateMachine} concept extends
+extends the base language of MPS \comment{Federico: I understand what you mean by we should clarify this is not the BaseLanguage presents in MPS, which is basically Java}. The \emph{StateMachine} concept extends
 \emph{BaseConcept}, which means that the state machine will be a program node,
 as \emph{BaseConcept} is the concept from which all other concepts are derived.
 The state machine language also implements the \emph{IModuleContent} interface,
