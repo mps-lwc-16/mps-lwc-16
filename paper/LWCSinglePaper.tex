@@ -24,7 +24,7 @@
 
 \section{Introduction}
 
-In this paper, we are going to discuss how the Jetbrains MetaProgramming System can be used to address the problems presented in the Language Workbench Challenge 2016 (LWC'16).
+In this paper, we are going to discuss how the JetBrains MetaProgramming System can be used to address the problems presented in the Language Workbench Challenge 2016 (LWC'16).
 
 The Jetbrains MetaProgramming System (MPS) is a mature Language Workbench based on projectional editing. While other Language Workbenches are based on projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+ \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is arguably the most mature, with a growing user base.
 
@@ -32,7 +32,7 @@ We believe that one key feature to make MPS successful is its flexibility. By us
 
 The ability to support different notations, to process models in different ways, to perform validation and support testing: all these features and others are necessary to build solutions as complete as demanded in real-life scenarios.
 
-Considering the comparison of Language Workbenches features presented in \cite{erdweg2015evaluating} we can see that MPS is among the most complete Language Workbenches. Other tools with a comparable level of completeness are \emph{MetaEdit+} and the \emph{Whole Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many areas it is strictly confined to the textual notation and this limitation set it apart from multi-notation Language Workbenches such as MPS.
+Considering the comparison of Language Workbenches features presented in \cite{erdweg2015evaluating} we can see that MPS is among the most complete Language Workbenches. Other tools with a comparable level of completeness are \emph{MetaEdit+} and the \emph{Whole Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many areas it is strictly confined to the textual notation and this limitation sets it apart from multi-notation Language Workbenches such as MPS.
 
 With respect to the feature model presented in \cite{erdweg2015evaluating} the only features missing in MPS are \emph{Free-form editing} and \emph{Live translation}.
 
@@ -67,13 +67,37 @@ Finally, we will draw our conclusions.
 \subsection{Assumptions}
 
 \subsection{Implementation}
+The implementation for this challenge is located in a repository on github \footnote{https://github.com/mps-lwc-16/mps-lwc-16}. To explore the implementation, please clone the repository and follow the instructions in the README.md.
 
-\subsubsection{Support mathematical symbols in addition to textual notation}
-\subsubsection{Support tabular notation in addition to textual notation}
-\subsubsection{Support diagrammatic notations in addition to textual notation}
+Many of the challenge items can be demonstrated using examples from the \emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}}, so we have used examples from there whenever appropriate.
+
+We have written models in the mbeddr documentation language to present the implementation. To open the documentation model for the implementation to this challenge, open the Notation model, as shown in Figure \ref{fig:opennotation}. The Notation chapter is divided into sections, each of which addresses one or more of the challenge items. Each of those items is discussed in detail in the subsections below.
+
+\begin{figure}[p]
+	\centering
+	\includegraphics{screens/OpenNotation.png}
+	\caption{The documentation model for the Notation challenge}
+	\label{fig:opennotation}
+\end{figure}
+
+\subsubsection{Support mathematical symbols, tabular notation, diagrammatic notations in addition to textual notation, and support switching between multiple alternative notations for the same language}
+This subsection addresses four of the challenge items at once:
+\begin{itemize}
+	\item Support mathematical symbols in addition to textual notation: see Figure \ref{fig:mathnotation}.
+	\item Support tabular notation in addition to textual notation
+	\item Support diagrammatic notation in addition to textual notation
+	\item Support alternative notations for the same language
+\end{itemize}
+
+\begin{figure}[p]
+	\centering
+	\includegraphics{screens/MathematicalNotation.png}
+	\caption{The documentation model for the Notation challenge}
+	\label{fig:mathnotation}
+\end{figure}
+
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
-\subsubsection{Alternative notations: multiple notations for the same language}
 \subsubsection{Computed properties: read only annotations that are automatically derived form the main program}
 \subsubsection{Computed structures: structured, editable views}
 \subsubsection{Skeleton editing: guide the user with syntactic templates with editable holes}
@@ -216,7 +240,7 @@ takeoff and landing and for speed flown \cite{voelter2014generic}.
 
 \section{Conclusions}
 
-The Jetbrains MetaProgramming System has significantly evolved during the years. Nowadays it is a powerful and flexible tool that can be used to address all the common Language Engineering challenge.
+The JetBrains MetaProgramming System has significantly evolved during the years. Nowadays it is a powerful and flexible tool that can be used to address most of the Language Engineering challenges that have been brought forward in the LWC 2016.
 
 \textbf{Notation}
 \textbf{Evolution and Reuse}
