@@ -138,7 +138,9 @@ In this section we present our solution to the problem about Evolution and Reuse
 \subsection{Assumptions}
 
 Our solutions are presented making references to the two main language families developed for MPS.
+
 First of all we have the BaseLanguage, which is an implementation of Java built from Jetbrains and shipped with MPS. Several extensions are distributed with MPS, including extensions to support lambdas, manipulation of sequences, expressions to access MPS concepts and models, etc.
+
 Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to the the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in were different contexts.
 
 \subsection{Implementation}
@@ -146,6 +148,7 @@ Another very popular family of languages is mbeddr. It is an implementation of t
 In this subsection we present how we implemented a solution to each specific challenge.
 
 \subsubsection{Language extension: modularly extend a language with new syntactic constructs}
+\label{evr:langext}
 
 In this section, we are going to describe the mbeddr language for state
 machines with event-driven execution. The mbeddr state machines extends
@@ -203,6 +206,7 @@ and in the guards. The actions are statement lists and the guards are expression
 For instance, look at the guards and actions in Figure \ref{fig:HFAT}; they contain mbeddr C expression.
 
 \subsubsection{Language embedding: embed a separate language inside another}
+\label{evr:langembed}
 
 We have implemented a simple toy language representing a subset of SQL. This language permits to define database schemas and simple SQL statements referring to such schemas.
 
@@ -229,10 +233,23 @@ To demonstrate the flexibility of this approach we have also embedded our MiniSQ
 \end{figure}
 
 \subsubsection{Extension composition: combine independently developed extensions}
+\label{evr:langcomp}
 
+The mbeddr project contains many examples of language composition. Different extensions have been developed during the years, not necessarily from the exact same persons or in the context of the same project. However all of these extensions can be combined and used together.
 
+A very interesting example is the Documentation language which permits to add references to other portions of code or to embed specificy contructs into the documentation.
+
+In the example in \ref{fig:extensioncomposition} we can see a Documentation construct containing a table. The tables extensions have been developed separately, in a completely agnostic way, so that it could be reused in very different contexts. In this case it contains expressions from mbeddr language (C). So effectively three different extensions are combined in one single example.
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/extension_composition.png}
+	\caption{Combining tables, C expressions and the documentation language}
+	\label{fig:extensioncomposition}
+\end{figure}
 
 \subsubsection{Beyond grammar restrictions: disallow constructs in certain scopes, without modeling this in the (abstract) syntax}
+\label{evr:beyondgrammar}
 
 MPS offers several mechanisms to limit where a certain construct can be used. In this respect it is not limited to the abstract syntax definition, but further logic can be added to additionally constraints the concepts usable in a given scope.
 
@@ -246,19 +263,46 @@ For example, every \emph{AssertStatement} is technically an mbeddr \emph{Stateme
 \end{figure}
 
 \subsubsection{Syntax migration: support migrating programs when concrete syntax changes}
+\label{evr:synmigr}
+
+\comment{TODO: to be written after the examples are provided}
+
 \subsubsection{Structure migration: support migrating programs when abstract syntax changes}
+\label{evr:structmigr}
+
+\comment{TODO: to be written after the examples are provided}
 
 \subsection{Variants}
 
+The three first points we have seens (\ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp}) have been solved through simple extension techniques. We do not see any obvious alternative for such cases. About combinging independently defined extensions (\ref{evr:langcomp}) we can consider all the projects using the mbeddr platform as examples of this technique.
+
+Regarding the grammar restrictions (\ref{evr:beyondgrammar}), we implemented it specifiying that certain rules can have as ancestors only certain nodes. Conversely we could have specified that certain rules could not contain specific descendants instead.
+
 \subsection{Usability}
+
+From the point of view of usability \ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp} do not pose any issue. We simply used the mechanism of language extensions to add additional constructs to existing language. In one case we had done that for the specific goal to embed another language, while in the other cases we did not. In all cases the new constructs can be used exactly as the existing ones, so the new constructs are as usable as the previous ones with no different interactions required to the users.
+
+The grammar restriction presented in \ref{evr:beyondgrammar} does not pose any usability issue neither. The whole mechanism is transparent to the user: elements which cannot be used in a certain context are not offered by the auto-completion mechanism and there is no immediate way to use them when they are not supposed to be used.
+
+Migrations are typically performed through wizard dialogs. Those migrations are proposed to the user when MPS is started or the user can trigger them manually.
 
 \subsection{Impact}
 
+Language composition does not require to change existing elements.
+
 \subsection{Composability}
+
+Language composition is well supported in MPS. It is very natural and it does not require any particular technique. The only possible issues could be caused by semantic conflicts: supposed an expression language defines only statically evaluable expressions such literals and basic mathematical expressions. Suppose a first extension is based on this consideration and add the possibility to display the result of such expressions. Now, if a second extension would introduce non-statically evaluable expressions, the two extensions could not play well together. This problem could be avoidable by planning for extensibility in the original language: for example we could have required each Expression concept to declare if it was statically evaluable or not. All the expressions of the original language would have declared themselves to be statically evaluable, while the Expressions from the first extension would have not. The extensions calculating result values could have used the method to verify that all Expressions for which it wanted to calculate a value were indeed statically evaluable and trigger an error when not-statically evaluable expressions were used in the wrong context. In this way the two extensions would have played nice without being aware of each other.
 
 \subsection{Limitations}
 
+No particular limitations come to mind.
+
+The only limitation we see is with migrations, because they are not reversible. This is an issue when different members of a team want to use different versions of MPS because each version comes with specific versions of the BaseLanguage: when a project is open with a new version migrations have to be performed and these migrations make the project incompatible with previous versions. Effectively this forces everyone to use the same version of the language workbench.
+
 \subsection{Uses and examples}
+
+Language extensibility and composition are used extensively in the two well-known MPS language families: the BaseLanguage and mbeddr. The BaseLanguage defines a core language and a set of independent extensions, mbeddr does the same.
 
 \subsection{Effort (best-effort)}
 
