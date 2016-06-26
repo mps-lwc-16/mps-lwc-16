@@ -7,7 +7,7 @@
 
 \begin{document}
 
-\title{Language Workbench Challenge 2016: the Jetbrains MetaProgramming System}
+\title{Language Workbench Challenge 2016: the JetBrains MetaProgramming System}
 
 \authorinfo{Eugen Schindler}{}{eugenschindler@gmail.com}
 \authorinfo{Klemens Schindler}{}{klemensschindler@gmail.com}
@@ -29,7 +29,7 @@
 
 In this paper, we are going to discuss how the JetBrains MetaProgramming System can be used to address the problems presented in the Language Workbench Challenge 2016 (LWC'16).
 
-The Jetbrains MetaProgramming System (MPS) is a mature Language Workbench based on projectional editing. While other Language Workbenches are based on projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+ \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is arguably the most mature, with a growing user base.
+The JetBrains MetaProgramming System (MPS) is a mature Language Workbench based on projectional editing. While other Language Workbenches are based on projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+ \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is arguably the most mature, with a growing user base.
 
 We believe that one key feature to make MPS successful is its flexibility. By using a powerful and flexible Language Workbench such MPS we, as Language Engineers, can provide languages and corresponding tools that support a significant overhaul of the processes of an organization. It is frequently the case that such processes involve very different kinds of users with very different backgrounds, experiences, and needs. Therefore a complete solution could potentially encompass different aspects of the internal processes, providing different views and a variety of tools such as simulators, debuggers, code-generators, and more.
 
@@ -39,7 +39,7 @@ Considering the comparison of Language Workbenches features presented in \cite{e
 
 With respect to the feature model presented in \cite{erdweg2015evaluating} the only features missing in MPS are \emph{Free-form editing} and \emph{Live translation}.
 
-\subsection{Jetbrains MPS in previous challenges}
+\subsection{JetBrains MPS in previous challenges}
 
 TODO: Summarize results of MPS in previous challenges
 
@@ -157,7 +157,7 @@ In this section we present our solution to the problem about Evolution and Reuse
 
 Our solutions are presented making references to the two main language families developed for MPS.
 
-First of all we have the BaseLanguage, which is an implementation of Java built from Jetbrains and shipped with MPS. Several extensions are distributed with MPS, including extensions to support lambdas, manipulation of sequences, expressions to access MPS concepts and models, etc.
+First of all we have the BaseLanguage, which is an implementation of Java built from JetBrains and shipped with MPS. Several extensions are distributed with MPS, including extensions to support lambdas, manipulation of sequences, expressions to access MPS concepts and models, etc.
 
 Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to the the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in were different contexts.
 
@@ -292,7 +292,7 @@ For example, every \emph{AssertStatement} is technically an mbeddr \emph{Stateme
 
 \subsection{Variants}
 
-The three first points we have seens (\ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp}) have been solved through simple extension techniques. We do not see any obvious alternative for such cases. About combinging independently defined extensions (\ref{evr:langcomp}) we can consider all the projects using the mbeddr platform as examples of this technique.
+The three first points we have seens (\ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp}) have been solved through simple extension techniques. We do not see any obvious alternative for such cases. About combining independently defined extensions (\ref{evr:langcomp}) we can consider all the projects using the mbeddr platform as examples of this technique.
 
 Regarding the grammar restrictions (\ref{evr:beyondgrammar}), we implemented it specifiying that certain rules can have as ancestors only certain nodes. Conversely we could have specified that certain rules could not contain specific descendants instead.
 
