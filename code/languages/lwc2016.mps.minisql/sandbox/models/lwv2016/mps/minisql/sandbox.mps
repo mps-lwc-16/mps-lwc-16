@@ -9,6 +9,26 @@
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
+    <use id="a482b416-d0c9-473f-8f67-725ed642b3f3" name="com.mbeddr.mpsutil.breadcrumb" version="0" />
+    <use id="63e0e566-5131-447e-90e3-12ea330e1a00" name="com.mbeddr.mpsutil.blutil" version="1" />
+    <use id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml" version="0" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="2" />
+    <use id="d09a16fb-1d68-4a92-a5a4-20b4b2f86a62" name="com.mbeddr.mpsutil.jung" version="0" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="1" />
+    <use id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext" version="0" />
+    <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
+    <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="0" />
+    <use id="b4d28e19-7d2d-47e9-943e-3a41f97a0e52" name="com.mbeddr.mpsutil.plantuml.node" version="0" />
+    <use id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base" version="3" />
+    <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
+    <use id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access" version="0" />
+    <use id="c1c2a88a-323c-4605-a37d-9ab77a2ccbd2" name="com.mbeddr.mpsutil.suppresswarning" version="0" />
+    <use id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions" version="3" />
+    <use id="3bf5377a-e904-4ded-9754-5a516023bfaa" name="com.mbeddr.core.pointers" version="0" />
+    <use id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements" version="1" />
+    <use id="223dd778-c44f-4ef3-9535-7aa7d12244a6" name="com.mbeddr.core.debug" version="0" />
+    <use id="6d11763d-483d-4b2b-8efc-09336c1b0001" name="com.mbeddr.core.modules" version="0" />
+    <use id="35e17311-3dea-49a6-9fc4-9703fc8c1722" name="lwc2016.mos.minisql.mbeddrextension" version="0" />
   </languages>
   <imports>
     <import index="zj7m" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.sql(JDK/)" />
@@ -125,6 +145,41 @@
         <child id="1824155742214094240" name="baseLanguageExpression" index="2cY4Tr" />
       </concept>
     </language>
+    <language id="a9d69647-0840-491e-bf39-2eb0805d2011" name="com.mbeddr.core.statements">
+      <concept id="7763322639126652757" name="com.mbeddr.core.statements.structure.ITypeContainingType" flags="ng" index="2umbIr">
+        <child id="7763322639126652758" name="baseType" index="2umbIo" />
+      </concept>
+      <concept id="1679452829930336984" name="com.mbeddr.core.statements.structure.CommentStatement" flags="ng" index="1QiMYF">
+        <child id="8624890525768479139" name="textblock" index="3SJzmv" />
+      </concept>
+      <concept id="4185783222026475238" name="com.mbeddr.core.statements.structure.LocalVariableDeclaration" flags="ng" index="3XIRlf">
+        <child id="4185783222026502647" name="init" index="3XIe9u" />
+      </concept>
+      <concept id="4185783222026475861" name="com.mbeddr.core.statements.structure.StatementList" flags="ng" index="3XIRFW">
+        <child id="4185783222026475862" name="statements" index="3XIRFZ" />
+      </concept>
+      <concept id="2093108837558113914" name="com.mbeddr.core.statements.structure.LocalVarRef" flags="ng" index="3ZVu4v">
+        <reference id="2093108837558124071" name="var" index="3ZVs_2" />
+      </concept>
+    </language>
+    <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
+      <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
+        <child id="2557074442922392302" name="words" index="19SJt6" />
+      </concept>
+      <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$">
+        <property id="2557074442922438158" name="escapedValue" index="19SUeA" />
+      </concept>
+    </language>
+    <language id="3bf5377a-e904-4ded-9754-5a516023bfaa" name="com.mbeddr.core.pointers">
+      <concept id="5308710777891643206" name="com.mbeddr.core.pointers.structure.NullExpression" flags="ng" index="Ea8Gl" />
+      <concept id="6113173064528067332" name="com.mbeddr.core.pointers.structure.StringType" flags="ng" index="Pu267" />
+      <concept id="279446265608459824" name="com.mbeddr.core.pointers.structure.PointerType" flags="ng" index="3wxxNl" />
+    </language>
+    <language id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base">
+      <concept id="8375407818529178006" name="com.mbeddr.core.base.structure.TextBlock" flags="ng" index="OjmMv">
+        <child id="8375407818529178007" name="text" index="OjmMu" />
+      </concept>
+    </language>
     <language id="87892e40-0466-4436-b202-b9638c83e7b5" name="lwc2016.mps.minisql">
       <concept id="8834046930926522849" name="lwc2016.mps.minisql.structure.Select" flags="ng" index="25Aos1">
         <reference id="8834046930926523034" name="table" index="25AohU" />
@@ -155,6 +210,30 @@
         <child id="5669571689495191059" name="expression" index="3UlCdU" />
       </concept>
     </language>
+    <language id="6d11763d-483d-4b2b-8efc-09336c1b0001" name="com.mbeddr.core.modules">
+      <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
+        <child id="8967919205527146150" name="expression" index="2BFjQA" />
+      </concept>
+      <concept id="8105003328814797298" name="com.mbeddr.core.modules.structure.IFunctionLike" flags="ng" index="2H9T1B">
+        <child id="5708867820623310661" name="arguments" index="1UOdpc" />
+      </concept>
+      <concept id="6437088627575722813" name="com.mbeddr.core.modules.structure.Module" flags="ng" index="N3F4X">
+        <child id="6437088627575722833" name="contents" index="N3F5h" />
+      </concept>
+      <concept id="6437088627575722830" name="com.mbeddr.core.modules.structure.ImplementationModule" flags="ng" index="N3F5e" />
+      <concept id="6437088627575724001" name="com.mbeddr.core.modules.structure.Function" flags="ng" index="N3Fnx">
+        <child id="4185783222026475860" name="body" index="3XIRFX" />
+      </concept>
+      <concept id="8934095934011938595" name="com.mbeddr.core.modules.structure.EmptyModuleContent" flags="ng" index="2NXPZ9" />
+      <concept id="7892328519581704407" name="com.mbeddr.core.modules.structure.Argument" flags="ng" index="19RgSI" />
+      <concept id="5950410542643524492" name="com.mbeddr.core.modules.structure.FunctionCall" flags="ng" index="3O_q_g">
+        <reference id="5950410542643524493" name="function" index="3O_q_h" />
+        <child id="5950410542643524495" name="actuals" index="3O_q_j" />
+      </concept>
+      <concept id="2093108837558505658" name="com.mbeddr.core.modules.structure.ArgumentRef" flags="ng" index="3ZUYvv">
+        <reference id="2093108837558505659" name="arg" index="3ZUYvu" />
+      </concept>
+    </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
       <concept id="1168401810208" name="jetbrains.mps.baseLanguage.logging.structure.PrintStatement" flags="nn" index="abc8K">
         <child id="1168401864803" name="textExpression" index="abp_N" />
@@ -163,6 +242,25 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="35e17311-3dea-49a6-9fc4-9703fc8c1722" name="lwc2016.mos.minisql.mbeddrextension">
+      <concept id="8834046930926642041" name="lwc2016.mos.minisql.mbeddrextension.structure.SqlCode" flags="ng" index="25AZmq">
+        <child id="8834046930926642066" name="sqlStatement" index="25AZlN" />
+      </concept>
+      <concept id="1824155742214094239" name="lwc2016.mos.minisql.mbeddrextension.structure.ExpressionInSql" flags="ng" index="2cY4T_">
+        <child id="1824155742214094240" name="mbeddrExpression" index="2cY4Ts" />
+      </concept>
+    </language>
+    <language id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions">
+      <concept id="8463282783691618435" name="com.mbeddr.core.expressions.structure.Int16tType" flags="ng" index="26Vqpq" />
+      <concept id="318113533128716675" name="com.mbeddr.core.expressions.structure.ITyped" flags="ng" index="2C2TGh">
+        <child id="318113533128716676" name="type" index="2C2TGm" />
+      </concept>
+      <concept id="7892328519581699353" name="com.mbeddr.core.expressions.structure.VoidType" flags="ng" index="19Rifw" />
+      <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
+        <property id="2941277002445651368" name="const" index="2c7vTL" />
+        <property id="2941277002448691247" name="volatile" index="2caQfQ" />
       </concept>
     </language>
   </registry>
@@ -379,6 +477,93 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="7EoPI3Z0Qd7" role="1B3o_S" />
+  </node>
+  <node concept="N3F5e" id="2yO5KJWbuhy">
+    <property role="TrG5h" value="MyModule" />
+    <node concept="N3Fnx" id="2yO5KJWbuk6" role="N3F5h">
+      <property role="TrG5h" value="getAuthorById" />
+      <node concept="19RgSI" id="2yO5KJWbv8w" role="1UOdpc">
+        <property role="TrG5h" value="id" />
+        <node concept="26Vqpq" id="2yO5KJWbv8u" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="3wxxNl" id="2yO5KJWbx1C" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+        <node concept="19Rifw" id="2yO5KJWbuk7" role="2umbIo">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="3XIRFW" id="2yO5KJWbuk8" role="3XIRFX">
+        <node concept="3XIRlf" id="2yO5KJWbuqG" role="3XIRFZ">
+          <property role="TrG5h" value="s" />
+          <node concept="Pu267" id="2yO5KJWbuYI" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+          <node concept="25AZmq" id="2yO5KJWbuPq" role="3XIe9u">
+            <node concept="25Aos1" id="2yO5KJWbv9F" role="25AZlN">
+              <ref role="25AohU" node="7EoPI3Z0BqZ" resolve="Authors" />
+              <node concept="3UlC2P" id="2yO5KJWbv9G" role="3UlCfQ">
+                <ref role="3UlCce" node="7EoPI3Z0IaZ" resolve="author_id" />
+                <node concept="2cY4T_" id="2yO5KJWbvdE" role="3UlCdU">
+                  <node concept="3ZUYvv" id="2yO5KJWbvfw" role="2cY4Ts">
+                    <ref role="3ZUYvu" node="2yO5KJWbv8w" resolve="id" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3UlxnH" id="2yO5KJWbv9J" role="25Aoht" />
+            </node>
+          </node>
+        </node>
+        <node concept="2BFjQ_" id="2yO5KJWbxaw" role="3XIRFZ">
+          <node concept="3O_q_g" id="2yO5KJWbxcb" role="2BFjQA">
+            <ref role="3O_q_h" node="2yO5KJWbwGv" resolve="runQuery" />
+            <node concept="3ZVu4v" id="2yO5KJWbxcF" role="3O_q_j">
+              <ref role="3ZVs_2" node="2yO5KJWbuqG" resolve="s" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="2yO5KJWbwie" role="N3F5h">
+      <property role="TrG5h" value="empty_1466850210712_5" />
+    </node>
+    <node concept="N3Fnx" id="2yO5KJWbwGv" role="N3F5h">
+      <property role="TrG5h" value="runQuery" />
+      <node concept="19RgSI" id="2yO5KJWbwSn" role="1UOdpc">
+        <property role="TrG5h" value="sqlCode" />
+        <node concept="Pu267" id="2yO5KJWbwSl" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="3wxxNl" id="2yO5KJWbwHo" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+        <node concept="19Rifw" id="2yO5KJWbwGw" role="2umbIo">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="3XIRFW" id="2yO5KJWbwGx" role="3XIRFX">
+        <node concept="1QiMYF" id="2yO5KJWbwXH" role="3XIRFZ">
+          <node concept="OjmMv" id="2yO5KJWbwXJ" role="3SJzmv">
+            <node concept="19SGf9" id="2yO5KJWbwXK" role="OjmMu">
+              <node concept="19SUe$" id="2yO5KJWbwXL" role="19SJt6">
+                <property role="19SUeA" value="some magic" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2BFjQ_" id="2yO5KJWbxll" role="3XIRFZ">
+          <node concept="Ea8Gl" id="2yO5KJWbxoG" role="2BFjQA" />
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 
