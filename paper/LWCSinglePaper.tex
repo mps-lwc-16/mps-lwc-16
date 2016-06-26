@@ -92,8 +92,8 @@ Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the 
 	\label{fig:mathnotation}
 \end{figure}
 
-\subsubsection{Support tabular notation in addition to textual notation}
-Figure \ref{fig:tabnotation} shows a textual notation for the mbedddr
+\subsubsection{Support tabular notation in addition to textual notation}\label{sec:tabnot}
+Figure \ref{fig:txtnotationsm} shows a textual notation for the mbeddr statemachine language, while Figure \ref{fig:tabnotationsm} shows a tabular notation for the same model expressed in the same statemachine language.
 \begin{figure}[p]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/TextualNotationStatemachine.png}
@@ -101,21 +101,25 @@ Figure \ref{fig:tabnotation} shows a textual notation for the mbedddr
 	\label{fig:txtnotationsm}
 \end{figure}
 
-\subsubsection{Support mathematical symbols, tabular notation, diagrammatic notations in addition to textual notation, and support switching between multiple alternative notations for the same language}
-This subsection addresses four of the challenge items at once:
-\begin{itemize}
-	\item Support mathematical symbols in addition to textual notation: see Figure \ref{fig:mathnotation}.
-	\item Support tabular notation in addition to textual notation
-	\item Support diagrammatic notation in addition to textual notation
-	\item Support alternative notations for the same language
-\end{itemize}
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/TabularNotationStatemachines.png}
+	\caption{Tabular notation for the mbeddr statemachine language}
+	\label{fig:tabnotationsm}
+\end{figure}
+
+\subsubsection{Support diagrammatic notation in addition to textual notation}\label{sec:dianot}
+Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language, for exactly the same model as also shown in Section \ref{sec:tabnot}.
 
 \begin{figure}[p]
 	\centering
-	\includegraphics[width=0.50\textwidth]{screens/MathematicalNotation.png}
-	\caption{The documentation model for the Notation challenge}
-	\label{fig:mathnotation}
+	\includegraphics[width=0.50\textwidth]{screens/DiagrammaticNotationStatemachines.png}
+	\caption{Diagrammatic notation for the mbeddr statemachine language}
+	\label{fig:dianotationsm}
 \end{figure}
+
+\subsubsection{Support switching between multiple alternative notations for the same language}
+As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the same model written in the mbeddr statemachine language can be alternated between textual, tabular, and diagrammatic.
 
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
