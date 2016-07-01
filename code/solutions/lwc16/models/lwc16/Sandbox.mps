@@ -390,17 +390,6 @@
           <property role="TrG5h" value="empty_-1" />
         </node>
       </node>
-      <node concept="1_0VNX" id="3FDP3BpR2DQ" role="1_0VJ0">
-        <property role="TrG5h" value="RererenceMissingItems" />
-        <property role="1_0VJr" value="Reference Missing items" />
-        <node concept="1_0LV8" id="3FDP3BpR2Fq" role="1_0VJ0">
-          <node concept="19SGf9" id="3FDP3BpR2Fr" role="1_0LWR">
-            <node concept="19SUe$" id="3FDP3BpR2Fs" role="19SJt6">
-              <property role="19SUeA" value="nht" />
-            </node>
-          </node>
-        </node>
-      </node>
       <node concept="1_0VNX" id="1zKhy7PAOv6" role="1_0VJ0">
         <property role="TrG5h" value="CopyPaste" />
         <property role="1_0VJr" value="Copy paste" />
@@ -471,14 +460,21 @@
         <node concept="1_0LV8" id="7T0_4mNu1IQ" role="1_0VJ0">
           <node concept="19SGf9" id="7T0_4mNu1IR" role="1_0LWR">
             <node concept="19SUe$" id="7T0_4mNu1IS" role="19SJt6">
-              <property role="19SUeA" value="MPS does not parse text and try to reconstruct references, but rather references specific nodes. Nodes have unique identifiers and carry information such as their concept. This means that every node knows its type, so explicit demarcation symbols are not required. Whenever ambiguity arises while adding a new node, a choice is presented to the user." />
+              <property role="19SUeA" value="MPS does not parse text and try to reconstruct a structure. Instead every tree node creation binds a type to a node. In case of ambiguity the user can choose which type to create. For this reason, no disambiguation is needed for the type of a node and no special demarcation markers are needed." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="3FDP3BpRdN$" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpRdN_" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpRdNA" role="19SJt6">
+              <property role="19SUeA" value="Sililarly, reference disambiguation is ensured by default since every node gets a unique ID. Although the presentation of the reference can show a name/identifier, the reference refers to the node with the given ID. A side effect of this is that removing an element named &quot;A&quot; and creating a new element named &quot;A&quot; will count as a new node and references will be broken. If desired, these references can also be automatically be re-bound." />
             </node>
           </node>
         </node>
         <node concept="1_0LV8" id="7T0_4mNu1Gv" role="1_0VJ0">
           <node concept="19SGf9" id="7T0_4mNu1Gw" role="1_0LWR">
             <node concept="19SUe$" id="7T0_4mNu1Gx" role="19SJt6">
-              <property role="19SUeA" value="Below example shows how references are resolved over language boundaries (c module, containing a state machine, containing c statements). This example uses the same name (&quot;some_name&quot;) for a state, an integer, a function, and a statemachine event. Ctrl+clicking on the references shows that all references point to the correct declaration." />
+              <property role="19SUeA" value="Below example shows how various languages can be nested (c module, containing a state machine, containing c statements) and how references are resolved over these language boundaries. This example uses the same name (&quot;some_name&quot;) for a state, an integer, a function, and a statemachine event. Ctrl+clicking on the references shows that all references point to the correct declaration." />
             </node>
           </node>
         </node>
