@@ -305,6 +305,11 @@
         <reference id="4514118643321592184" name="providedPort" index="1ZwSu5" />
       </concept>
     </language>
+    <language id="a26a3aea-de54-4e8b-8b8f-f3eb079923b4" name="ExampleLanguage">
+      <concept id="4245157468706760088" name="ExampleLanguage.structure.GenericNote" flags="ng" index="3zdj6x">
+        <property id="4245157468706760120" name="note" index="3zdj61" />
+      </concept>
+    </language>
     <language id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions">
       <concept id="8463282783691618440" name="com.mbeddr.core.expressions.structure.Int32tType" flags="ng" index="26Vqph" />
       <concept id="8463282783691618435" name="com.mbeddr.core.expressions.structure.Int16tType" flags="ng" index="26Vqpq" />
@@ -978,12 +983,54 @@
       <node concept="1_0VNX" id="zh_Ys$lcnQ" role="1_0VJ0">
         <property role="TrG5h" value="metadata" />
         <property role="1_0VJr" value="Generic Metadata Annotations" />
-        <node concept="1_0LV8" id="zh_Ys$lcot" role="1_0VJ0">
-          <node concept="19SGf9" id="zh_Ys$lcou" role="1_0LWR">
-            <node concept="19SUe$" id="zh_Ys$lcov" role="19SJt6">
-              <property role="19SUeA" value="todo" />
+        <node concept="1_0LV8" id="3FDP3BpRAu4" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpRAu5" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpRAu6" role="19SJt6">
+              <property role="19SUeA" value="Annotations are also called attributes in MPS. An example is the generic commenting functionality that can comment out nodes in most models. (even this documentation model)" />
             </node>
           </node>
+        </node>
+        <node concept="1_0LV8" id="3FDP3BpRAyM" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpRAyN" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpRAyO" role="19SJt6">
+              <property role="19SUeA" value="It is also possible to make your own annotation as generic or specific as needed. An example to demonstrate this is the GenericNote annotation which allows you to add a note to most model nodes." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="3FDP3BpRAyX" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="1_0LV8" id="3FDP3BpRAzo" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpRAzp" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpRAzq" role="19SJt6">
+              <property role="19SUeA" value="Example annotated paragraph" />
+            </node>
+          </node>
+          <node concept="3zdj6x" id="3FDP3BpRABu" role="lGtFl">
+            <property role="3zdj61" value="This is a note attached to this paragraph" />
+          </node>
+        </node>
+        <node concept="1_1sxE" id="3FDP3BpRBr8" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
+        </node>
+        <node concept="1_0LV8" id="3FDP3BpRBrF" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpRBrG" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpRBrH" role="19SJt6">
+              <property role="19SUeA" value="Below the exact same annotation type can be seen in java code:" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="3FDP3BpRABw" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="3FDP3BpRABx" role="3z_lpI">
+            <node concept="2NCMab" id="3FDP3BpRABL" role="2NCMaf">
+              <ref role="2NCMaa" node="p7TAWbcUp8" resolve="TestClass" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_1sxE" id="3FDP3BpRAzB" role="1_0VJ0">
+          <property role="TrG5h" value="empty_-1" />
         </node>
       </node>
       <node concept="1_0VNX" id="zh_Ys$lcpj" role="1_0VJ0">
@@ -1538,12 +1585,12 @@
       <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="p7TAWbcUqE" role="3clF47">
-        <node concept="3cpWs6" id="p7TAWbcUrl" role="3cqZAp">
-          <node concept="17qRlL" id="p7TAWbcUvN" role="3cqZAk">
-            <node concept="37vLTw" id="p7TAWbcUw0" role="3uHU7w">
+        <node concept="3cpWs6" id="3FDP3BpRxCv" role="3cqZAp">
+          <node concept="17qRlL" id="3FDP3BpRxKg" role="3cqZAk">
+            <node concept="37vLTw" id="3FDP3BpRxN6" role="3uHU7w">
               <ref role="3cqZAo" node="p7TAWbcUqX" resolve="aNumber" />
             </node>
-            <node concept="37vLTw" id="p7TAWbcUrM" role="3uHU7B">
+            <node concept="37vLTw" id="3FDP3BpRxEF" role="3uHU7B">
               <ref role="3cqZAo" node="p7TAWbcUqX" resolve="aNumber" />
             </node>
           </node>
@@ -1554,8 +1601,10 @@
         <property role="TrG5h" value="aNumber" />
         <node concept="10Oyi0" id="p7TAWbcUqW" role="1tU5fm" />
       </node>
+      <node concept="3zdj6x" id="3FDP3BpRADb" role="lGtFl">
+        <property role="3zdj61" value="Example Note" />
+      </node>
     </node>
-    <node concept="2tJIrI" id="p7TAWbcUCO" role="jymVt" />
     <node concept="3Tm1VV" id="p7TAWbcUp9" role="1B3o_S" />
   </node>
 </model>
