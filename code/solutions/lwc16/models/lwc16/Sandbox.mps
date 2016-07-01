@@ -356,19 +356,23 @@
         <node concept="1_0LV8" id="1zKhy7PAMcx" role="1_0VJ0">
           <node concept="19SGf9" id="1zKhy7PAMcy" role="1_0LWR">
             <node concept="19SUe$" id="1zKhy7PAMcz" role="19SJt6">
-              <property role="19SUeA" value="It is not possible to arbitrarily type and remove text regardless of the model/program structure. A node, for example an if statement, must have a complete skeleton. However it is possible to leave content out (e.g. remove  the guard and body in the if statement)." />
+              <property role="19SUeA" value="It is not possible to arbitrarily type and remove text regardless of the model/program structure. A node, for example an if statement, must have a complete skeleton of that selected concept. However it is possible to leave content out (e.g. remove  the guard and body in the if statement). The result can be considered syntactically incorrect (guard missing from if statement), but is structurally sound (a valid, if incomplete tree node)." />
             </node>
           </node>
         </node>
         <node concept="1_0LV8" id="p7TAWbcSAd" role="1_0VJ0">
           <node concept="19SGf9" id="p7TAWbcSAe" role="1_0LWR">
             <node concept="19SUe$" id="p7TAWbcSAf" role="19SJt6">
-              <property role="19SUeA" value="So it is possible to edit and persist incomplete programs, but the limitation is that every node that is inserted must have a full &quot;skeleton&quot;. It is not possible to remove things such as the bracket of an if statement, because this is actually not part of the model contents, only of the presentation (concrete syntax). " />
+              <property role="19SUeA" value="So it is possible to edit and persist incomplete programs, but the limitation is that every node that is inserted must have a full &quot;skeleton&quot;. It is not possible to remove things such as the bracket of an if statement, because this is actually not part of the model contents, only of the presentation (concrete syntax)." />
             </node>
           </node>
         </node>
-        <node concept="1_1sxE" id="1zKhy7PAMco" role="1_0VJ0">
-          <property role="TrG5h" value="empty_-1" />
+        <node concept="1_0LV8" id="3FDP3BpR2C1" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpR2C2" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpR2C3" role="19SJt6">
+              <property role="19SUeA" value="Additionally it is possible to design elements such as an &quot;Unmatched Paranthesis&quot; into your language which are not intended to leave in the final model, but serve as an aid to enable a more text-like editing experience." />
+            </node>
+          </node>
         </node>
         <node concept="1_1sxE" id="1zKhy7PAMci" role="1_0VJ0">
           <property role="TrG5h" value="empty_-1" />
@@ -384,6 +388,17 @@
         </node>
         <node concept="1_1sxE" id="1zKhy7PAO7Y" role="1_0VJ0">
           <property role="TrG5h" value="empty_-1" />
+        </node>
+      </node>
+      <node concept="1_0VNX" id="3FDP3BpR2DQ" role="1_0VJ0">
+        <property role="TrG5h" value="RererenceMissingItems" />
+        <property role="1_0VJr" value="Reference Missing items" />
+        <node concept="1_0LV8" id="3FDP3BpR2Fq" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpR2Fr" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpR2Fs" role="19SJt6">
+              <property role="19SUeA" value="nht" />
+            </node>
+          </node>
         </node>
       </node>
       <node concept="1_0VNX" id="1zKhy7PAOv6" role="1_0VJ0">
@@ -570,7 +585,14 @@
         <node concept="1_0LV8" id="1zKhy7PAQlR" role="1_0VJ0">
           <node concept="19SGf9" id="1zKhy7PAQlS" role="1_0LWR">
             <node concept="19SUe$" id="1zKhy7PAQlT" role="19SJt6">
-              <property role="19SUeA" value="It is possible to make languages that give some formatting control to the end user. A simple example is to allow a whitespace concept in places where you can enter statements. A more elaborate example is a diagram editor where a user can move around visual elements freely:" />
+              <property role="19SUeA" value="It is possible to make languages that give some formatting control to the end user. A simple example is to allow a whitespace concept in places where you can enter statements. A more elaborate example is a diagram editor where a user can move around visual elements freely." />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="3FDP3BpR2$X" role="1_0VJ0">
+          <node concept="19SGf9" id="3FDP3BpR2$Y" role="1_0LWR">
+            <node concept="19SUe$" id="3FDP3BpR2$Z" role="19SJt6">
+              <property role="19SUeA" value="Note: to view the graphical representation, Ctrl-click the StateMachines.FlightAnalyzer model to open it and select &quot;Projection -&gt; State machines graphically&quot; " />
             </node>
           </node>
         </node>
@@ -1480,6 +1502,9 @@
         <property role="2caQfQ" value="false" />
         <property role="2c7vTL" value="false" />
       </node>
+    </node>
+    <node concept="2NXPZ9" id="3FDP3BpR4eQ" role="N3F5h">
+      <property role="TrG5h" value="empty_1467364766650_1" />
     </node>
     <node concept="2B_Gvg" id="p7TAWbcUMG" role="N3F5h">
       <node concept="OjmMv" id="p7TAWbcUMI" role="2B_H8o">
