@@ -124,6 +124,16 @@ As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
 \subsubsection{Computed properties: read only annotations that are automatically derived form the main program}
+The assert statements in mbeddr have an id that is read-only and that is derived from the main program. The number of the
+id depends on the location of the assert statement in the main program. It is used mainly in logs  to
+easily identify failed assert statements. An example of assert statements and their ids is given in Figure \ref{fig:asserts}.
+
+\begin{figure}[p]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/testFlightAnalyzer.png}
+	\caption{Assert statements and their computed ids}
+	\label{fig:asserts}
+\end{figure}
 \subsubsection{Computed structures: structured, editable views}
 \subsubsection{Skeleton editing: guide the user with syntactic templates with editable holes}
 \subsubsection{Embedding code in prose: mix structured code with free text}
