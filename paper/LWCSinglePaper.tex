@@ -123,6 +123,35 @@ As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the
 
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
+The mbeddr environment supports product line variability \cite{voelter2015using}. In the variability language, users can define
+feature models (see Figure~\ref{fig:featureModel}) and
+different configurations of such features (see~Figure \ref{fig:configs}).
+In the implementation code that makes use of the features of a feature model, presence conditions guard
+code fragments (see Figure~\ref{fig:presenceCond}). A presence condition is a condition on features from the feature model. 
+Once a configuration is chosen, the code that is guarded with presence conditions that do not hold is taken out by the generator.
+For more information on the feature models in mbeddr see Voelter et. al. \cite{voelter2013mbeddr}.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.30\textwidth]{screens/FeatureModelFlightProcessor.png}
+	\caption{The feature model for flight processor}
+	\label{fig:featureModel}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/ConfigurationModels}
+	\caption{Three configuration models given the feature model of the flight processor in Figure~\ref{fig:featureModel}}
+	\label{fig:configs}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/process_trackpoint.png}
+	\caption{Function initializing a trackpoint by making use of presence conditions for elements from the
+feature model in Figure~\ref{fig:featureModel}}
+	\label{fig:presenceCond}
+\end{figure}
 \subsubsection{Computed properties: read only annotations that are automatically derived form the main program}
 The assert statements in mbeddr have an id that is read-only and that is derived from the main program. The number of the
 id depends on the location of the assert statement in the main program. It is used mainly in logs  to
