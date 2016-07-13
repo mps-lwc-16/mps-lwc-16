@@ -3,6 +3,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{float}
 \newcommand\comment[1]{\textcolor{blue}{#1}}
 
 \begin{document}
@@ -74,18 +75,18 @@ The implementation for this challenge is located in a repository on github \foot
 
 Many of the challenge items can be demonstrated using examples from the \emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}}, so we have used examples from there whenever appropriate.
 
-We have written models in the mbeddr documentation language to present the implementation. To open the documentation model for the implementation to this challenge, open the Notation model, as shown in Figure \ref{fig:opennotation}. The Notation chapter is divided into sections, each of which addresses one or more of the challenge items. Each of those items is discussed in detail in the subsections below.
-
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/OpenNotation.png}
 	\caption{The documentation model for the Notation challenge}
 	\label{fig:opennotation}
 \end{figure}
 
+We have written models in the mbeddr documentation language to present the implementation. To open the documentation model for the implementation to this challenge, open the Notation model, as shown in Figure \ref{fig:opennotation}. The Notation chapter is divided into sections, each of which addresses one or more of the challenge items. Each of those items is discussed in detail in the subsections below.
+
 \subsubsection{Support mathematical symbols in addition to textual notation}
 Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the mbeddr math language, which is embedded in a function of the mbeddr C language.
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/MathematicalNotation.png}
 	\caption{Mathematical notation for the mbeddr math language}
@@ -93,30 +94,28 @@ Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the 
 \end{figure}
 
 \subsubsection{Support tabular notation in addition to textual notation}\label{sec:tabnot}
-Figure \ref{fig:txtnotationsm} shows a textual notation for the mbeddr statemachine language, while Figure \ref{fig:tabnotationsm} shows a tabular notation for the same model expressed in the same statemachine language.
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/TextualNotationStatemachine.png}
 	\caption{Textual notation for the mbeddr statemachine language}
 	\label{fig:txtnotationsm}
 \end{figure}
-
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/TabularNotationStatemachines.png}
 	\caption{Tabular notation for the mbeddr statemachine language}
 	\label{fig:tabnotationsm}
 \end{figure}
+Figure \ref{fig:txtnotationsm} shows a textual notation for the mbeddr statemachine language, while Figure \ref{fig:tabnotationsm} shows a tabular notation for the same model expressed in the same statemachine language.
 
 \subsubsection{Support diagrammatic notation in addition to textual notation}\label{sec:dianot}
-Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language, for exactly the same model as also shown in Section \ref{sec:tabnot}.
-
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/DiagrammaticNotationStatemachines.png}
 	\caption{Diagrammatic notation for the mbeddr statemachine language}
 	\label{fig:dianotationsm}
 \end{figure}
+Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language, for exactly the same model as also shown in Section \ref{sec:tabnot}.
 
 \subsubsection{Support switching between multiple alternative notations for the same language}
 As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the same model written in the mbeddr statemachine language can be alternated between textual, tabular, and diagrammatic.
