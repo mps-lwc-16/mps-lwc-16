@@ -6,6 +6,9 @@
 \usepackage{float}
 \newcommand\comment[1]{\textcolor{blue}{#1}}
 
+\newcommand\markus[1]{\textcolor{red}{MARKUS: {#1}}}
+
+
 \begin{document}
 
 \title{Language Workbench Challenge 2016: the JetBrains MetaProgramming System}
@@ -13,10 +16,10 @@
 \authorinfo{Eugen Schindler}{}{eugenschindler@gmail.com}
 \authorinfo{Klemens Schindler}{}{klemensschindler@gmail.com}
 \authorinfo{Federico Tomassetti}{Independent}{federico@tomassetti.me}
-\authorinfo{Markus V\"{o}elter}{}{voelter@gmail.com}
 \authorinfo{Kolja Dummann}{}{k.dummann@gmail.com}
 \authorinfo{Remi Bosman}{}{remi.bosman@gmail.com}
 \authorinfo{Ana Maria \c{S}ut\^{i}i}{}{farcasia@gmail.com}
+\authorinfo{Markus V\"{o}elter}{}{voelter@gmail.com}
 
 \maketitle
 
@@ -26,19 +29,56 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\markus{Abstrsact is missing}
+\markus{Author affiliations are missing}
+
+
 \section{Introduction}
 
-In this paper, we are going to discuss how the JetBrains MetaProgramming System can be used to address the problems presented in the Language Workbench Challenge 2016 (LWC'16).
 
-The JetBrains MetaProgramming System (MPS) is a mature Language Workbench based on projectional editing. While other Language Workbenches are based on projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+ \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is arguably the most mature, with a growing user base.
 
-We believe that one key feature to make MPS successful is its flexibility. By using a powerful and flexible Language Workbench such MPS we, as Language Engineers, can provide languages and corresponding tools that support a significant overhaul of the processes of an organization. It is frequently the case that such processes involve very different kinds of users with very different backgrounds, experiences, and needs. Therefore a complete solution could potentially encompass different aspects of the internal processes, providing different views and a variety of tools such as simulators, debuggers, code-generators, and more.
+In this paper, we\markus{Use present tense, not ``going to''} discuss how the
+JetBrains MetaProgramming System can be used to address the problems presented in the Language Workbench
+Challenge 2016 (LWC'16).
 
-The ability to support different notations, to process models in different ways, to perform validation and support testing: all these features and others are necessary to build solutions as complete as demanded in real-life scenarios.
+The JetBrains MetaProgramming System (MPS) is a mature Language Workbench based
+on projectional editing. While other Language Workbenches are based on
+projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+
+\cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
+arguably the most mature, with a growing user base.\markus{Repetition between
+the first sentence and the last}
 
-Considering the comparison of Language Workbenches features presented in \cite{erdweg2015evaluating} we can see that MPS is among the most complete Language Workbenches. Other tools with a comparable level of completeness are \emph{MetaEdit+} and the \emph{Whole Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many areas it is strictly confined to the textual notation and this limitation sets it apart from multi-notation Language Workbenches such as MPS.
+We believe\markus{No beliefs in papers! Facts or nothing :-)} that one key
+feature to make MPS successful is its flexibility\markus{Meaning? Very general
+word}.
+By using a powerful and flexible Language Workbench such MPS we, as language
+engineers, can provide languages and corresponding tools that support a
+significant overhaul\markus{Overhaul?} of the processes of an organization. It
+is frequently the case that such processes involve very different kinds of users with very
+different backgrounds, experiences, and needs. Therefore a complete solution
+could potentially encompass different aspects of the internal processes,
+providing different views and a variety of tools such as simulators, debuggers,
+code-generators, and more.\markus{Can you make this paragraph more concrete?
+Eg. with examples?}
 
-With respect to the feature model presented in \cite{erdweg2015evaluating} the only features missing in MPS are \emph{Free-form editing} and \emph{Live translation}.
+The ability to support different notations, to process models in different
+ways\markus{What does this mean?}, to perform validation and support testing:
+all these features and others are necessary to build solutions as complete as
+demanded in real-life scenarios.
+
+Considering the comparison of Language Workbenches features presented in
+\cite{erdweg2015evaluating} we can see that MPS is among the most complete
+Language Workbenches. Other tools with a comparable level of completeness are
+\emph{MetaEdit+}\markus{Not in terms of notations \ldots} and the \emph{Whole
+Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many
+areas it is strictly confined to the textual notation and this limitation sets
+it apart from multi-notation Language Workbenches such as MPS.\markus{ME+ is
+limited to graphical.}
+
+With respect to the feature model presented in \cite{erdweg2015evaluating} the
+only features missing in MPS are \emph{Free-form editing} and \emph{Live
+translation}.\markus{We are looking into live translation, by the way :-) We
+need it here.}
 
 \subsection{JetBrains MPS in previous challenges}
 
@@ -46,17 +86,55 @@ TODO: Summarize results of MPS in previous challenges
 
 \subsection{Problems presented in the LWC'16}
 
-The problems identified for the LWC'16 permit to evaluate very different aspects of a Language Workbench. By addressing all three of them we aim to offer a complete picture of the potentialities (and possibly the limitations) offered by MPS.
+The problems identified for the LWC'16 permit to evaluate very different aspects
+of a Language Workbench. By addressing all three of them we aim to offer a
+complete picture of the capabilities (and possibly the limitations) offered by
+MPS.
 
-The first problem is regarding \textbf{Notation}. By addressing this problem we aim to demonstrate how MPS can support several, very different notations. Notations are particularly relevant because they are the most visible aspect of languages. In many cases, Language Workbenches are used to create Domain Specific Languages. Such languages are intended to appeal a specific category of subjects. This category could be familiar with specific notations, not necessarily textual. Being able to support the notations of preference of the target audience can be a key element to winning users support. 
+The first problem is regarding \textbf{Notation}. We demonstrate how MPS
+supports several, very different notations.
+Notations are particularly relevant because they are the most visible aspect of
+languages. In many cases, Language Workbenches are used to create Domain
+Specific Languages\markus{I would not capitalize \markus{Abstrsact is missing}
+and Domain Specific Languages}. Such languages are intended to appeal a specific
+category of subjects\markus{Subjects == People || Subjects == Domains?}.
+This category could be familiar with specific notations, not necessarily
+textual. Being able to support the notations of preference of the target
+audience can be a key element to winning users support.
 
-The second problem considers \textbf{Evolution and Reuse}. These are characteristics which are absolutely crucial for the maintenance of a solution in the long run. Any mature engineering approach should consider the whole lifecycle of the proposed solution. The evolution is particularly important for languages because they are tools used to represent knowledge, probably the most valuable asset for many companies. By being able to evolve languages we can preserve the investment done in building models using those languages. Reuse is another key element because it permits to significantly reduce the cost of developing complex solutions. For example, several projects based on MPS benefit from reusing languages provided as part of the \emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}}.
+The second problem considers \textbf{Evolution and Reuse}. These are
+characteristics which are absolutely\markus{Do not use ``colorful'' words like
+this. Delete.} crucial for the maintenance of a solution in the long run. Any
+mature engineering approach should consider the whole lifecycle of the proposed
+solution. The evolution is particularly important for languages because they are
+tools used to represent knowledge, probably the most valuable asset for many
+companies. By being able to evolve languages we can preserve the investment 
+in building models using those languages. Reuse is another key element because
+it permits to significantly reduce the cost of developing complex solutions. For
+example, several projects based on MPS benefit from reusing languages provided
+as part of the \emph{mbeddr platform} \footnote{See
+\url{http://mbeddr.com/platform.html}}.
 
-Finally, the third problem is about \textbf{Editing}. This aspect is particularly relevant for projectional editors because they usually require users to part from the traditional textual editing experience. This transition requires significant training and it can be a cause of resistance. By improving the editing experience we can reduce this risk. While the usability of the MPS editors have been previously deemed positive by users \cite{Voelter2014} we believe is still an aspect which needs to be emphasized. By addressing this particular problem we aim to prove the progresses of MPS in this area and highlight possible necessary improvements still needed.
+Finally, the third problem is about \textbf{Editing}. This aspect is
+particularly relevant for projectional editors because they usually require
+users to part from the traditional textual editing experience. This transition
+requires significant training and it can be a cause of resistance. By improving
+the editing experience we can reduce this risk. While the usability of the MPS
+editors have been previously deemed positive by users \cite{Voelter2014} we
+believe is still an aspect which needs to be emphasized. By addressing this
+particular problem we aim to prove the progresses of MPS in this area and
+highlight possible necessary improvements still needed.
 
 \subsection{Structure of the paper}
 
-In the rest of the paper we are going to present our proposed solutions to the three different problems (\emph{Notation, Evolution and Reuse, and Editing}). For each problem we will start by describing the assumptions, then we will discuss the implementation, separately for each point, and after that we will analyze each problem according to this schema: Variants, Usability, Impact, Composability, Limitations, Uses and examples, Effort (best-effort), Other comments, Artifact.
+In the rest of the paper we present our proposed solutions to the
+three different problems (\emph{Notation, Evolution and Reuse, and Editing}).
+For each problem we start by describing the assumptions, then we
+discuss the implementation, separately for each point, and finally we
+analyze each problem according to the schema suggested in the challenge
+paper\cite{REFERENCE?}:
+Variants, Usability, Impact, Composability, Limitations, Uses and examples, Effort (best-effort), Other
+comments, Artifact.
 
 Finally, we will draw our conclusions.
 
@@ -82,14 +160,20 @@ Many of the challenge items can be demonstrated using examples from the \emph{mb
 	\label{fig:opennotation}
 \end{figure}
 
-We have written models in the mbeddr documentation language to present the implementation. To open the documentation model for the implementation to this challenge, open the Notation model, as shown in Figure \ref{fig:opennotation}. The Notation chapter is divided into sections, each of which addresses one or more of the challenge items. Each of those items is discussed in detail in the subsections below.
+We have written models in the mbeddr documentation language\markus{Say a
+sentence on what this is?} to present the implementation. To open the
+documentation model for the implementation to this challenge, open the Notation
+model, as shown in Figure \ref{fig:opennotation}. The Notation chapter is
+divided into sections, each of which addresses one or more of the challenge
+items. Each of those items is discussed in detail in the subsections below.
 
 \subsubsection{Support mathematical symbols in addition to textual notation}
 Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the mbeddr math language, which is embedded in a function of the mbeddr C language.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/MathematicalNotation.png}
-	\caption{Mathematical notation for the mbeddr math language}
+	\caption{Mathematical notation for the mbeddr math language\markus{Looks
+	broken, sum symbol is white/transparent.}}
 	\label{fig:mathnotation}
 \end{figure}
 
@@ -97,7 +181,8 @@ Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/TextualNotationStatemachine.png}
-	\caption{Textual notation for the mbeddr statemachine language}
+	\caption{Textual notation for the mbeddr statemachine language\markus{Too
+	small, can't be read.}}
 	\label{fig:txtnotationsm}
 \end{figure}
 \begin{figure}[H]
@@ -112,7 +197,8 @@ Figure \ref{fig:txtnotationsm} shows a textual notation for the mbeddr statemach
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/DiagrammaticNotationStatemachines.png}
-	\caption{Diagrammatic notation for the mbeddr statemachine language}
+	\caption{Diagrammatic notation for the mbeddr statemachine
+	language\markus{What's the diag line?}}
 	\label{fig:dianotationsm}
 \end{figure}
 Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language, for exactly the same model as also shown in Section \ref{sec:tabnot}.
@@ -129,6 +215,10 @@ In the implementation code that makes use of the features of a feature model, pr
 code fragments (see Figure~\ref{fig:presenceCond}). A presence condition is a condition on features from the feature model. 
 Once a configuration is chosen, the code that is guarded with presence conditions that do not hold is taken out by the generator.
 For more information on the feature models in mbeddr see Voelter et. al. \cite{voelter2013mbeddr}.
+\markus{if you describe things this way, then this is only a demo of what can
+be done. But it does not at all explain *how* it is done. I do think that you'll
+need to go through all the schema. Better address fewer challegnes if the effort
+is too high otherwise. }
 
 \begin{figure}[ht!]
 	\centering
