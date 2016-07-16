@@ -220,21 +220,21 @@ be done. But it does not at all explain *how* it is done. I do think that you'll
 need to go through all the schema. Better address fewer challegnes if the effort
 is too high otherwise. }
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.30\textwidth]{screens/FeatureModelFlightProcessor.png}
 	\caption{The feature model for flight processor}
 	\label{fig:featureModel}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/ConfigurationModels}
 	\caption{Three configuration models given the feature model of the flight processor in Figure~\ref{fig:featureModel}}
 	\label{fig:configs}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/process_trackpoint.png}
 	\caption{Function initializing a trackpoint by making use of presence conditions for elements from the
@@ -246,7 +246,7 @@ The assert statements in mbeddr have an id that is read-only and that is derived
 id depends on the location of the assert statement in the main program. It is used mainly in logs  to
 easily identify failed assert statements. An example of assert statements and their ids is given in Figure \ref{fig:asserts}.
 
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/testFlightAnalyzer.png}
 	\caption{Assert statements and their computed ids}
@@ -337,7 +337,7 @@ In addition, because textual forms can live alongside graphical and tabular form
 the state machine can be viewed in table form and graphical form as well alongside the piece of C code
 where it is used. Figure \ref{fig:HFATab} shows the same state machine for flight analyzes in tabular form.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{screens/HierarchicalFlightAnalyzerT}
 	\caption{Hierarchical flight analyzer state machine - textual notation}
@@ -366,7 +366,7 @@ In our example we implemented both embedding of C code into our MiniSQL and embe
 By embedding C code in MiniSQL we can define SQL statements with variable elements. For example we can refer to a C variable containing an ID in our SQL statement. In this way we can vary the value of the variable to obtain parametric SQL queries. We can then execute those queries using libraries such as those based on ODBC\footnote{See \url{https://en.wikipedia.org/wiki/Open_Database_Connectivity}}. It is important to notice that the MiniSQL embedded in C can be still edited with proper support regarding validation and auto-completion. It is not \"just a string\".
 This technique is illustrated in \ref{fig:sqlembedding}.
 
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/minisql_embedded.png}
 	\caption{Embedding SQL code into C code and viceversa}
@@ -375,7 +375,7 @@ This technique is illustrated in \ref{fig:sqlembedding}.
 
 To demonstrate the flexibility of this approach we have also embedded our MiniSQL into the BaseLanguage, which is basically an implementation of Java in MPS. You can see it in \ref{fig:sqlembeddingjava}. Two separate extensions permit to embed the same language into different hosts (C and Java). For further explanations on this approach refer to \cite{Tomassetti2013}.
 
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/minisql_embedded_java.png}
 	\caption{Embedding SQL code into Java code and viceversa}
@@ -391,7 +391,7 @@ A very interesting example is the Documentation language which permits to add re
 
 In the example in \ref{fig:extensioncomposition} we can see a Documentation construct containing a table. The tables extensions have been developed separately, in a completely agnostic way, so that it could be reused in very different contexts. In this case it contains expressions from mbeddr language (C). So effectively three different extensions are combined in one single example.
 
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/extension_composition.png}
 	\caption{Combining tables, C expressions and the documentation language}
@@ -405,7 +405,7 @@ MPS offers several mechanisms to limit where a certain construct can be used. In
 
 For example, every \emph{AssertStatement} is technically an mbeddr \emph{Statement}, from the point of the abstract syntax. However, an additional rule has been defined to restricted all constructs marked as \emph{IRestrictToTests} to be used exclusively in tests or tests related helper functions. This rule is visible in \ref{fig:restrictedtotest}.
 
-\begin{figure}[p]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/restricted_to_test.png}
 	\caption{Rule which constraints the usage of certain constructs to tests}
