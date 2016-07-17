@@ -253,6 +253,32 @@ easily identify failed assert statements. An example of assert statements and th
 	\label{fig:asserts}
 \end{figure}
 \subsubsection{Computed structures: structured, editable views}
+The signatures of mbeddr component operations are an example of computed structures.
+Figure~\ref{fig:ComputedStructures} depicts component \emph{B}, which provides a port \emph{a} that refers to interface \emph{A}.
+In this component, we create a runnable (component method) with an initial dummy name, \emph{aFloat}. We want this
+runnable to be triggered by operation \emph{a.f} from the port \emph{a}.
+When you execute the \emph{Synchronize} intention on \emph{aFloat}, it will get the same arguments as \emph{a.f}
+automatically and its name will be updated consistently to \emph{portName\_methodName}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/ComputedStructures.png}
+	\caption{The synchronize intention automatically updates the runnable name and arguments.}
+	\label{fig:ComputedStructures}
+\end{figure}
+
+The implementation of the synchronize intention is straightforward. Figure~\ref{fig:synchronizeRunnable}
+depicts the implementation of the intention. The intention is defined for \emph{RunnableTrigger} concepts
+and it calls method \emph{synchronizeRunnableParent} from concept \emph{RunnableTrigger}. The \emph{OperationTrigger}
+is a sub-concept of \emph{RunnableTrigger} and it overrides method \emph{synchronizeRunnableParent}. The implementation
+of the method is straightforward again, simply renaming the method name and adding the right arguments.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/synchronizeRunnableWithTrigger.png}
+	\caption{The implementation of the synchronize intention.}
+	\label{fig:synchronizeRunnable}
+\end{figure}
 \subsubsection{Skeleton editing: guide the user with syntactic templates with editable holes}
 \subsubsection{Embedding code in prose: mix structured code with free text}
 \subsubsection{Embedding blackboxes: allow program elements to be opaque non-textual elements}
