@@ -280,6 +280,29 @@ of the method is straightforward again, simply renaming the method name and addi
 	\label{fig:synchronizeRunnable}
 \end{figure}
 \subsubsection{Skeleton editing: guide the user with syntactic templates with editable holes}
+The mbeddr build language is an example of a bigger structure with skeletons that can be edited.
+The user makes a build configuration and some course-grained choices for the build (\emph{gcc}, \emph{microcontroller}, \emph{custom}, etc.),
+and then she has a skeleton in which the details can be filled in. An example of a build configuration is shown in Figure~\ref{fig:buildConfigExample}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/BuildConfigExample.png}
+	\caption{A build configuration example.}
+	\label{fig:buildConfigExample}
+\end{figure}
+
+Obtaining such a skeleton is possible through the editor aspect of a language. In this particular case,
+in the editor for the build configuration language (see Figure~\ref{fig:buildConfigEditor}), there are three
+sections specified: the platform, the configuration items and the binaries. The headers of these sections
+are constant cells in the editor, and their constituent elements can be filled in by the user once the
+build configuration is instantiated.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/BuildConfigurationEditor.png}
+	\caption{The editor for build configurations.}
+	\label{fig:buildConfigEditor}
+\end{figure}
 \subsubsection{Embedding code in prose: mix structured code with free text}
 \subsubsection{Embedding blackboxes: allow program elements to be opaque non-textual elements}
 
