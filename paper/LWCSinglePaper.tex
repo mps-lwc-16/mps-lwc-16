@@ -304,6 +304,36 @@ build configuration is instantiated.
 	\label{fig:buildConfigEditor}
 \end{figure}
 \subsubsection{Embedding code in prose: mix structured code with free text}
+One of the most relevant examples of code embedding in prose is the documentation language in mbeddr.
+An example can be seen in Figure~\ref{fig:CodeInProse}. The figure shows an excerpt from the file
+that was used to document and implement the language workbench competition's requirements of this year.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/CodeInProse.png}
+	\caption{Mixing prose and code.}
+	\label{fig:CodeInProse}
+\end{figure}
+
+The documentation language has as a top-level concept the \emph{Document} concept. The document is formed of chapters. In turn, a chapter
+is formed of sections and sections are formed of paragraphs. There are multiple types of paragraphs allowed in
+the documentation language. One of them is \emph{ModelContentAsTextParagraph}. This type of paragraph
+extends \emph{AbstractModelContentParagraph}, which contains model code pointers. Furthermore, a model code pointer contains
+a collection of elements that can reference any named concepts in MPS (a named element implements interface
+\emph{INamedConcept}). The referenced nodes are then embedded in the editor component.
+Thus, \emph{ModelContentAsTextParagraph} can embed any piece of code that has a name property.
+That allows us to embed an \emph{ImplementationModule}, for instance, as can be seen in Figure~\ref{fig:CodeInProse}.
+
+Moreover, the text itself can contain actual references to concepts that are defined in mbeddr files.
+This is achieved with the help of the \emph{mps-multiline} language, the \emph{mps-richtext} language
+and the \emph{IWord} interface \cite{voelter2013integrating}.
+If one has a concept that needs to be referenced from text (from comments or in the documentation language, for instance), then
+that concept needs to implement the \emph{IWord} interface that simply presupposes to provide a string representation
+for the concept. An example can be seen in Figure~\ref{fig:CodeInProse}, where the arguments of function
+\emph{SelectingAndModifyingCode}, \emph{data} and \emph{dataLen}, are referenced from the comment attached
+to the function.
+
+Thus, in mbeddr, one can embed both code in prose and prose in code, giving rise to a mix of the two.
 \subsubsection{Embedding blackboxes: allow program elements to be opaque non-textual elements}
 
 \subsection{Variants}
