@@ -335,7 +335,29 @@ to the function.
 
 Thus, in mbeddr, one can embed both code in prose and prose in code, giving rise to a mix of the two.
 \subsubsection{Embedding blackboxes: allow program elements to be opaque non-textual elements}
+We highlight the feature on embedding blackboxes in MPS with the embedding of images
+in the documentation language. An example of an image introduced in a document in mbeddr is shown in Figure~\ref{fig:ImageInDoc}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/PlaneGlider.png}
+	\caption{Embedding of an image into an mbeddr documentation file.}
+	\label{fig:ImageInDoc}
+\end{figure}
+
+As discussed in the previous section, the \emph{Document} concept is ultimately formed of paragraphs.
+In the mbeddr documentation language, one type of paragraph is the \emph{ImageParagraph}. The editor
+component of \emph{ImageParagraph} embeds a swing component, and this specifies how to render an image
+with a given path. Part of the implementation can be seen in Figure~\ref{fig:EditorImageParagraph}.
+Now, once a valid image path is specified in the document, the respective image
+is rendered in the editor. The image itself is a blackbox from the point of view of the document.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/EditorImageParagraph.png}
+	\caption{Part of the implementation of a swing component in the editor of concept \emph{ImageParagraph}.}
+	\label{fig:EditorImageParagraph}
+\end{figure}
 \subsection{Variants}
 
 \subsection{Usability}
