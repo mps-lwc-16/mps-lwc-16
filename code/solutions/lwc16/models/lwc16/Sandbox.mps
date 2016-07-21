@@ -107,6 +107,9 @@
         <child id="4185783222026475862" name="statements" index="3XIRFZ" />
       </concept>
       <concept id="4185783222026464515" name="com.mbeddr.core.statements.structure.Statement" flags="ng" index="3XISUE" />
+      <concept id="2093108837558113914" name="com.mbeddr.core.statements.structure.LocalVarRef" flags="ng" index="3ZVu4v">
+        <reference id="2093108837558124071" name="var" index="3ZVs_2" />
+      </concept>
     </language>
     <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
       <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
@@ -206,17 +209,27 @@
       <concept id="4459718605982007337" name="com.mbeddr.core.base.structure.IConfigurationContainer" flags="ng" index="2Q9xDo">
         <child id="4459718605982007338" name="configurationItems" index="2Q9xDr" />
       </concept>
+      <concept id="3857533489766146428" name="com.mbeddr.core.base.structure.ElementDocumentation" flags="ng" index="1z9TsT">
+        <child id="4052432714772608243" name="text" index="1w35rA" />
+      </concept>
       <concept id="6156524541422549000" name="com.mbeddr.core.base.structure.AbstractPicker" flags="ng" index="3N1QpV">
         <property id="9294901202237533" name="mayBeEmpty" index="3kgbRO" />
         <property id="2711621784026951428" name="pointOnlyToExistingFile" index="1RwFax" />
       </concept>
     </language>
     <language id="6d11763d-483d-4b2b-8efc-09336c1b0001" name="com.mbeddr.core.modules">
+      <concept id="3788988821851860886" name="com.mbeddr.core.modules.structure.GlobalConstantDeclaration" flags="ng" index="4WHVk" />
+      <concept id="3788988821852026523" name="com.mbeddr.core.modules.structure.GlobalConstantRef" flags="ng" index="4ZOvp">
+        <reference id="3376775282622611130" name="constant" index="2DPCA0" />
+      </concept>
       <concept id="1028666136487545270" name="com.mbeddr.core.modules.structure.CommentModuleContent" flags="ng" index="2B_Gvg">
         <child id="1028666136487550078" name="text" index="2B_H8o" />
       </concept>
       <concept id="8967919205527146149" name="com.mbeddr.core.modules.structure.ReturnStatement" flags="ng" index="2BFjQ_">
         <child id="8967919205527146150" name="expression" index="2BFjQA" />
+      </concept>
+      <concept id="3376775282622142916" name="com.mbeddr.core.modules.structure.AbstractDefineLike" flags="ng" index="2DRUVY">
+        <child id="3376775282622233992" name="value" index="2DQcEM" />
       </concept>
       <concept id="8105003328814797298" name="com.mbeddr.core.modules.structure.IFunctionLike" flags="ng" index="2H9T1B">
         <child id="5708867820623310661" name="arguments" index="1UOdpc" />
@@ -235,8 +248,12 @@
       <concept id="7892328519581704407" name="com.mbeddr.core.modules.structure.Argument" flags="ng" index="19RgSI" />
       <concept id="5950410542643524492" name="com.mbeddr.core.modules.structure.FunctionCall" flags="ng" index="3O_q_g">
         <reference id="5950410542643524493" name="function" index="3O_q_h" />
+        <child id="5950410542643524495" name="actuals" index="3O_q_j" />
       </concept>
       <concept id="6610873504380335822" name="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" flags="ng" index="1S7NMz" />
+      <concept id="2093108837558505658" name="com.mbeddr.core.modules.structure.ArgumentRef" flags="ng" index="3ZUYvv">
+        <reference id="2093108837558505659" name="arg" index="3ZUYvu" />
+      </concept>
     </language>
     <language id="564e97d6-8fb7-41f5-bfc1-c7ed376efd62" name="com.mbeddr.ext.statemachines">
       <concept id="4643433264760980253" name="com.mbeddr.ext.statemachines.structure.InEvent" flags="ng" index="2cfOFI" />
@@ -313,6 +330,7 @@
     <language id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions">
       <concept id="8463282783691618440" name="com.mbeddr.core.expressions.structure.Int32tType" flags="ng" index="26Vqph" />
       <concept id="8463282783691618435" name="com.mbeddr.core.expressions.structure.Int16tType" flags="ng" index="26Vqpq" />
+      <concept id="8463282783691618426" name="com.mbeddr.core.expressions.structure.Int8tType" flags="ng" index="26Vqqz" />
       <concept id="3005510381523579442" name="com.mbeddr.core.expressions.structure.UnaryExpression" flags="ng" index="2aKSnQ">
         <child id="7254843406768839760" name="expression" index="1_9fRO" />
       </concept>
@@ -327,7 +345,9 @@
         <child id="318113533128716676" name="type" index="2C2TGm" />
       </concept>
       <concept id="7892328519581699353" name="com.mbeddr.core.expressions.structure.VoidType" flags="ng" index="19Rifw" />
+      <concept id="22102029902365709" name="com.mbeddr.core.expressions.structure.AssignmentExpr" flags="ng" index="3pqW6w" />
       <concept id="4739982148980385695" name="com.mbeddr.core.expressions.structure.FloatType" flags="ng" index="3AreGT" />
+      <concept id="8860443239512147447" name="com.mbeddr.core.expressions.structure.GreaterEqualsExpression" flags="ng" index="3Tl9Jp" />
       <concept id="8860443239512128058" name="com.mbeddr.core.expressions.structure.BooleanType" flags="ng" index="3TlMgk" />
       <concept id="8860443239512128054" name="com.mbeddr.core.expressions.structure.Type" flags="ng" index="3TlMgo">
         <property id="2941277002445651368" name="const" index="2c7vTL" />
@@ -613,6 +633,36 @@
           <node concept="19SGf9" id="1zKhy7PAQpM" role="1_0LWR">
             <node concept="19SUe$" id="1zKhy7PAQpN" role="19SJt6">
               <property role="19SUeA" value="Also, if a user wants a different default presentation (similar to pretty-printing) it is possible to extend a language and override the default editor for a concept in the same way as seen in the above custom presentations of the state machine." />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1_0VNX" id="3LuuACGMZ5W" role="1_0VJ0">
+        <property role="TrG5h" value="FormattingPreservationCodeRestructuring" />
+        <property role="1_0VJr" value="Formatting preservation - code restructuring" />
+        <node concept="1_0LV8" id="3LuuACGN3W0" role="1_0VJ0">
+          <node concept="19SGf9" id="3LuuACGN3W1" role="1_0LWR">
+            <node concept="19SUe$" id="3LuuACGN3W2" role="19SJt6">
+              <property role="19SUeA" value="An example of code restructuring is code refactoring. An expression can be selected" />
+            </node>
+          </node>
+        </node>
+        <node concept="1_0LV8" id="3LuuACGN4jq" role="1_0VJ0">
+          <node concept="19SGf9" id="3LuuACGN4jr" role="1_0LWR">
+            <node concept="19SUe$" id="3LuuACGN4js" role="19SJt6">
+              <property role="19SUeA" value="and refactored into a variable declaration with the expression as an initializer." />
+            </node>
+          </node>
+        </node>
+        <node concept="3z_lpU" id="3LuuACGN3VH" role="1_0VJ0">
+          <property role="3z_lpW" value="mbeddr" />
+          <property role="3z_lpJ" value="true" />
+          <node concept="2NCZwO" id="3LuuACGN3VI" role="3z_lpI">
+            <node concept="2NCMab" id="3LuuACGN3VL" role="2NCMaf">
+              <ref role="2NCMaa" node="3LuuACGMZjh" resolve="FormattingPreservation" />
+            </node>
+            <node concept="2NCMab" id="3LuuACGN3VQ" role="2NCMaf">
+              <ref role="2NCMaa" node="3LuuACGMZkT" resolve="isAtLimit" />
             </node>
           </node>
         </node>
@@ -1606,6 +1656,157 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="p7TAWbcUp9" role="1B3o_S" />
+  </node>
+  <node concept="N3F5e" id="3LuuACGMZjh">
+    <property role="TrG5h" value="FormattingPreservation" />
+    <node concept="N3Fnx" id="3LuuACGMZkT" role="N3F5h">
+      <property role="TrG5h" value="isAtLimit" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="3LuuACGMZkV" role="3XIRFX">
+        <node concept="3XIRlf" id="3LuuACGMZmL" role="3XIRFZ">
+          <property role="TrG5h" value="val" />
+          <node concept="26Vqqz" id="3LuuACGMZmJ" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+          <node concept="3O_q_g" id="3LuuACGN0Ef" role="3XIe9u">
+            <ref role="3O_q_h" node="3LuuACGMZXh" resolve="measure" />
+            <node concept="2BOcij" id="3LuuACGN0Gc" role="3O_q_j">
+              <node concept="4ZOvp" id="3LuuACGN0HD" role="3TlMhJ">
+                <ref role="2DPCA0" node="3LuuACGMZpU" resolve="FACTOR" />
+              </node>
+              <node concept="3ZUYvv" id="3LuuACGN0F0" role="3TlMhI">
+                <ref role="3ZUYvu" node="3LuuACGMZla" resolve="v" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1_9egQ" id="3LuuACGN11t" role="3XIRFZ">
+          <node concept="3pqW6w" id="3LuuACGN12I" role="1_9egR">
+            <node concept="3O_q_g" id="3LuuACGN1bv" role="3TlMhJ">
+              <ref role="3O_q_h" node="3LuuACGN0wu" resolve="calibrate" />
+              <node concept="3ZVu4v" id="3LuuACGN2iv" role="3O_q_j">
+                <ref role="3ZVs_2" node="3LuuACGMZmL" resolve="val" />
+              </node>
+              <node concept="2BOcij" id="3LuuACGN1uj" role="3O_q_j">
+                <node concept="4ZOvp" id="3LuuACGN1Do" role="3TlMhJ">
+                  <ref role="2DPCA0" node="3LuuACGMZpU" resolve="FACTOR" />
+                </node>
+                <node concept="3ZUYvv" id="3LuuACGN1lG" role="3TlMhI">
+                  <ref role="3ZUYvu" node="3LuuACGMZla" resolve="v" />
+                </node>
+              </node>
+            </node>
+            <node concept="3ZVu4v" id="3LuuACGN11r" role="3TlMhI">
+              <ref role="3ZVs_2" node="3LuuACGMZmL" resolve="val" />
+            </node>
+          </node>
+        </node>
+        <node concept="2BFjQ_" id="3LuuACGN2_t" role="3XIRFZ">
+          <node concept="3Tl9Jp" id="3LuuACGN2WH" role="2BFjQA">
+            <node concept="3ZUYvv" id="3LuuACGN38b" role="3TlMhJ">
+              <ref role="3ZUYvu" node="3LuuACGMZm4" resolve="lim" />
+            </node>
+            <node concept="3ZVu4v" id="3LuuACGN2KZ" role="3TlMhI">
+              <ref role="3ZVs_2" node="3LuuACGMZmL" resolve="val" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3TlMgk" id="3LuuACGMZk3" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3LuuACGMZla" role="1UOdpc">
+        <property role="TrG5h" value="v" />
+        <node concept="26Vqqz" id="3LuuACGMZl9" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="19RgSI" id="3LuuACGMZm4" role="1UOdpc">
+        <property role="TrG5h" value="lim" />
+        <node concept="26Vqqz" id="3LuuACGMZm2" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="1z9TsT" id="3LuuACGN3Ke" role="lGtFl">
+        <node concept="OjmMv" id="3LuuACGN3Kf" role="1w35rA">
+          <node concept="19SGf9" id="3LuuACGN3Kg" role="OjmMu">
+            <node concept="19SUe$" id="3LuuACGN3Kh" role="19SJt6">
+              <property role="19SUeA" value="Pressing CTRL-ALT-V on v * FACTOR leads to&#10;popping out a window that asks for the name of&#10;the variable to be introduced." />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="3LuuACGMZpt" role="N3F5h">
+      <property role="TrG5h" value="empty_1469135183401_6" />
+    </node>
+    <node concept="N3Fnx" id="3LuuACGMZXh" role="N3F5h">
+      <property role="TrG5h" value="measure" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="3LuuACGMZXj" role="3XIRFX">
+        <node concept="2BFjQ_" id="3LuuACGN05R" role="3XIRFZ">
+          <node concept="3ZUYvv" id="3LuuACGN069" role="2BFjQA">
+            <ref role="3ZUYvu" node="3LuuACGN05d" resolve="v" />
+          </node>
+        </node>
+      </node>
+      <node concept="26Vqqz" id="3LuuACGN052" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3LuuACGN05d" role="1UOdpc">
+        <property role="TrG5h" value="v" />
+        <node concept="26Vqqz" id="3LuuACGN05c" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="3LuuACGMZyk" role="N3F5h">
+      <property role="TrG5h" value="empty_1469135210730_8" />
+    </node>
+    <node concept="N3Fnx" id="3LuuACGN0wu" role="N3F5h">
+      <property role="TrG5h" value="calibrate" />
+      <property role="2OOxQR" value="false" />
+      <node concept="3XIRFW" id="3LuuACGN0ww" role="3XIRFX">
+        <node concept="2BFjQ_" id="3LuuACGN0Dk" role="3XIRFZ">
+          <node concept="3ZUYvv" id="3LuuACGN0DA" role="2BFjQA">
+            <ref role="3ZUYvu" node="3LuuACGN0CE" resolve="v" />
+          </node>
+        </node>
+      </node>
+      <node concept="26Vqqz" id="3LuuACGN0og" role="2C2TGm">
+        <property role="2caQfQ" value="false" />
+        <property role="2c7vTL" value="false" />
+      </node>
+      <node concept="19RgSI" id="3LuuACGN1XN" role="1UOdpc">
+        <property role="TrG5h" value="val" />
+        <node concept="26Vqqz" id="3LuuACGN1XL" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+      <node concept="19RgSI" id="3LuuACGN0CE" role="1UOdpc">
+        <property role="TrG5h" value="v" />
+        <node concept="26Vqqz" id="3LuuACGN0CD" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
+    </node>
+    <node concept="2NXPZ9" id="3LuuACGN06o" role="N3F5h">
+      <property role="TrG5h" value="empty_1469135236179_10" />
+    </node>
+    <node concept="4WHVk" id="3LuuACGMZpU" role="N3F5h">
+      <property role="TrG5h" value="FACTOR" />
+      <node concept="3TlMh9" id="3LuuACGMZqW" role="2DQcEM">
+        <property role="2hmy$m" value="3" />
+      </node>
+    </node>
   </node>
 </model>
 
