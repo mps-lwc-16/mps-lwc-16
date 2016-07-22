@@ -591,8 +591,40 @@ For \emph{Language embedding} we calculate only the time for creating the concep
 \subsection{Implementation}
 
 \subsubsection{Editing incomplete programs: support for syntactically malformed programs}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.25\textwidth]{screens/IncompleteNode.png}
+	\caption{An incomplete function with missing name, containing an if statement missing a guard.}
+	\label{fig:IncompleteNode}
+\end{figure}
+
+It is possible to edit and persist an incomplete model, however there are some restrictions to this. A node, for example an if statement, must have a complete skeleton. It is possible to leave content out such as the guard and body in an if statement. The result can be considered syntactically incorrect since the guard missing from if statement. However, the construction is still structurally sound since it is a valid tree node, albeit with some gaps to be filled in. Figure~\ref{fig:IncompleteNode} shows an example of a function with omitted name containing an if statement missing the guard. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/CannotDeleteConcreteSyntaxElements.png}
+	\caption{Since the closing bracket is not part of the model, but the presentation, the bracket cannot be removed.}
+	\label{fig:CannotDeleteConcreteSyntaxElements}
+\end{figure}
+Removing arbitrary pieces of "text" from the model is not possible. For example the closing bracket of an if statement can not be removed in isolation. The reason for this is that it is not part of the model contents (AST), but only of the presentation (concrete syntax).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{screens/UnmatchedParenthesis.png}
+	\caption{An unmatched parenthesis element enables more text-like editing.}
+	\label{fig:UnmatchedParenthesis}
+\end{figure}
+
+Designing language and editors in MPS can enable a text-like editing experience. For example, 
+ it is possible to design elements such as an "Unmatched Parenthesis" into your language which are not intended for the final model, but serve as an aid to enable a text-like editing experience. Inserting a closing parenthesis will restructure the expression tree according to operator precedence rules and remove the unmatched parenthesis element.
+ Figure~\ref{fig:UnmatchedParenthesis} shows an example of such scenario.
+
+
 \subsubsection{Referencing missing items: support referencing items that have not been defined}
+TODO
+
 \subsubsection{Structure agnostic copy-paste: copy-paste works across syntax boundaries}
+
 \subsubsection{Restructuring: changing syntactic structure without typing the complete expression again.}
 \subsubsection{Language demarcation: show how a combination multiple languages in one program are disambiguated}
 \subsubsection{Delayed decisions: show when the syntactic category of an expression is determined}
