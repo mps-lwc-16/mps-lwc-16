@@ -624,8 +624,12 @@ Designing language and editors in MPS can enable a text-like editing experience.
 TODO
 
 \subsubsection{Structure agnostic copy-paste: copy-paste works across syntax boundaries}
+MPS allows selecting, copying, and pasting nodes across any language boundaries, however selection of nodes must follow the tree structure. For example, it is possible to copy 5 full statements from a selection. It is also possible to copy a node which contains a component (component language) containing a state machine (statemachine language) containing c code (c language) in action implementations. However, it is not possible to start selection halfway a node and end it halfway another one.
+
+It is also possible to copy parts of a text-like language into a text editor. The textual content will be in the text document, but layout information and whitespace may vary.
 
 \subsubsection{Restructuring: changing syntactic structure without typing the complete expression again.}
+
 \subsubsection{Language demarcation: show how a combination multiple languages in one program are disambiguated}
 \subsubsection{Delayed decisions: show when the syntactic category of an expression is determined}
 \subsubsection{End-user defined formatting: show if and how user can change the visual appearance of the program}
