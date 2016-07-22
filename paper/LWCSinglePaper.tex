@@ -611,12 +611,12 @@ Removing arbitrary pieces of "text" from the model is not possible. For example 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\textwidth]{screens/UnmatchedParenthesis.png}
-	\caption{An unmatched parenthesis element enables more text-like editing.}
+	\caption{An unmatched parenthesis element enables more text-like editing. Inserting a closing parenthesis restructures the AST.}
 	\label{fig:UnmatchedParenthesis}
 \end{figure}
 
 Designing language and editors in MPS can enable a text-like editing experience. For example, 
- it is possible to design elements such as an "Unmatched Parenthesis" into your language which are not intended for the final model, but serve as an aid to enable a text-like editing experience. Inserting a closing parenthesis will restructure the expression tree according to operator precedence rules and remove the unmatched parenthesis element.
+ it is possible to design elements such as an "Unmatched Parenthesis" into your language which are not intended for the final model, but serve as an aid to enable a text-like editing experience.
  Figure~\ref{fig:UnmatchedParenthesis} shows an example of such scenario.
 
 
@@ -629,9 +629,35 @@ MPS allows selecting, copying, and pasting nodes across any language boundaries,
 It is also possible to copy parts of a text-like language into a text editor. The textual content will be in the text document, but layout information and whitespace may vary.
 
 \subsubsection{Restructuring: changing syntactic structure without typing the complete expression again.}
+The example in Figure~\ref{fig:UnmatchedParenthesis} shows a model with an "Unmatched Parenthesis". Inserting a closing parenthesis will restructure the expression tree according to operator precedence rules and remove the unmatched parenthesis element.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{screens/TypeAndRestructure.png}
+	\caption{Inserting a C function in mbeddr restructures the AST as you type.}
+	\label{fig:TypeAndRestructure}
+\end{figure}
+Figure~\ref{fig:TypeAndRestructure} shows how a C function goes through various restructurings as you type.
 
 \subsubsection{Language demarcation: show how a combination multiple languages in one program are disambiguated}
+MPS does not parse text and try to reconstruct a structure. Instead every tree node creation binds a type to a node. In case of ambiguity the user can choose which type to create. For this reason, no disambiguation is needed for the type of a node and no special demarcation markers are needed.
+
+Similarly, reference disambiguation is ensured by default since every node has a unique ID. Although the presentation of the reference can show a human readable name/identifier, the reference refers to the node with the given ID. A side effect of this is that removing an element named "A" and creating a new element named "A" will count as a new node and existing references will be broken. If desired, these references can also be automatically be re-bound to the new node ID.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{screens/LanguageDemarcationAndAmbiguity.png}
+	\caption{A C module, containing a state machine, containing c statements demonstrating language boundaries. The name \emph{some\_name} is heavily overloaded to demonstrate disambiguation over language boundaries.}
+	\label{fig:LanguageDemarcationAndAmbiguity}
+\end{figure}
+
+Figure~\ref{fig:LanguageDemarcationAndAmbiguity} shows how various languages can be nested (c module, containing a state machine, containing c statements) and how references are resolved over these language boundaries. This example uses the same name ("some\_name") for a state, an integer, a function, and a statemachine event. But since reference insertion binds to specific ids, references over language boundaries are disambiguated by default. The screenshot does not show this, but ctrl+clicking on the references shows that all references point to the correct declaration.
+
 \subsubsection{Delayed decisions: show when the syntactic category of an expression is determined}
+At node insertion a defined concept must be inserted. However, it is possible to restructure the concepts as you type. Figure~Figure~\ref{fig:TypeAndRestructure} shows how the syntactic category changes as you type, effectively delaying the final decision and providing a text-like experience.
+
+If a user thinks in terms of the AST instead of linear text, it is also possible to immediately insert the desired concept by using code completion or typing the alias of the desired concept. In text terms this feels similar to using a template instead of typing sequentially.
+
 \subsubsection{End-user defined formatting: show if and how user can change the visual appearance of the program}
 \subsubsection{Specification of default formatting: support for pretty printing}
 \subsubsection{Formatting preservation: how is formatting preserved when the code is automatically restructured}
