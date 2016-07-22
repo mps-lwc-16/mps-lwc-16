@@ -599,7 +599,38 @@ For \emph{Language embedding} we calculate only the time for creating the concep
 \subsubsection{End-user defined formatting: show if and how user can change the visual appearance of the program}
 \subsubsection{Specification of default formatting: support for pretty printing}
 \subsubsection{Formatting preservation: how is formatting preserved when the code is automatically restructured}
+An example of a common refactoring is the introduction of a local variable in C functions \cite{voelter2014generic}.
+The refactoring is triggered by selecting an expression in the body of a function, and pressing \emph{CTRL-Alt-V}.
+As a result of this action, a window is prompted where the user introduces the name of the variable.
+The refactoring extracts the expression, places it in a
+local variable declaration and replaces all its occurrences in the body of the function with a reference to the variable.
+The process can be seen in Figure~\ref{fig:IntroLocalVar}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/IntroLocalVar.png}
+	\caption{Refactoring for introduction of a local variable}
+	\label{fig:IntroLocalVar}
+\end{figure}
+
+The refactoring for introducing a local variable is applicable to expression concepts that have a statement as an
+ancestor (see Figure~\ref{fig:RefactoringImpl}). The body of the refactoring is straightforward:
+a new local variable declaration is introduced before the statement where the expression was selected and all
+the occurrences of the expression are looked up and replaced. Changing an expression with a variable declaration
+does not change the formatting because the change implies replacing a node in the tree with another, and the editor
+component will render the new node at the specific cell, without affecting other cells. The most intrusive operation is the
+introduction of the new local variable declaration in the existing statements, but this is the purpose of the
+refactoring itself.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/RefactoringImpl.png}
+	\caption{Implementation header of refactoring for introduction of a local variable}
+	\label{fig:RefactoringImpl}
+\end{figure}
+
+Other types of code restructuring are migration scripts in mbeddr. The situation is similar to the refactorings, the
+formatting of the existing code being unchanged (unless the migration itself changes the formatting).
 \subsection{Variants}
 
 \subsection{Usability}
