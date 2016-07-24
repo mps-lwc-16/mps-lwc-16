@@ -660,6 +660,35 @@ If a user thinks in terms of the AST instead of linear text, it is also possible
 
 \subsubsection{End-user defined formatting: show if and how user can change the visual appearance of the program}
 \subsubsection{Specification of default formatting: support for pretty printing}
+Jetbrains MPS has a default formatting for languages. The default formatting is simply following
+the structure of the abstract syntax of the language, printing the names of the instantiated concepts and
+their values, and also visually showing the parent-children relationship among concepts.
+An example of an expression with a defined formatting and
+a default formatting is shown in Figure~\ref{fig:DefaultEditor}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/DefaultEditor.png}
+	\caption{Defined and default formatting for a binary expression}
+	\label{fig:DefaultEditor}
+\end{figure}
+
+A multitude of projections (formatting) can be defined for a given language and its concepts.
+A projection is defined in an editor component, where editor cells specify the location and other attributes
+of the concepts in the viewer. For instance, the editor component of the binary expression
+says that the left expression (with conditional parentheses around it) is followed by a constant (the
+symbol for the expression) and the right expression (again, with a conditional parentheses around it).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/EditorMultiExpression.png}
+	\caption{Defined editor for binary expression}
+	\label{fig:DefaultEditor}
+\end{figure}
+
+Switching among projections does not modify the model itself, but only the representation of the model
+on the screen.
+
 \subsubsection{Formatting preservation: how is formatting preserved when the code is automatically restructured}
 An example of a common refactoring is the introduction of a local variable in C functions \cite{voelter2014generic}.
 The refactoring is triggered by selecting an expression in the body of a function, and pressing \emph{CTRL-Alt-V}.
