@@ -659,6 +659,23 @@ At node insertion a defined concept must be inserted. However, it is possible to
 If a user thinks in terms of the AST instead of linear text, it is also possible to immediately insert the desired concept by using code completion or typing the alias of the desired concept. In text terms this feels similar to using a template instead of typing sequentially.
 
 \subsubsection{End-user defined formatting: show if and how user can change the visual appearance of the program}
+In MPS, end-users can be given some control over the formatting. In the visual projection, for instance,
+end-users can move the nodes and the edges freely. There are some default layouts for the visual projection, but these
+layouts can be changed by the end-users.
+
+Another example of end-user defined formatting is the insertion of
+empty lines in places where a statement is expected in mbeddr code. That means that the end-user can insert any number
+of empty lines in the body of a function, for instance. Subsequently, the empty line can be substituted by any sub-concept of \emph{Statement}.
+To achieve this behavior the \emph{Statement} concept has been declared with an editor that shows an empty line.
+Moreover, the \emph{StatementList} concept contains an arbitrary number of \emph{Statement} children, and by default,
+in MPS, at the press of an enter in a children collection (the statements in \emph{StatementList}), a child concept is created (\emph{Statement}).
+This results in showing an empty line in the viewer because the \emph{Statement} concept is represented by an empty line.
+Moreover, by default, in MPS, a concept can be substituted by any of its sub-concepts, and hence,
+the \emph{Statement} concept can be replaced by any of its sub-concepts.
+
+Thus, the amount of freedom that the end-user has in defining its own formatting
+is decided, to some extent, by the language designer.
+
 \subsubsection{Specification of default formatting: support for pretty printing}
 Jetbrains MPS has a default formatting for languages. The default formatting is simply following
 the structure of the abstract syntax of the language, printing the names of the instantiated concepts and
