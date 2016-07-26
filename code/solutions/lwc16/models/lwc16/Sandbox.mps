@@ -312,10 +312,12 @@
     </language>
     <language id="61c69711-ed61-4850-81d9-7714ff227fb0" name="com.mbeddr.core.expressions">
       <concept id="8463282783691618440" name="com.mbeddr.core.expressions.structure.Int32tType" flags="ng" index="26Vqph" />
+      <concept id="8463282783691618445" name="com.mbeddr.core.expressions.structure.Int64tType" flags="ng" index="26Vqpk" />
       <concept id="8463282783691618435" name="com.mbeddr.core.expressions.structure.Int16tType" flags="ng" index="26Vqpq" />
       <concept id="3005510381523579442" name="com.mbeddr.core.expressions.structure.UnaryExpression" flags="ng" index="2aKSnQ">
         <child id="7254843406768839760" name="expression" index="1_9fRO" />
       </concept>
+      <concept id="8864856114140038681" name="com.mbeddr.core.expressions.structure.DoubleType" flags="ng" index="2fgwQN" />
       <concept id="2212975673976017893" name="com.mbeddr.core.expressions.structure.NumericLiteral" flags="ng" index="2hns93">
         <property id="2212975673976043696" name="value" index="2hmy$m" />
       </concept>
@@ -685,6 +687,34 @@
           </node>
         </node>
       </node>
+      <node concept="2EX0iL" id="1kRALJB6FRQ" role="2EX0iN">
+        <property role="TrG5h" value="g" />
+        <node concept="2EWNYT" id="1kRALJB6FS7" role="1UOdpc">
+          <property role="TrG5h" value="a" />
+          <node concept="26Vqph" id="1kRALJB6FS8" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="2EWNYT" id="1kRALJB6FS9" role="1UOdpc">
+          <property role="TrG5h" value="b" />
+          <node concept="3AreGT" id="1kRALJB6FSa" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="2EWNYT" id="1kRALJB6FSb" role="1UOdpc">
+          <property role="TrG5h" value="c" />
+          <node concept="3TlMgk" id="1kRALJB6FSc" role="2C2TGm">
+            <property role="2caQfQ" value="false" />
+            <property role="2c7vTL" value="false" />
+          </node>
+        </node>
+        <node concept="26Vqpk" id="1kRALJB6G96" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+      </node>
     </node>
     <node concept="2NXPZ9" id="6pYKx1vDIN6" role="N3F5h">
       <property role="TrG5h" value="empty_1466542199582_27" />
@@ -699,36 +729,53 @@
       <node concept="2EWDwb" id="6pYKx1vDQ8c" role="2RW2fA">
         <property role="TrG5h" value="a_f" />
         <node concept="3XIRFW" id="6pYKx1vDQ8d" role="2EWMhI">
-          <node concept="3XISUE" id="6pYKx1vDQ8e" role="3XIRFZ" />
+          <node concept="2BFjQ_" id="1kRALJB6FuT" role="3XIRFZ">
+            <node concept="3TlMh9" id="1kRALJB6Fv0" role="2BFjQA">
+              <property role="2hmy$m" value="0.0f" />
+            </node>
+          </node>
         </node>
         <node concept="2EWDw0" id="6pYKx1vDQ8n" role="2EWDeT">
           <ref role="1ZwSu5" node="6pYKx1vDQ6P" resolve="a" />
           <ref role="1ZwxE2" node="6pYKx1vDILC" resolve="f" />
         </node>
-        <node concept="3AreGT" id="6pYKx1vDQ8p" role="2C2TGm">
+        <node concept="3AreGT" id="1kRALJB6FIm" role="2C2TGm">
           <property role="2caQfQ" value="false" />
           <property role="2c7vTL" value="false" />
         </node>
-        <node concept="19RgSI" id="6pYKx1vDQ8q" role="1UOdpc">
+        <node concept="19RgSI" id="1kRALJB6FIn" role="1UOdpc">
           <property role="TrG5h" value="a" />
-          <node concept="26Vqph" id="6pYKx1vDQ8r" role="2C2TGm">
+          <node concept="26Vqph" id="1kRALJB6FIo" role="2C2TGm">
             <property role="2caQfQ" value="false" />
             <property role="2c7vTL" value="false" />
           </node>
         </node>
-        <node concept="19RgSI" id="6pYKx1vDQ8s" role="1UOdpc">
+        <node concept="19RgSI" id="1kRALJB6FIp" role="1UOdpc">
           <property role="TrG5h" value="b" />
-          <node concept="3AreGT" id="6pYKx1vDQ8t" role="2C2TGm">
+          <node concept="3AreGT" id="1kRALJB6FIq" role="2C2TGm">
             <property role="2caQfQ" value="false" />
             <property role="2c7vTL" value="false" />
           </node>
         </node>
-        <node concept="19RgSI" id="6pYKx1vDQ8u" role="1UOdpc">
+        <node concept="19RgSI" id="1kRALJB6FIr" role="1UOdpc">
           <property role="TrG5h" value="c" />
-          <node concept="3TlMgk" id="6pYKx1vDQ8v" role="2C2TGm">
+          <node concept="3TlMgk" id="1kRALJB6FIs" role="2C2TGm">
             <property role="2caQfQ" value="false" />
             <property role="2c7vTL" value="false" />
           </node>
+        </node>
+      </node>
+      <node concept="2EWDwb" id="1kRALJB6G7i" role="2RW2fA">
+        <property role="TrG5h" value="rename_me" />
+        <node concept="3XIRFW" id="1kRALJB6G7j" role="2EWMhI">
+          <node concept="3XISUE" id="1kRALJB6G7k" role="3XIRFZ" />
+        </node>
+        <node concept="2fgwQN" id="1kRALJB6G9t" role="2C2TGm">
+          <property role="2caQfQ" value="false" />
+          <property role="2c7vTL" value="false" />
+        </node>
+        <node concept="2EWDw0" id="1kRALJB6G9E" role="2EWDeT">
+          <ref role="1ZwSu5" node="6pYKx1vDQ6P" resolve="a" />
         </node>
       </node>
     </node>
@@ -1082,7 +1129,7 @@
         <node concept="1_0LV8" id="6pYKx1vDtfb" role="1_0VJ0">
           <node concept="19SGf9" id="6pYKx1vDtfc" role="1_0LWR">
             <node concept="19SUe$" id="6pYKx1vDtfd" role="19SJt6">
-              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures. The component B provides interface a, and the runnable a_f is triggered by operation a.f. When you execute the &quot;synchronize&quot; intention on a_f, it will get the same arguments as a.f automatically and its name will be updated consistently to a_f." />
+              <property role="19SUeA" value="The signatures of mbeddr component operations are an example of computed structures. The component B provides interface A (under the name a), and the runnable a_f is triggered by operation a.f. When you execute the &quot;synchronize&quot; intention on a.f (which is located after after &lt;= op in the declaration of a_f), it will get the same arguments as A.f automatically and its name will be updated consistently to a_f. This synchronization even happens automatically everytime the model is focussed. Try to set the operation of the runnable rename_me in component B to a.f, then the synchronize will automatically compute the structure and give rename_me the name a_g and the right return type and arguments as A.g:" />
             </node>
           </node>
         </node>
