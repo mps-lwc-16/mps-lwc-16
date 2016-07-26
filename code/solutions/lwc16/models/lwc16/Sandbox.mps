@@ -940,7 +940,7 @@
         <node concept="1_0LV8" id="zh_Ys$lcmw" role="1_0VJ0">
           <node concept="19SGf9" id="zh_Ys$lcmx" role="1_0LWR">
             <node concept="19SUe$" id="zh_Ys$lcmy" role="19SJt6">
-              <property role="19SUeA" value="The mbeddr tutorial implements a langauge for writing mathematical formulae:" />
+              <property role="19SUeA" value="The mbeddr tutorial implements a language for writing mathematical formulae:" />
             </node>
           </node>
         </node>
