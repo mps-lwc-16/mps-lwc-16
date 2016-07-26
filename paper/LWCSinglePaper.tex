@@ -38,11 +38,11 @@
 
 
 In this paper, we\markus{Use present tense, not ``going to''} discuss how the
-JetBrains MetaProgramming System can be used to address the problems presented in the Language Workbench
+JetBrains MetaProgramming System can be used to address the challenges presented in the Language Workbench
 Challenge 2016 (LWC'16).
 
-The JetBrains MetaProgramming System (MPS) is a mature Language Workbench based
-on projectional editing. While other Language Workbenches are based on
+The JetBrains MetaProgramming System (MPS) is a mature language workbench based
+on projectional editing. While other language workbenches are based on
 projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+
 \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
 arguably the most mature, with a growing user base.\markus{Repetition between
@@ -51,7 +51,7 @@ the first sentence and the last}
 We believe\markus{No beliefs in papers! Facts or nothing :-)} that one key
 feature to make MPS successful is its flexibility\markus{Meaning? Very general
 word}.
-By using a powerful and flexible Language Workbench such MPS we, as language
+By using a powerful and flexible language workbench such MPS we, as language
 engineers, can provide languages and corresponding tools that support a
 significant overhaul\markus{Overhaul?} of the processes of an organization. It
 is frequently the case that such processes involve very different kinds of users with very
@@ -66,13 +66,13 @@ ways\markus{What does this mean?}, to perform validation and support testing:
 all these features and others are necessary to build solutions as complete as
 demanded in real-life scenarios.
 
-Considering the comparison of Language Workbenches features presented in
+Considering the comparison of language workbenches features presented in
 \cite{erdweg2015evaluating} we can see that MPS is among the most complete
-Language Workbenches. Other tools with a comparable level of completeness are
+language workbenches. Other tools with a comparable level of completeness are
 \emph{MetaEdit+}\markus{Not in terms of notations \ldots} and the \emph{Whole
 Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many
 areas it is strictly confined to the textual notation and this limitation sets
-it apart from multi-notation Language Workbenches such as MPS.\markus{ME+ is
+it apart from multi-notation language workbenches such as MPS.\markus{ME+ is
 limited to graphical.}
 
 With respect to the feature model presented in \cite{erdweg2015evaluating} the
@@ -84,25 +84,24 @@ need it here.}
 
 TODO: Summarize results of MPS in previous challenges
 
-\subsection{Problems presented in the LWC'16}
+\subsection{Challenges presented in the LWC'16}
 
-The problems identified for the LWC'16 permit to evaluate very different aspects
-of a Language Workbench. By addressing all three of them we aim to offer a
+The challenges identified for the LWC'16 permit to evaluate very different aspects
+of a language workbench. By addressing all three of them we aim to offer a
 complete picture of the capabilities (and possibly the limitations) offered by
 MPS.
 
-The first problem is regarding \textbf{Notation}. We demonstrate how MPS
+The first challenge is on \textbf{Notation}. We demonstrate how MPS
 supports several, very different notations.
 Notations are particularly relevant because they are the most visible aspect of
-languages. In many cases, Language Workbenches are used to create Domain
-Specific Languages\markus{I would not capitalize \markus{Abstrsact is missing}
-and Domain Specific Languages}. Such languages are intended to appeal a specific
+languages. In many cases, language workbenches are used to create domain
+specific languages. Such languages are intended to appeal a specific
 category of subjects\markus{Subjects == People || Subjects == Domains?}.
 This category could be familiar with specific notations, not necessarily
 textual. Being able to support the notations of preference of the target
 audience can be a key element to winning users support.
 
-The second problem considers \textbf{Evolution and Reuse}. These are
+The second challenge considers \textbf{Evolution and Reuse}. These are
 characteristics which are absolutely\markus{Do not use ``colorful'' words like
 this. Delete.} crucial for the maintenance of a solution in the long run. Any
 mature engineering approach should consider the whole lifecycle of the proposed
@@ -115,28 +114,51 @@ example, several projects based on MPS benefit from reusing languages provided
 as part of the \emph{mbeddr platform} \footnote{See
 \url{http://mbeddr.com/platform.html}}.
 
-Finally, the third problem is about \textbf{Editing}. This aspect is
+Finally, the third challenge is about \textbf{Editing}. This aspect is
 particularly relevant for projectional editors because they usually require
 users to part from the traditional textual editing experience. This transition
 requires significant training and it can be a cause of resistance. By improving
 the editing experience we can reduce this risk. While the usability of the MPS
 editors have been previously deemed positive by users \cite{Voelter2014} we
 believe is still an aspect which needs to be emphasized. By addressing this
-particular problem we aim to prove the progresses of MPS in this area and
+particular challenge we aim to prove the progresses of MPS in this area and
 highlight possible necessary improvements still needed.
+
+\subsection{Accessing the implementation}
+The implementation for these challenges is located in a repository on github
+\footnote{https://github.com/mps-lwc-16/mps-lwc-16}. To explore the implementation,
+please clone the repository and follow the instructions in the README.md.
+
+Many of the challenge items can be demonstrated using examples from the
+\emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}},
+so we have used examples from there whenever appropriate.
+
+We have written models in the mbeddr documentation language
+to present the implementation. The mbeddr documentation language is a language that allows
+writing prose with sections, figures, embedded program nodes, etc. 
+To open the documentation model for the implementation to the \emph{Notation} challenge, for instance,
+open the \emph{Notation} model, as shown in Figure \ref{fig:opennotation}. The \emph{Notation} chapter is
+divided into sections, each of which addresses one or more of the challenge
+items.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/OpenNotation.png}
+	\caption{The documentation model for the Notation challenge}
+	\label{fig:opennotation}
+\end{figure}
 
 \subsection{Structure of the paper}
 
 In the rest of the paper we present our proposed solutions to the
-three different problems (\emph{Notation, Evolution and Reuse, and Editing}).
-For each problem we start by describing the assumptions, then we
+three different challenges (\emph{Notation, Evolution and Reuse, and Editing}).
+For each challenge we start by describing the assumptions, then we
 discuss the implementation, separately for each point, and finally we
-analyze each problem according to the schema suggested in the challenge
-paper\cite{REFERENCE?}:
+analyze each challenge according to the schema suggested in the challenge
+paper\cite{erdweg2015evaluating}:
 Variants, Usability, Impact, Composability, Limitations, Uses and examples, Effort (best-effort), Other
 comments, Artifact.
-
-Finally, we will draw our conclusions.
+Finally, we will reflect back on the three challenges in the conclusions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -149,40 +171,37 @@ Finally, we will draw our conclusions.
 \subsection{Assumptions}
 
 \subsection{Implementation}
-The implementation for this challenge is located in a repository on github \footnote{https://github.com/mps-lwc-16/mps-lwc-16}. To explore the implementation, please clone the repository and follow the instructions in the README.md.
-
-Many of the challenge items can be demonstrated using examples from the \emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}}, so we have used examples from there whenever appropriate.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.50\textwidth]{screens/OpenNotation.png}
-	\caption{The documentation model for the Notation challenge}
-	\label{fig:opennotation}
-\end{figure}
-
-We have written models in the mbeddr documentation language\markus{Say a
-sentence on what this is?} to present the implementation. To open the
-documentation model for the implementation to this challenge, open the Notation
-model, as shown in Figure \ref{fig:opennotation}. The Notation chapter is
-divided into sections, each of which addresses one or more of the challenge
-items. Each of those items is discussed in detail in the subsections below.
+In the next subsections we present the implementation and chosen examples for each
+item of the \emph{Notation} challenge.
 
 \subsubsection{Support mathematical symbols in addition to textual notation}
 Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the mbeddr math language, which is embedded in a function of the mbeddr C language.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/MathematicalNotation.png}
-	\caption{Mathematical notation for the mbeddr math language\markus{Looks
-	broken, sum symbol is white/transparent.}}
+	\caption{Mathematical notation for the mbeddr math language}
 	\label{fig:mathnotation}
+\end{figure}
+
+This notation is possible in MPS because one can insert any drawing in an editor cell using base language code (which is a reimplementation of Java).
+The sum symbol, for instance, is placed in the editor component of the \emph{SumExpression} concept,
+and the sum symbol is drawn on the screen using a \emph{Graphics} object in Java. Two screenshots from
+the editor component of the \emph{SumExpression} concept and the implementation of the sum symbol
+are shown in Figure \ref{fig:MathSymbolImpl}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{screens/MathSymbolImpl.png}
+	\caption{Editor component of the sum expression in the math language and the implementation
+of the sum symbol with some details folded}
+	\label{fig:MathSymbolImpl}
 \end{figure}
 
 \subsubsection{Support tabular notation in addition to textual notation}\label{sec:tabnot}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.50\textwidth]{screens/TextualNotationStatemachine.png}
-	\caption{Textual notation for the mbeddr statemachine language\markus{Too
-	small, can't be read.}}
+	\includegraphics[width=0.45\textwidth]{screens/TextualNotationStatemachine.png}
+	\caption{Textual notation for the mbeddr statemachine language with some details folded}
 	\label{fig:txtnotationsm}
 \end{figure}
 \begin{figure}[H]
@@ -191,21 +210,51 @@ Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the 
 	\caption{Tabular notation for the mbeddr statemachine language}
 	\label{fig:tabnotationsm}
 \end{figure}
-Figure \ref{fig:txtnotationsm} shows a textual notation for the mbeddr statemachine language, while Figure \ref{fig:tabnotationsm} shows a tabular notation for the same model expressed in the same statemachine language.
+Figure \ref{fig:txtnotationsm} shows a textual notation for the mbeddr statemachine language,
+while Figure \ref{fig:tabnotationsm} shows a tabular notation for the same model expressed in the same statemachine language.
+
+There can be multiple projections associated to models of a language because MPS permits an arbitrary
+number of editors to be defined for the same language.
+For instance, the tabular notation for the \emph{Statemachine} concept is defined
+in a separate editor component where the columns, rows and cells of the concept are filled in
+with the adequate properties, children and references of the \emph{Statemachine} concept.
+An excerpt from this editor can be seen in Figure~\ref{fig:TableEditorStatemachine}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/TableEditorStatemachine.png}
+	\caption{Excerpt from the table editor for the \emph{Statemachine} concept with some details folded}
+	\label{fig:TableEditorStatemachine}
+\end{figure}
 
 \subsubsection{Support diagrammatic notation in addition to textual notation}\label{sec:dianot}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/DiagrammaticNotationStatemachines.png}
 	\caption{Diagrammatic notation for the mbeddr statemachine
-	language\markus{What's the diag line?}}
+	language}
 	\label{fig:dianotationsm}
 \end{figure}
-Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language, for exactly the same model as also shown in Section \ref{sec:tabnot}.
+
+Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language for the same model from Section \ref{sec:tabnot}.
+The diagrammatic notation for the \emph{Statemachine} concept is implemented in the same manner as described in the previous subsection,
+by means of an editor component where the nodes and the edges of the \emph{Statemachine} concept
+are filled in with the appropriate properties, children and references of the \emph{Statemachine} concept.
 
 \subsubsection{Support switching between multiple alternative notations for the same language}
-As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the same model written in the mbeddr statemachine language can be alternated between textual, tabular, and diagrammatic.
+As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the same model written
+in the mbeddr statemachine language can be alternated between textual, tabular, and diagrammatic.
+MPS provides support for switching between alternative notations by means of so-called context hints.
+A context hint is defined for each new editor provided for a language.
+All the context hints defined for a language are added to a list that can be accessed from the viewer.
+The context hints defined for the mbeddr statemachine language are shown in Figure~\ref{fig:contextHints}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/ContextHints.png}
+	\caption{Context hints for the mbeddr statemachine language}
+	\label{fig:contextHints}
+\end{figure}
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
 The mbeddr environment supports product line variability \cite{voelter2015using}. In the variability language, users can define
@@ -215,10 +264,6 @@ In the implementation code that makes use of the features of a feature model, pr
 code fragments (see Figure~\ref{fig:presenceCond}). A presence condition is a condition on features from the feature model. 
 Once a configuration is chosen, the code that is guarded with presence conditions that do not hold is taken out by the generator.
 For more information on the feature models in mbeddr see Voelter et. al. \cite{voelter2013mbeddr}.
-\markus{if you describe things this way, then this is only a demo of what can
-be done. But it does not at all explain *how* it is done. I do think that you'll
-need to go through all the schema. Better address fewer challegnes if the effort
-is too high otherwise. }
 
 \begin{figure}[H]
 	\centering
@@ -240,6 +285,27 @@ is too high otherwise. }
 	\caption{Function initializing a trackpoint by making use of presence conditions for elements from the
 feature model in Figure~\ref{fig:featureModel}}
 	\label{fig:presenceCond}
+\end{figure}
+
+The hiding of parts of the code is handled in the editor with the help of the \emph{show if} option.
+Cells of the editor are conditioned by the \emph{show if} option. For instance, once a variant configuration has been chosen,
+the editor can be updated to show the model with the processed presence conditions. Figure~\ref{fig:presenceConditionEditor}
+illustrates how the viewing of the presence conditions are conditioned by a mode that is different from the compact mode.
+Moreover, the changes to the viewer once the mode is changed via a menu action can be seen in Figure~\ref{fig:processTrackpointSelectedVariant}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/PresenceConditionEditor.png}
+	\caption{The editor for concept \emph{PresenceCondition}}
+	\label{fig:presenceConditionEditor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/ProcessTrackpointSelectedVariant.png}
+	\caption{The \emph{process\_trackpoint} function after changing the editor mode to the selected
+variant}
+	\label{fig:processTrackpointSelectedVariant}
 \end{figure}
 \subsubsection{Computed properties: read only annotations that are automatically derived form the main program}
 The assert statements in mbeddr have an id that is read-only and that is derived from the main program. The number of the
@@ -384,7 +450,7 @@ is rendered in the editor. The image itself is a blackbox from the point of view
 
 \section{Addressing the Evolution and Reuse Problem}
 
-In this section we present our solution to the problem about Evolution and Reuse.
+In this section we present our solution to the challenge on Evolution and Reuse.
 
 \subsection{Assumptions}
 
