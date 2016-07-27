@@ -7,7 +7,7 @@
 \newcommand\comment[1]{\textcolor{blue}{#1}}
 
 \newcommand\markus[1]{\textcolor{red}{MARKUS: {#1}}}
-
+\newcommand\federico[1]{\textcolor{red}{FEDERICO: {#1}}}
 
 \begin{document}
 
@@ -41,40 +41,35 @@ In this paper, we\markus{Use present tense, not ``going to''} discuss how the
 JetBrains MetaProgramming System can be used to address the challenges presented in the Language Workbench
 Challenge 2016 (LWC'16).
 
-The JetBrains MetaProgramming System (MPS) is a mature language workbench based
+The JetBrains MetaProgramming System (MPS) is a language workbench based
 on projectional editing. While other language workbenches are based on
 projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+
 \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
-arguably the most mature, with a growing user base.\markus{Repetition between
-the first sentence and the last}
+arguably the most mature, with a growing user base.
 
-We believe\markus{No beliefs in papers! Facts or nothing :-)} that one key
-feature to make MPS successful is its flexibility\markus{Meaning? Very general
-word}.
 By using a powerful and flexible language workbench such MPS we, as language
 engineers, can provide languages and corresponding tools that support a
-significant overhaul\markus{Overhaul?} of the processes of an organization. It
-is frequently the case that such processes involve very different kinds of users with very
+significant redesign of the processes of an organization. 
+It is frequently the case that such processes involve very different kinds of users with very
 different backgrounds, experiences, and needs. Therefore a complete solution
 could potentially encompass different aspects of the internal processes,
 providing different views and a variety of tools such as simulators, debuggers,
-code-generators, and more.\markus{Can you make this paragraph more concrete?
+code-generators, and more.
+\markus{Can you make this paragraph more concrete?
 Eg. with examples?}
+\federico{I tried adding the following paragraph}
+For example, in MPS we could create a text-like DSL to be used by developers. The same code could be projected using a graphical representation, to support discussion with domain experts. Testers could use a simulator to verify the correct behavior of the applications and documentation includings graphs and tables could be generated for other stakeholders.
 
-The ability to support different notations, to process models in different
-ways\markus{What does this mean?}, to perform validation and support testing:
-all these features and others are necessary to build solutions as complete as
-demanded in real-life scenarios.
+%The ability to support different notations, to process models in different
+%ways\markus{What does this mean?}, to perform validation and support testing:
+%all these features and others are necessary to build solutions as complete as
+%demanded in real-life scenarios.
 
 Considering the comparison of language workbenches features presented in
 \cite{erdweg2015evaluating} we can see that MPS is among the most complete
-language workbenches. Other tools with a comparable level of completeness are
-\emph{MetaEdit+}\markus{Not in terms of notations \ldots} and the \emph{Whole
-Platform}. While \emph{Xtext} \cite{Eysholdt2010} has a strong support in many
-areas it is strictly confined to the textual notation and this limitation sets
-it apart from multi-notation language workbenches such as MPS.\markus{ME+ is
-limited to graphical.}
-
+language workbenches. Most other well-known language workbenches are not as complete as MPS: for example \emph{MetaEdit+} is limited to graphichal notations while \emph{Xtext} \cite{Eysholdt2010} it is strictly confined to the textual notation. A language workbench with a comparable level of completeness is the \emph{Whole
+Platform}.
+ 
 With respect to the feature model presented in \cite{erdweg2015evaluating} the
 only features missing in MPS are \emph{Free-form editing} and \emph{Live
 translation}.\markus{We are looking into live translation, by the way :-) We
@@ -102,8 +97,7 @@ textual. Being able to support the notations of preference of the target
 audience can be a key element to winning users support.
 
 The second challenge considers \textbf{Evolution and Reuse}. These are
-characteristics which are absolutely\markus{Do not use ``colorful'' words like
-this. Delete.} crucial for the maintenance of a solution in the long run. Any
+characteristics which are important for the maintenance of a solution in the long run. Any
 mature engineering approach should consider the whole lifecycle of the proposed
 solution. The evolution is particularly important for languages because they are
 tools used to represent knowledge, probably the most valuable asset for many
