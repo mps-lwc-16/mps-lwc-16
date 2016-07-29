@@ -118,19 +118,19 @@ believe is still an aspect which needs to be emphasized. By addressing this
 particular challenge we aim to prove the progresses of MPS in this area and
 highlight possible necessary improvements still needed.
 
-\subsection{Accessing the implementation}
-The implementation for these challenges is located in a repository on github
-\footnote{https://github.com/mps-lwc-16/mps-lwc-16}. To explore the implementation,
+\subsection{Accessing the examples}
+The examples for these challenges are located in a repository on github
+\footnote{https://github.com/mps-lwc-16/mps-lwc-16}. To explore the examples,
 please clone the repository and follow the instructions in the README.md.
 
 Many of the challenge items can be demonstrated using examples from the
 \emph{mbeddr platform} \footnote{See \url{http://mbeddr.com/platform.html}},
-so we have used examples from there whenever appropriate.
+so we have used them whenever appropriate.
 
 We have written models in the mbeddr documentation language
-to present the implementation. The mbeddr documentation language is a language that allows
+to present the examples. The mbeddr documentation language is a language that allows
 writing prose with sections, figures, embedded program nodes, etc. 
-To open the documentation model for the implementation to the \emph{Notation} challenge, for instance,
+To open the documentation model for the examples of the \emph{Notation} challenge, for instance,
 open the \emph{Notation} model, as shown in Figure \ref{fig:opennotation}. The \emph{Notation} chapter is
 divided into sections, each of which addresses one or more of the challenge
 items.
@@ -161,11 +161,24 @@ Finally, we will reflect back on the three challenges in the conclusions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Addressing the Notation Problem}
+The notation part of MPS is arguably one of its most powerful features.
+That is so, because almost any notation can be rendered in an editor, from textual,
+tabular and graphical to a mixture of these. Moreover, one can
+define an arbitrary UI component as a cell in the editor (the editor in MPS is made
+of cells\footnote{\url{https://confluence.jetbrains.com/display/MPSD31/Editor}}).
+
+On the other hand, writing textual notations seamlessly requires more effort
+from the language designer because of the projectional nature of MPS.
+The classical example of writing a sum of two numbers in the editor by first writing the left-hand side
+number followed by the plus sign and the right-hand side number requires additional
+functions to be implemented in MPS.
 
 \subsection{Assumptions}
+We do not make any assumptions for the examples in the next sections. Notations and capabilities such as those
+described next can be provided for any MPS languages.
 
 \subsection{Implementation}
-In the next subsections we present the implementation and chosen examples for each
+In the next subsections we present the chosen examples and the implementation for each
 item of the \emph{Notation} challenge.
 
 \subsubsection{Support mathematical symbols in addition to textual notation}
@@ -231,7 +244,7 @@ An excerpt from this editor can be seen in Figure~\ref{fig:TableEditorStatemachi
 \end{figure}
 
 Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language for the same model from Section \ref{sec:tabnot}.
-The diagrammatic notation for the \emph{Statemachine} concept is implemented in the same manner as described in the previous subsection,
+The diagrammatic notation for the \emph{Statemachine} concept is implemented in the same manner as described in the previous section,
 by means of an editor component where the nodes and the edges of the \emph{Statemachine} concept
 are filled in with the appropriate properties, children and references of the \emph{Statemachine} concept.
 
@@ -251,6 +264,7 @@ The context hints defined for the mbeddr statemachine language are shown in Figu
 \end{figure}
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
+\label{sec:OptHiding}
 The mbeddr environment supports product line variability \cite{voelter2015using}. In the variability language, users can define
 feature models (see Figure~\ref{fig:featureModel}) and
 different configurations of such features (see~Figure \ref{fig:configs}).
@@ -418,23 +432,107 @@ is rendered in the editor. The image itself is a blackbox from the point of view
 	\caption{Part of the implementation of a swing component in the editor of concept \emph{ImageParagraph}.}
 	\label{fig:EditorImageParagraph}
 \end{figure}
+
 \subsection{Variants}
+There were other alternatives for showcasing some of the features presented in the previous sections.
+We will give here a few variants only.
+
+Switching between notations can be accomplished not only through context hints, but with
+different user actions as well. In the state machine language, one can switch between different
+projections by using the \emph{Projection} tab and selecting the desired projection. Details on this
+can be found in our documentation model on github, in the \emph{Notation} section. In the implementation in mbeddr,
+there is a plugin that introduces this tab and that triggers the projection selected.
+
+There are also many other examples for the optional hiding feature. Some characteristics of concepts
+can be hidden and toggled with an intention, for instance. Take the export statement for modules as an example, which can
+be tried on modules in the documentation model on github. The intention toggles the value of the boolean property \emph{exported},
+which results in showing/hiding the export statement depending on the condition expressed in the editor of the concept
+(similar to the discussion in Section~\ref{sec:OptHiding}).
+
+One other variant that can be used as an example to showcase the power of MPS
+is the notation in the form of a PlantUML\footnote{\url{http://plantuml.com/}} diagram of the
+state machine languages. MPS allows to incorporate viewers in the editor that project a model in a language
+written in MPS.
 
 \subsection{Usability}
+The effort to make the notations as usable as possible goes to the language designer. The drawbacks of the
+projectional editors are well-known, but MPS goes a long way to provide tools to the language
+designer that help in creating a user-friendly editor \cite{voelter2014towards}.
+The notations provided in mbeddr are a good example of user-friendly notations.
 
 \subsection{Impact}
+Introducing notations to a language does not come with a big negative impact on the language.
+The notation is expressed in an editor aspect, that is provided for each concept, and this aspect
+does not usually influence the other aspects of the language.
+At most, the editor aspect might require the import of certain libraries, and that has an impact on the overall
+language because the import is going to be added to the dependency list of the language itself.
+
+There are situations when the impact of the notation can be considerable on the language. If one uses the default
+graphical notation provided by MPS (instead of the graphical notation provided in mbeddr), one might need to
+change the structure of the language itself. This has a very big impact, because all the other aspects of the language
+depend on the structure. The changes are required if the elements that need to be represented as edges in the graphical representation
+are not concepts in the language itself. That would mean transforming those elements into concepts first.
 
 \subsection{Composability}
+Each concept in a language can have any number of editors attached to it. The different editors of a concept $C$
+do not interact among each others, unless one editor of $C$ reuses another editor of $C$ (reuse of editors for the same concept
+is possible in MPS). One common pattern is to define an editor component for an interface concept and reuse that
+editor component in the editor of a concept that implements the interface concept. This can be noticed in the
+mbeddr code with concept \emph{StateMachine} and interface concept \emph{IModuleContent}, for instance.
+
+Composability is very well supported at the editor level, because each editor is made of cells,
+and cells, in turn, are formed of other cells. This permits defining
+the editor of a concept as a collection of cells, where some cells are the editors of the children of the concept.
+
+Moreover, a sub-concept inherits the editor (the notations) of its super-concept. If this is not the desired behaviour,
+the editors of the sub-concepts can be overriden as well.
 
 \subsection{Limitations}
+The notations introduced can be used only inside MPS. That applies also to the textual notations, because
+the files are persisted as XML on disk, and they are projected as text on the screen. 
+
+Moreover, as already mentioned, there are certain limitations inherent to projectional editors especially
+when it comes to textual notations, but this limitations are well mitigated by MPS \cite{voelter2014towards}.
 
 \subsection{Uses and examples}
+The uses and examples have been covered in the implementation section.
+All examples in that section are from mbeddr.
 
 \subsection{Effort (best-effort)}
+Some of the items described in the previous sections are trivial to address (in the order of a few minutes):
+\begin{itemize}
+\item The skeleton editing is provided by default in Jetbrains MPS and is a natural consequence
+of how editors are created in Jetbrains MPS.
+\item The switching between notations is a matter of introducing one context hint, that is one file and a name for the
+context hint.
+\item The optional hiding is a matter of writing one condition in the editor cell
+that should be hidden.
+\item Embedding code in prose is trivial if we want to make references to elements defined in code in text, because
+it requires implementing one interface and defining one operation.
+\item Computed structures and properties such as the one exemplified imply the implementation of a function that computes the
+necessary structures.
+\end{itemize}
 
-\subsection{Other comments}
+Other items require more time (in the order of a few minutes to a few hours, depending on the size of the language):
+\begin{itemize}
+\item The tabular notation can be more involved because it requires that a few functions are provided
+to fill in the columns and the rows of the table.
+\item The same holds for the diagrammatic notation where code needs to be filled in that specifies what concepts
+are going to fulfill the role of edges and nodes and under what conditions.
+\item Embedding entire chunks of code in prose requires more effort than simply referencing an element from code in text.
+\end{itemize}
+
+More involved items that require considerable time (in the order of a few hours to a day):
+\begin{itemize}
+\item Embedding blackboxes, such as images, requires that one implements the logic to render the image in the
+editor and the logic to read the path of such images.
+\item Showing math symbols in the editor takes more time as well, as the rendering of the symbol in the viewer needs to be
+implemented.
+\end{itemize}
 
 \subsection{Artifact}
+The examples discussed about in this section can all be found in the documentation model in the \emph{Notation} section.
+As for their implementation, that resides in the mbeddr code (see file \emph{README.md} for the version of mbeddr we used).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -452,7 +550,7 @@ Our solutions are presented making references to the two main language families 
 
 First of all we have the BaseLanguage, which is an implementation of Java built from JetBrains and shipped with MPS. Several extensions are distributed with MPS, including extensions to support lambdas, manipulation of sequences, expressions to access MPS concepts and models, etc.
 
-Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to the the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in were different contexts.
+Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to the the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in different contexts.
 
 \subsection{Implementation}
 
