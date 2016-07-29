@@ -8,6 +8,7 @@
 
 \newcommand\markus[1]{\textcolor{red}{MARKUS: {#1}}}
 \newcommand\federico[1]{\textcolor{red}{FEDERICO: {#1}}}
+\newcommand\ana[1]{\textcolor{red}{ANA: {#1}}}
 
 \begin{document}
 
@@ -44,10 +45,10 @@ Challenge 2016 (LWC'16).
 The JetBrains MetaProgramming System (MPS) is a language workbench based
 on projectional editing. While other language workbenches are based on
 projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+
-\cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
+\cite{Tolvanen2006}, Intentional Doman Workbench \cite{Simonyi2006}) MPS is
 arguably the most mature, with a growing user base.
 
-By using a powerful and flexible language workbench such MPS we, as language
+By using a powerful and flexible language workbench such as MPS we, as language
 engineers, can provide languages and corresponding tools that support a
 significant redesign of the processes of an organization. 
 It is frequently the case that such processes involve very different kinds of users with very
@@ -65,7 +66,7 @@ For example, in MPS we could create a text-like DSL to be used by developers. Th
 %all these features and others are necessary to build solutions as complete as
 %demanded in real-life scenarios.
 
-Considering the comparison of language workbenches features presented in
+Considering the comparison of language workbenches features presented by Erdweg et al.
 \cite{erdweg2015evaluating} we can see that MPS is among the most complete
 language workbenches. Most other well-known language workbenches are not as complete as MPS: for example \emph{MetaEdit+} is limited to graphichal notations while \emph{Xtext} \cite{Eysholdt2010} it is strictly confined to the textual notation. A language workbench with a comparable level of completeness is the \emph{Whole
 Platform}.
@@ -78,6 +79,8 @@ need it here.}
 \subsection{JetBrains MPS in previous challenges}
 
 TODO: Summarize results of MPS in previous challenges
+\ana{It would be nice to come back in the conclusions with a series of items that we could address in
+this competition, but not in the previous ones.}
 
 \subsection{Challenges presented in the LWC'16}
 
@@ -90,11 +93,11 @@ The first challenge is on \textbf{Notation}. We demonstrate how MPS
 supports several, very different notations.
 Notations are particularly relevant because they are the most visible aspect of
 languages. In many cases, language workbenches are used to create domain
-specific languages. Such languages are intended to appeal a specific
-category of subjects\markus{Subjects == People || Subjects == Domains?}.
-This category could be familiar with specific notations, not necessarily
+specific languages. Such languages are intended to appeal to a specific
+category of people. 
+This people could be familiar with specific notations, not necessarily
 textual. Being able to support the notations of preference of the target
-audience can be a key element to winning users support.
+audience can be a key element to winning users' support.
 
 The second challenge considers \textbf{Evolution and Reuse}. These are
 characteristics which are important for the maintenance of a solution in the long run. Any
@@ -521,7 +524,9 @@ when it comes to textual notations, but this limitations are well mitigated by M
 
 \subsection{Uses and examples}
 The uses and examples have been covered in the implementation section.
-All examples in that section are from mbeddr.
+Almost all examples in that section are from mbeddr, with the exception of the generic metadata annotation,
+where we created a separate language with the generic note concept. This language and the generic note concept
+can be found on the github repository of our submission.
 
 \subsection{Effort (best-effort)}
 Some of the items described in the previous sections are trivial to address (in the order of a few minutes):
@@ -577,7 +582,7 @@ Our solutions are presented making references to the two main language families 
 
 First of all we have the BaseLanguage, which is an implementation of Java built from JetBrains and shipped with MPS. Several extensions are distributed with MPS, including extensions to support lambdas, manipulation of sequences, expressions to access MPS concepts and models, etc.
 
-Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to the the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in different contexts.
+Another very popular family of languages is mbeddr. It is an implementation of the C language in MPS with support for variability, state machines, testing, documentation and more. In addition to that, the mbeddr platform has been created. It is a collection of language extensions not specifically related to mbeddr or the C language. These extensions proved to be useful in different contexts.
 
 \subsection{Implementation}
 
@@ -728,21 +733,21 @@ Language composition does not require to change existing elements.
 
 \subsection{Composability}
 
-Language composition is well supported in MPS. It is very natural and it does not require any particular technique. The only possible issues could be caused by semantic conflicts: supposed an expression language defines only statically evaluable expressions such literals and basic mathematical expressions. Suppose a first extension is based on this consideration and add the possibility to display the result of such expressions. Now, if a second extension would introduce non-statically evaluable expressions, the two extensions could not play well together. This problem could be avoidable by planning for extensibility in the original language: for example we could have required each Expression concept to declare if it was statically evaluable or not. All the expressions of the original language would have declared themselves to be statically evaluable, while the Expressions from the first extension would have not. The extensions calculating result values could have used the method to verify that all Expressions for which it wanted to calculate a value were indeed statically evaluable and trigger an error when not-statically evaluable expressions were used in the wrong context. In this way the two extensions would have played nice without being aware of each other.
+Language composition is well supported in MPS. It is very natural and it does not require any particular technique. The only possible issues could be caused by semantic conflicts: suppose an expression language defines only statically evaluable expressions such as literals and basic mathematical expressions. Furthermore, suppose a first extension is based on this consideration and adds the possibility to display the result of such expressions. Now, if a second extension would introduce non-statically evaluable expressions, the two extensions would not interact well together. This problem could be avoided by planning for extensibility in the original language: for example we could have required each \emph{Expression} concept to declare if it was statically evaluable or not. All the expressions of the original language would have declared themselves to be statically evaluable, while the Expressions from the first extension would have not. The extensions calculating result values could have used the method to verify that all Expressions for which it wanted to calculate a value were indeed statically evaluable and trigger an error when not-statically evaluable expressions were used in the wrong context. In this way the two extensions would interact nicely without being aware of each other.
 
 \subsection{Limitations}
 
 No particular limitations come to mind.
 
-The only limitation we see is with migrations, because they are not reversible. This is an issue when different members of a team want to use different versions of MPS because each version comes with specific versions of the BaseLanguage: when a project is open with a new version migrations have to be performed and these migrations make the project incompatible with previous versions. Effectively this forces everyone to use the same version of the language workbench.
+The only limitation we see is with migrations, because they are not reversible. This is an issue when different members of a team want to use different versions of MPS because each version comes with specific versions of the BaseLanguage: when a project is open with a new version, migrations have to be performed and these migrations make the project incompatible with previous versions. Effectively this forces everyone to use the same version of the language workbench.
 
 \subsection{Uses and examples}
 
 Language extensibility and composition are used extensively in the two well-known MPS language families: the BaseLanguage and mbeddr. The BaseLanguage defines a core language and a set of independent extensions, mbeddr does the same.
 
 \subsection{Effort (best-effort)}
-
-The estimated effort for the different points is:
+\ana{Maybe it is easier to write this subsection in the same manner we have wrote about effort in the notation section.}
+The estimated effort for the different points are:
 
 \begin{itemize}
 	\item Language extension: XXX minutes
@@ -762,6 +767,8 @@ For \emph{Language embedding} we calculate only the time for creating the concep
 \subsection{Artifact}
 
 \comment{TODO understand what should we write in this section}
+\ana{I assume that this refers to the actual artifacts that we created: the
+examples in the documentation models and the mbeddr code itself}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -958,7 +965,7 @@ The JetBrains MetaProgramming System has significantly evolved during the years.
 
 %% We are using the command `bibtex' from within the directory `build', thus we need
 %% to go back from this directory and look for the bibliography file.
-\bibliographystyle{plain}
+\bibliographystyle{abbrvnat}
 \bibliography{../LWC2016}
 
 \end{document}
