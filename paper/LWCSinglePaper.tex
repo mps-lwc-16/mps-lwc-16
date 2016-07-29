@@ -262,7 +262,32 @@ The context hints defined for the mbeddr statemachine language are shown in Figu
 	\caption{Context hints for the mbeddr statemachine language}
 	\label{fig:contextHints}
 \end{figure}
+
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
+Annotations are called attributes in Jetbrain MPS.
+For defining attributes of nodes in MPS, there exists the \emph{NodeAttribute} concept that can be attached
+to almost any model node by default. Thus, when declaring generic metadata annotations, one needs to extend the \emph{NodeAttribute}
+concept and define its contents. An example can be seen in Figure~\ref{fig:GenericNote} where a \emph{GenericNote} concept is defined.
+To use the annotation, the language needs to be imported in the solution, and then, the \emph{GenericNote} concept can be attached to any
+model node. For example, we have attached a generic note to both a paragraph in the documentation model and
+a Java method, as can be seen in Figure~\ref{fig:exampleGenericNote}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\textwidth]{screens/GenericNoteImpl.png}
+	\caption{Structure of the generic note concept}
+	\label{fig:GenericNote}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{screens/ExampleGenericNote.png}
+	\caption{Two example uses of the generic note in the documentation model from github}
+	\label{fig:exampleGenericNote}
+\end{figure}
+
+The metadata annotations do not change the model elements to which they are attached at all.
+
 \subsubsection{Optional hiding: hide parts of the code, without losing the content and while retaining editability}
 \label{sec:OptHiding}
 The mbeddr environment supports product line variability \cite{voelter2015using}. In the variability language, users can define
@@ -511,6 +536,8 @@ that should be hidden.
 it requires implementing one interface and defining one operation.
 \item Computed structures and properties such as the one exemplified imply the implementation of a function that computes the
 necessary structures.
+\item Generic metadata annotations are trivial to add to model elements as well, because they involve only defining a new
+concept that extends the node attribute.
 \end{itemize}
 
 Other items require more time (in the order of a few minutes to a few hours, depending on the size of the language):
