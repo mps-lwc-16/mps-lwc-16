@@ -20,6 +20,9 @@
 \authorinfo{Ana Maria \c{S}ut\^{i}i}{Eindhoven University of Technology}{farcasia@gmail.com}
 \maketitle
 
+\begin{abstract}
+    This paper
+\end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Introduction
@@ -27,34 +30,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \markus{Abstrsact is missing}
-\markus{Author affiliations are missing}
-
 
 \section{Introduction}
 
 
 
-In this paper, we\markus{Use present tense, not ``going to''} discuss how the
-JetBrains MetaProgramming System can be used to address the challenges presented in the Language Workbench
+In this paper, we discuss how the JetBrains MetaProgramming System can be used to address the challenges presented in the Language Workbench
 Challenge 2016 (LWC'16).
 
 The JetBrains MetaProgramming System (MPS) is a language workbench based
 on projectional editing. While other language workbenches are based on
-projectional editing (the Whole Platform \cite{solmi2005whole}, MetaEdit+
-\cite{Tolvanen2006}, Intentional Doman Workbench \cite{Simonyi2006}) MPS is
-arguably the most mature, with a growing user base.
+projectional editing (e.g. the Whole Platform \cite{solmi2005whole}, MetaEdit+
+\cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
+arguably the most feature-rich, with a fast growing user base.
 
-By using a powerful and flexible language workbench such as MPS we, as language
-engineers, can provide languages and corresponding tools that support a
-significant redesign of the processes of an organization.
-It is frequently the case that such processes involve very different kinds of users with very
-different backgrounds, experiences, and needs. Therefore a complete solution
+By using a powerful and flexible language workbench such as MPS, language
+engineers can provide languages and IDEs for programmers and non-programmers that support a significant redesign of the processes of an organization.
+It is frequently the case that such processes involve various kinds of users with various backgrounds, experiences, and needs. Therefore a complete solution
 could potentially encompass different aspects of the internal processes,
 providing different views and a variety of tools such as simulators, debuggers,
 code-generators, and more.
-\markus{Can you make this paragraph more concrete?
-Eg. with examples?}
-\federico{I tried adding the following paragraph}
+
 For example, in MPS we could create a text-like DSL to be used by developers. The same code could be projected using a graphical representation, to support discussion with domain experts. Testers could use a simulator to verify the correct behavior of the applications and documentation includings graphs and tables could be generated for other stakeholders.
 
 %The ability to support different notations, to process models in different
@@ -62,38 +58,27 @@ For example, in MPS we could create a text-like DSL to be used by developers. Th
 %all these features and others are necessary to build solutions as complete as
 %demanded in real-life scenarios.
 
-Considering the comparison of language workbenches features presented by Erdweg et al.
+Considering the comparison of language workbench features presented by Erdweg et al.
 \cite{erdweg2015evaluating} we can see that MPS is among the most complete
-language workbenches. Most other well-known language workbenches are not as complete as MPS: for example \emph{MetaEdit+} is limited to graphichal notations while \emph{Xtext} \cite{Eysholdt2010} it is strictly confined to the textual notation. A language workbench with a comparable level of completeness is the \emph{Whole
+language workbenches. Most other well-known language workbenches are not as complete as MPS: for example \emph{MetaEdit+} is limited to graphical notations while \emph{Xtext} \cite{Eysholdt2010} is strictly confined to textual notations. A language workbench with a comparable level of completeness is the \emph{Whole
 Platform}.
 
 With respect to the feature model presented in \cite{erdweg2015evaluating} the
 only features missing in MPS are \emph{Free-form editing} and \emph{Live
-translation}.\markus{We are looking into live translation, by the way :-) We
-need it here.}
+translation} (the second of which is currently being looked into by the mbeddr team).
 
-\subsection{JetBrains MPS in previous challenges}
-
-TODO: Summarize results of MPS in previous challenges
-\ana{It would be nice to come back in the conclusions with a series of items that we could address in
-this competition, but not in the previous ones.}
+% \subsection{JetBrains MPS in previous challenges}
+%
+% TODO: Summarize results of MPS in previous challenges
+% \ana{It would be nice to come back in the conclusions with a series of items that we could address in
+% this competition, but not in the previous ones.}
 
 \subsection{Challenges presented in the LWC'16}
 
-The challenges identified for the LWC'16 permit to evaluate very different aspects
-of a language workbench. By addressing all three of them we aim to offer a
-complete picture of the capabilities (and possibly the limitations) offered by
-MPS.
+While the call for solutions does not require to address all challenges, we attempted to cover as much as we could (given our limited time) in order to offer a broad overview of the capabilities and limitations of MPS.
 
-The first challenge is on \textbf{Notation}. We demonstrate how MPS
-supports several, very different notations.
-Notations are particularly relevant because they are the most visible aspect of
-languages. In many cases, language workbenches are used to create domain
-specific languages. Such languages are intended to appeal to a specific
-category of people.
-This people could be familiar with specific notations, not necessarily
-textual. Being able to support the notations of preference of the target
-audience can be a key element to winning users' support.
+The first challenge is on \textbf{Notation}. We demonstrate how MPS supports several notations. Notations are particularly relevant because they are the most visible aspect of languages. In many cases, language workbenches are used to create domain
+specific languages. Each such language is intended for domain specific developers who already have their own preferred notations. Such notations are not necessarily textual. By adapting the tooling to the notations that are used daily by developers, the mental overhead of expressing their specifications and designs is significantly reduced, which increases their productivity and satisfaction in using the tooling.
 
 The second challenge considers \textbf{Evolution and Reuse}. These are
 characteristics which are important for the maintenance of a solution in the long run. Any
