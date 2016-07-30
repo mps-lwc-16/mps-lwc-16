@@ -30,7 +30,7 @@
 \begin{abstract}
     This paper describes a solution for the \href{http://2016.splashcon.org/track/lwc2016}{SPLASH 2016 Language Workbench Challenge (LWC)} workshop, using the \href{https://www.jetbrains.com/mps/}{JetBrains Meta Programming System (MPS)} language workbench.
 	As the main focus of the LWC is on implementation and not on writing a paper, we used the \href{http://mbeddr.com/}{mbeddr} documentation language to describe the solutions to the challenges posed in the LWC. In this way, the showcasing of a solution is co-located directly with its implementation, making it easier for the reader to directly try out the solutions to better understand them. Therefore we would encourage you to actually open \href{https://github.com/mps-lwc-16/mps-lwc-16}{the solution implementation} (see README.md for setting it up) and play around with it.
-	
+
 	We believe that JetBrains MPS has evolved into a powerful and flexible tool that can be used to address most of the Language Engineering challenges in the LWC. When using the mbeddr platform extensions as well as other plugins that have been made by the MPS community, the feature-richness, and with it, the scale of practical applicability of the tooling increases even more.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -696,12 +696,15 @@ For example, every \emph{AssertStatement} is technically an mbeddr \emph{Stateme
 \subsubsection{Syntax migration: support migrating programs when concrete syntax changes}
 \label{evr:synmigr}
 
-\comment{TODO: to be written after the examples are provided}
+Concrete syntax changes are supported by default with projectional editing without requiring any migration. Since only the AST is stored in the model, all concrete syntax elements purely exist in the editor. Therefore, updating an MPS editor, immediately changes the presentation (conrete syntax) without requiring a change in the stored model (AST).
 
 \subsubsection{Structure migration: support migrating programs when abstract syntax changes}
 \label{evr:structmigr}
+Unfortunately, we didnt have enough time to work out a brief example inline of this document.
 
-\comment{TODO: to be written after the examples are provided}
+Migrations in structure are handled in MPS by means of migration scripts. Whenever a metamodel for a language in the field needs to change, you can write a migration script to migrate models in order to comply with the updated metamodel. MPS automatically handles versioning of your language and detects when a model needs to be migrated.
+
+com.mbeddr.core.unittest contains an example of a non-trivial migration script. You can explore it by opening Logical View $\rightarrow$ Modules Pool $\rightarrow$ languages $\rightarrow$ com$\rightarrow$ mbeddr $\rightarrow$ core $\rightarrow$ unittest $\rightarrow$ migrations and explore the migration scripts there.
 
 \subsection{Variants}
 
