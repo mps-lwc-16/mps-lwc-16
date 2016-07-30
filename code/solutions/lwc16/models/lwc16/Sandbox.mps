@@ -1369,7 +1369,7 @@
         <node concept="1_0LV8" id="30e67$70Ds5" role="1_0VJ0">
           <node concept="19SGf9" id="30e67$70Ds6" role="1_0LWR">
             <node concept="19SUe$" id="30e67$70Ds7" role="19SJt6">
-              <property role="19SUeA" value="todo" />
+              <property role="19SUeA" value="Concrete syntax changes are supported by default with projectional editing without requiring any migration. Since only the AST is stored in the model, all concrete syntax elements purely exist in the editor. Therefore, updating an MPS editor, immediately changes the presentation (conrete syntax) without requiring a change in the stored model (AST)." />
             </node>
           </node>
         </node>
@@ -1380,21 +1380,21 @@
         <node concept="1_0LV8" id="6pYKx1vD$9J" role="1_0VJ0">
           <node concept="19SGf9" id="6pYKx1vD$9K" role="1_0LWR">
             <node concept="19SUe$" id="6pYKx1vD$9L" role="19SJt6">
-              <property role="19SUeA" value="todo" />
+              <property role="19SUeA" value="Unfortunately, we didnt have enough time to work out a brief example inline of this document." />
             </node>
           </node>
         </node>
         <node concept="1_0LV8" id="30e67$70DvN" role="1_0VJ0">
           <node concept="19SGf9" id="30e67$70DvO" role="1_0LWR">
             <node concept="19SUe$" id="30e67$70DvP" role="19SJt6">
-              <property role="19SUeA" value="Migrations in structure are handled in MPS by means of migration scripts." />
+              <property role="19SUeA" value="Migrations in structure are handled in MPS by means of migration scripts. Whenever a metamodel for a language in the field needs to change, you can write a migration script to migrate models in order to comply with the updated metamodel. MPS automatically handles versioning of your language and detects when a model needs to be migrated." />
             </node>
           </node>
         </node>
         <node concept="1_0LV8" id="30e67$70Dvb" role="1_0VJ0">
           <node concept="19SGf9" id="30e67$70Dvc" role="1_0LWR">
             <node concept="19SUe$" id="30e67$70Dvd" role="19SJt6">
-              <property role="19SUeA" value="com.mbeddr.core.unittest contains an example of a non-trivial migration script" />
+              <property role="19SUeA" value="com.mbeddr.core.unittest contains an example of a non-trivial migration script. You can explore it by opening (via the Logical View) Modules Pool --&gt; languages --&gt; com--&gt; mbeddr --&gt; core --&gt; unittest --&gt; migrations and explore the migration scripts there" />
             </node>
           </node>
         </node>
