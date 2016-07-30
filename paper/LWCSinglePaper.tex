@@ -14,14 +14,10 @@
 
 \title{Language Workbench Challenge 2016: the JetBrains MetaProgramming System}
 
-\authorinfo{Eugen Schindler}{}{eugenschindler@gmail.com}
-\authorinfo{Klemens Schindler}{}{klemensschindler@gmail.com}
+\authorinfo{Eugen Schindler}{Canon/Oc\'e Technologies}{eugenschindler@gmail.com}
+\authorinfo{Klemens Schindler}{Sioux Embedded Systems}{klemensschindler@gmail.com}
 \authorinfo{Federico Tomassetti}{Independent}{federico@tomassetti.me}
 \authorinfo{Ana Maria \c{S}ut\^{i}i}{Eindhoven University of Technology}{farcasia@gmail.com}
-\authorinfo{Kolja Dummann}{}{k.dummann@gmail.com}
-\authorinfo{Remi Bosman}{}{remi.bosman@gmail.com}
-\authorinfo{Markus V\"{o}elter}{}{voelter@gmail.com}
-
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,7 +46,7 @@ arguably the most mature, with a growing user base.
 
 By using a powerful and flexible language workbench such as MPS we, as language
 engineers, can provide languages and corresponding tools that support a
-significant redesign of the processes of an organization. 
+significant redesign of the processes of an organization.
 It is frequently the case that such processes involve very different kinds of users with very
 different backgrounds, experiences, and needs. Therefore a complete solution
 could potentially encompass different aspects of the internal processes,
@@ -70,7 +66,7 @@ Considering the comparison of language workbenches features presented by Erdweg 
 \cite{erdweg2015evaluating} we can see that MPS is among the most complete
 language workbenches. Most other well-known language workbenches are not as complete as MPS: for example \emph{MetaEdit+} is limited to graphichal notations while \emph{Xtext} \cite{Eysholdt2010} it is strictly confined to the textual notation. A language workbench with a comparable level of completeness is the \emph{Whole
 Platform}.
- 
+
 With respect to the feature model presented in \cite{erdweg2015evaluating} the
 only features missing in MPS are \emph{Free-form editing} and \emph{Live
 translation}.\markus{We are looking into live translation, by the way :-) We
@@ -94,7 +90,7 @@ supports several, very different notations.
 Notations are particularly relevant because they are the most visible aspect of
 languages. In many cases, language workbenches are used to create domain
 specific languages. Such languages are intended to appeal to a specific
-category of people. 
+category of people.
 This people could be familiar with specific notations, not necessarily
 textual. Being able to support the notations of preference of the target
 audience can be a key element to winning users' support.
@@ -104,7 +100,7 @@ characteristics which are important for the maintenance of a solution in the lon
 mature engineering approach should consider the whole lifecycle of the proposed
 solution. The evolution is particularly important for languages because they are
 tools used to represent knowledge, probably the most valuable asset for many
-companies. By being able to evolve languages we can preserve the investment 
+companies. By being able to evolve languages we can preserve the investment
 in building models using those languages. Reuse is another key element because
 it permits to significantly reduce the cost of developing complex solutions. For
 example, several projects based on MPS benefit from reusing languages provided
@@ -132,7 +128,7 @@ so we have used them whenever appropriate.
 
 We have written models in the mbeddr documentation language
 to present the examples. The mbeddr documentation language is a language that allows
-writing prose with sections, figures, embedded program nodes, etc. 
+writing prose with sections, figures, embedded program nodes, etc.
 To open the documentation model for the examples of the \emph{Notation} challenge, for instance,
 open the \emph{Notation} model, as shown in Figure \ref{fig:opennotation}. The \emph{Notation} chapter is
 divided into sections, each of which addresses one or more of the challenge
@@ -297,7 +293,7 @@ The mbeddr environment supports product line variability \cite{voelter2015using}
 feature models (see Figure~\ref{fig:featureModel}) and
 different configurations of such features (see~Figure \ref{fig:configs}).
 In the implementation code that makes use of the features of a feature model, presence conditions guard
-code fragments (see Figure~\ref{fig:presenceCond}). A presence condition is a condition on features from the feature model. 
+code fragments (see Figure~\ref{fig:presenceCond}). A presence condition is a condition on features from the feature model.
 Once a configuration is chosen, the code that is guarded with presence conditions that do not hold is taken out by the generator.
 For more information on the feature models in mbeddr see Voelter et. al. \cite{voelter2013mbeddr}.
 
@@ -517,7 +513,7 @@ the editors of the sub-concepts can be overriden as well.
 
 \subsection{Limitations}
 The notations introduced can be used only inside MPS. That applies also to the textual notations, because
-the files are persisted as XML on disk, and they are projected as text on the screen. 
+the files are persisted as XML on disk, and they are projected as text on the screen.
 
 Moreover, as already mentioned, there are certain limitations inherent to projectional editors especially
 when it comes to textual notations, but this limitations are well mitigated by MPS \cite{voelter2014towards}.
@@ -624,7 +620,7 @@ takeoff and landing and for speed flown \cite{voelter2014generic}.
 The state machine adds custom notation for specifying the state machine. The textual
 form of the state machine can be seen in Figure \ref{fig:HFAT}. The figure depicts a hierarchical state machine
 that computes the points for a flight.
-In addition, because textual forms can live alongside graphical and tabular forms in MPS, 
+In addition, because textual forms can live alongside graphical and tabular forms in MPS,
 the state machine can be viewed in table form and graphical form as well alongside the piece of C code
 where it is used. Figure \ref{fig:HFATab} shows the same state machine for flight analyzes in tabular form.
 
@@ -790,7 +786,7 @@ examples in the documentation models and the mbeddr code itself}.
 	\label{fig:IncompleteNode}
 \end{figure}
 
-It is possible to edit and persist an incomplete model, however there are some restrictions to this. A node, for example an if statement, must have a complete skeleton. It is possible to leave content out such as the guard and body in an if statement. The result can be considered syntactically incorrect since the guard missing from if statement. However, the construction is still structurally sound since it is a valid tree node, albeit with some gaps to be filled in. Figure~\ref{fig:IncompleteNode} shows an example of a function with omitted name containing an if statement missing the guard. 
+It is possible to edit and persist an incomplete model, however there are some restrictions to this. A node, for example an if statement, must have a complete skeleton. It is possible to leave content out such as the guard and body in an if statement. The result can be considered syntactically incorrect since the guard missing from if statement. However, the construction is still structurally sound since it is a valid tree node, albeit with some gaps to be filled in. Figure~\ref{fig:IncompleteNode} shows an example of a function with omitted name containing an if statement missing the guard.
 
 \begin{figure}[H]
 	\centering
@@ -807,7 +803,7 @@ Removing arbitrary pieces of "text" from the model is not possible. For example 
 	\label{fig:UnmatchedParenthesis}
 \end{figure}
 
-Designing language and editors in MPS can enable a text-like editing experience. For example, 
+Designing language and editors in MPS can enable a text-like editing experience. For example,
  it is possible to design elements such as an "Unmatched Parenthesis" into your language which are not intended for the final model, but serve as an aid to enable a text-like editing experience.
  Figure~\ref{fig:UnmatchedParenthesis} shows an example of such scenario.
 
@@ -962,6 +958,13 @@ The JetBrains MetaProgramming System has significantly evolved during the years.
 \textbf{Notation}
 \textbf{Evolution and Reuse}
 \textbf{Editing}
+
+\section{Acknowledgements}
+Our thanks go out to Markus V\"olter and Kolja Dummann from the mbeddr team for providing us with good examples from the mbeddr project. Without these, it would have taken us a lot more work to find nice examples in mbeddr or to construct such examples ourselves.
+
+Moreover, we would like to thank Markus V\"olter for reviewing the paper and providing us with many helpful hints on how to improve it.
+
+Finally, we would like to thank Remi Bosman from Sioux Embedded Systems for his contribution to the initial design proposal of this solution.
 
 %% We are using the command `bibtex' from within the directory `build', thus we need
 %% to go back from this directory and look for the bibliography file.
