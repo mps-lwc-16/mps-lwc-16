@@ -12,7 +12,7 @@
 
 \begin{document}
 
-\title{Language Workbench Challenge 2016: the JetBrains MetaProgramming System}
+\title{Language Workbench Challenge 2016: the JetBrains Meta Programming System}
 
 \authorinfo{Eugen Schindler}{Canon/Oc\'e Technologies}{eugenschindler@gmail.com}
 \authorinfo{Klemens Schindler}{Sioux Embedded Systems}{klemensschindler@gmail.com}
@@ -35,10 +35,10 @@
 
 
 
-In this paper, we discuss how the JetBrains MetaProgramming System can be used to address the challenges presented in the Language Workbench
+In this paper, we discuss how the JetBrains Meta Programming System can be used to address the challenges presented in the Language Workbench
 Challenge 2016 (LWC'16).
 
-The JetBrains MetaProgramming System (MPS) is a language workbench based
+The JetBrains Meta Programming System (MPS) is a language workbench based
 on projectional editing. While other language workbenches are based on
 projectional editing (e.g. the Whole Platform \cite{solmi2005whole}, MetaEdit+
 \cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
@@ -51,7 +51,7 @@ could potentially encompass different aspects of the internal processes,
 providing different views and a variety of tools such as simulators, debuggers,
 code-generators, and more.
 
-For example, in MPS we could create a text-like DSL to be used by developers. The same code could be projected using a graphical representation, to support discussion with domain experts. Testers could use a simulator to verify the correct behavior of the applications and documentation includings graphs and tables could be generated for other stakeholders.
+For example, in MPS we could create a text-like DSL to be used by developers. The same code could be projected using a graphical representation, to support discussion with domain experts. Testers could use a simulator to verify the correct behavior of the applications and documentation including graphs and tables could be generated for other stakeholders.
 
 %The ability to support different notations, to process models in different
 %ways\markus{What does this mean?}, to perform validation and support testing:
@@ -82,7 +82,7 @@ specific languages. Each such language is intended for domain specific developer
 
 The second challenge considers \textbf{Evolution and Reuse}. These are
 characteristics which are important for the maintenance of a solution in the long run. Any
-mature engineering approach should consider the whole lifecycle of the proposed
+mature engineering approach should consider the whole life cycle of the proposed
 solution. The evolution is particularly important for languages because they are
 tools used to represent knowledge, probably the most valuable asset for many
 companies. By being able to evolve languages we can preserve the investment
@@ -103,7 +103,7 @@ particular challenge we aim to prove the progresses of MPS in this area and
 highlight possible necessary improvements still needed.
 
 \subsection{Accessing the examples}
-The examples for these challenges are located in a repository on github
+The examples for these challenges are located in a repository on GitHub
 \footnote{https://github.com/mps-lwc-16/mps-lwc-16}. To explore the examples,
 please clone the repository and follow the instructions in the README.md.
 
@@ -174,7 +174,7 @@ Figure \ref{fig:mathnotation} shows a mathematical calculation expressed in the 
 	\label{fig:mathnotation}
 \end{figure}
 
-This notation is possible in MPS because one can insert any drawing in an editor cell using base language code (which is a reimplementation of Java).
+This notation is possible in MPS because one can insert any drawing in an editor cell using base language code (which is a re-implementation of Java).
 The sum symbol, for instance, is placed in the editor component of the \emph{SumExpression} concept,
 and the sum symbol is drawn on the screen using a \emph{Graphics} object in Java. Two screenshots from
 the editor component of the \emph{SumExpression} concept and the implementation of the sum symbol
@@ -227,7 +227,8 @@ An excerpt from this editor can be seen in Figure~\ref{fig:TableEditorStatemachi
 	\label{fig:dianotationsm}
 \end{figure}
 
-Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr statemachine language for the same model from Section \ref{sec:tabnot}.
+Figure \ref{fig:dianotationsm} shows a diagrammatic notation for the mbeddr
+statemachine language for the same model from Section \ref{sec:tabnot}.
 The diagrammatic notation for the \emph{Statemachine} concept is implemented in the same manner as described in the previous section,
 by means of an editor component where the nodes and the edges of the \emph{Statemachine} concept
 are filled in with the appropriate properties, children and references of the \emph{Statemachine} concept.
@@ -248,7 +249,7 @@ The context hints defined for the mbeddr statemachine language are shown in Figu
 \end{figure}
 
 \subsubsection{Generic metadata annotations: annotation of program elements without changing their core meaning}
-Annotations are called attributes in Jetbrain MPS.
+Annotations are called attributes in JetBrains MPS.
 For defining attributes of nodes in MPS, there exists the \emph{NodeAttribute} concept that can be attached
 to almost any model node by default. Thus, when declaring generic metadata annotations, one needs to extend the \emph{NodeAttribute}
 concept and define its contents. An example can be seen in Figure~\ref{fig:GenericNote} where a \emph{GenericNote} concept is defined.
@@ -266,7 +267,7 @@ a Java method, as can be seen in Figure~\ref{fig:exampleGenericNote}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\textwidth]{screens/ExampleGenericNote.png}
-	\caption{Two example uses of the generic note in the documentation model from github}
+	\caption{Two example uses of the generic note in the documentation model from GitHub}
 	\label{fig:exampleGenericNote}
 \end{figure}
 
@@ -313,7 +314,7 @@ Moreover, the changes to the viewer once the mode is changed via a menu action c
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/PresenceConditionEditor.png}
-	\caption{The editor for concept \emph{PresenceCondition}}
+	\caption{The editor for concept \emph{PrecenceCondition}}
 	\label{fig:presenceConditionEditor}
 \end{figure}
 
@@ -449,12 +450,12 @@ We will give here a few variants only.
 Switching between notations can be accomplished not only through context hints, but with
 different user actions as well. In the state machine language, one can switch between different
 projections by using the \emph{Projection} tab and selecting the desired projection. Details on this
-can be found in our documentation model on github, in the \emph{Notation} section. In the implementation in mbeddr,
+can be found in our documentation model on GitHub, in the \emph{Notation} section. In the implementation in mbeddr,
 there is a plugin that introduces this tab and that triggers the projection selected.
 
 There are also many other examples for the optional hiding feature. Some characteristics of concepts
 can be hidden and toggled with an intention, for instance. Take the export statement for modules as an example, which can
-be tried on modules in the documentation model on github. The intention toggles the value of the boolean property \emph{exported},
+be tried on modules in the documentation model on GitHub. The intention toggles the value of the Boolean property \emph{exported},
 which results in showing/hiding the export statement depending on the condition expressed in the editor of the concept
 (similar to the discussion in Section~\ref{sec:OptHiding}).
 
@@ -493,8 +494,8 @@ Composability is very well supported at the editor level, because each editor is
 and cells, in turn, are formed of other cells. This permits defining
 the editor of a concept as a collection of cells, where some cells are the editors of the children of the concept.
 
-Moreover, a sub-concept inherits the editor (the notations) of its super-concept. If this is not the desired behaviour,
-the editors of the sub-concepts can be overriden as well.
+Moreover, a sub-concept inherits the editor (the notations) of its super-concept. If this is not the desired behavior,
+the editors of the sub-concepts can be overridden as well.
 
 \subsection{Limitations}
 The notations introduced can be used only inside MPS. That applies also to the textual notations, because
@@ -507,13 +508,13 @@ when it comes to textual notations, but this limitations are well mitigated by M
 The uses and examples have been covered in the implementation section.
 Almost all examples in that section are from mbeddr, with the exception of the generic metadata annotation,
 where we created a separate language with the generic note concept. This language and the generic note concept
-can be found on the github repository of our submission.
+can be found on the GitHub repository of our submission.
 
 \subsection{Effort (best-effort)}
 Some of the items described in the previous sections are trivial to address (in the order of a few minutes):
 \begin{itemize}
-\item The skeleton editing is provided by default in Jetbrains MPS and is a natural consequence
-of how editors are created in Jetbrains MPS.
+\item The skeleton editing is provided by default in JetBrains MPS and is a natural consequence
+of how editors are created in JetBrains MPS.
 \item The switching between notations is a matter of introducing one context hint, that is one file and a name for the
 context hint.
 \item The optional hiding is a matter of writing one condition in the editor cell
@@ -578,7 +579,7 @@ the base language from MPS. This enables a seamless integration between
 C code and state machine specifications.
 
 State machines are a mathematical model of computation often used in embedded software
-for describing discrete behaviour through state transitions. Its characterizing
+for describing discrete behavior through state transitions. Its characterizing
 ingredients are states, transitions and events. At any given time, a state
 machine is in a state and it can be transitioned from one state to another.
 A transition in a state machine is triggered by an event. These events
@@ -641,7 +642,7 @@ This technique is illustrated in \ref{fig:sqlembedding}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/minisql_embedded.png}
-	\caption{Embedding SQL code into C code and viceversa}
+	\caption{Embedding SQL code into C code and vice versa}
 	\label{fig:sqlembedding}
 \end{figure}
 
@@ -650,7 +651,7 @@ To demonstrate the flexibility of this approach we have also embedded our MiniSQ
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/minisql_embedded_java.png}
-	\caption{Embedding SQL code into Java code and viceversa}
+	\caption{Embedding SQL code into Java code and vice versa}
 	\label{fig:sqlembeddingjava}
 \end{figure}
 
@@ -659,7 +660,7 @@ To demonstrate the flexibility of this approach we have also embedded our MiniSQ
 
 The mbeddr project contains many examples of language composition. Different extensions have been developed during the years, not necessarily from the exact same persons or in the context of the same project. However all of these extensions can be combined and used together.
 
-A very interesting example is the Documentation language which permits to add references to other portions of code or to embed specificy contructs into the documentation.
+A very interesting example is the Documentation language which permits to add references to other portions of code or to embed specify constructs into the documentation.
 
 In the example in \ref{fig:extensioncomposition} we can see a Documentation construct containing a table. The tables extensions have been developed separately, in a completely agnostic way, so that it could be reused in very different contexts. In this case it contains expressions from mbeddr language (C). So effectively three different extensions are combined in one single example.
 
@@ -696,9 +697,9 @@ For example, every \emph{AssertStatement} is technically an mbeddr \emph{Stateme
 
 \subsection{Variants}
 
-The three first points we have seens (\ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp}) have been solved through simple extension techniques. We do not see any obvious alternative for such cases. About combining independently defined extensions (\ref{evr:langcomp}) we can consider all the projects using the mbeddr platform as examples of this technique.
+The three first points we have seen (\ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp}) have been solved through simple extension techniques. We do not see any obvious alternative for such cases. About combining independently defined extensions (\ref{evr:langcomp}) we can consider all the projects using the mbeddr platform as examples of this technique.
 
-Regarding the grammar restrictions (\ref{evr:beyondgrammar}), we implemented it specifiying that certain rules can have as ancestors only certain nodes. Conversely we could have specified that certain rules could not contain specific descendants instead.
+Regarding the grammar restrictions (\ref{evr:beyondgrammar}), we implemented it specifying that certain rules can have as ancestors only certain nodes. Conversely we could have specified that certain rules could not contain specific descendants instead.
 
 \subsection{Usability}
 
@@ -734,12 +735,15 @@ The estimated effort for the different points are:
 	\item Language extension: XXX minutes
 	\item Language embedding: 10 minutes
 	\item Extension composition:
-	\item Beyong grammar restrictions:
+	\item Beyond grammar restrictions:
 	\item Syntax migration:
 	\item Structure migration:
 \end{itemize}
 
-For \emph{Language embedding} we calculate only the time for creating the concepts wrapping constructs of one language to be used in the other one (SQL into C and C into SQL). This time considers the definitions of the concepts, the editors, the typesystem rules and the code generators.
+For \emph{Language embedding} we calculate only the time for creating the
+concepts wrapping constructs of one language to be used in the other one (SQL
+into C and C into SQL). This time considers the definitions of the concepts, the
+editors, the typesystem rules and the code generators.
 
 \subsection{Other comments}
 
@@ -850,7 +854,7 @@ Thus, the amount of freedom that the end-user has in defining its own formatting
 is decided, to some extent, by the language designer.
 
 \subsubsection{Specification of default formatting: support for pretty printing}
-Jetbrains MPS has a default formatting for languages. The default formatting is simply following
+JetBrains MPS has a default formatting for languages. The default formatting is simply following
 the structure of the abstract syntax of the language, printing the names of the instantiated concepts and
 their values, and also visually showing the parent-children relationship among concepts.
 An example of an expression with a defined formatting and
@@ -938,13 +942,13 @@ formatting of the existing code being unchanged (unless the migration itself cha
 
 \section{Conclusions}
 
-The JetBrains MetaProgramming System has significantly evolved during the years. Nowadays it is a powerful and flexible tool that can be used to address most of the Language Engineering challenges that have been brought forward in the LWC 2016.
+The JetBrains Meta Programming System has significantly evolved during the years. Nowadays it is a powerful and flexible tool that can be used to address most of the Language Engineering challenges that have been brought forward in the LWC 2016.
 
 \textbf{Notation}
 \textbf{Evolution and Reuse}
 \textbf{Editing}
 
-\section{Acknowledgements}
+\section{Acknowledgments}
 Our thanks go out to Markus V\"olter and Kolja Dummann from the mbeddr team for providing us with good examples from the mbeddr project. Without these, it would have taken us a lot more work to find nice examples in mbeddr or to construct such examples ourselves.
 
 Moreover, we would like to thank Markus V\"olter for reviewing the paper and providing us with many helpful hints on how to improve it.
