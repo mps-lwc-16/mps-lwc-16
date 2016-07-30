@@ -623,24 +623,21 @@
         <property role="TrG5h" value="empty_-1" />
       </node>
     </node>
-    <node concept="Wq1Bs" id="zh_Ys$l7Bv" role="Wq1Bf">
-      <property role="Wq1Bt" value="Remi Bosman" />
-      <property role="Wq1Bq" value="r" />
-    </node>
-    <node concept="Wq1Bs" id="zh_Ys$l7Bx" role="Wq1Bf">
-      <property role="Wq1Bt" value="Kolja Dummann" />
-    </node>
-    <node concept="Wq1Bs" id="zh_Ys$l7B$" role="Wq1Bf">
-      <property role="Wq1Bt" value="Federico Tomassetti" />
-    </node>
-    <node concept="Wq1Bs" id="zh_Ys$l7BH" role="Wq1Bf">
+    <node concept="Wq1Bs" id="7wRjClzL9Zk" role="Wq1Bf">
       <property role="Wq1Bt" value="Eugen Schindler" />
+      <property role="Wq1Bq" value="eugenschindler@gmail.com" />
     </node>
-    <node concept="Wq1Bs" id="zh_Ys$l7BN" role="Wq1Bf">
+    <node concept="Wq1Bs" id="7wRjClzL9Zl" role="Wq1Bf">
       <property role="Wq1Bt" value="Klemens Schindler" />
+      <property role="Wq1Bq" value="klemensschindler@gmail.com" />
     </node>
-    <node concept="Wq1Bs" id="zh_Ys$l7BC" role="Wq1Bf">
-      <property role="Wq1Bt" value="Markus Völter" />
+    <node concept="Wq1Bs" id="7wRjClzL9Zm" role="Wq1Bf">
+      <property role="Wq1Bt" value="Federico Tomassetti" />
+      <property role="Wq1Bq" value="federico@tomassetti.me" />
+    </node>
+    <node concept="Wq1Bs" id="7wRjClzL9Zn" role="Wq1Bf">
+      <property role="Wq1Bt" value="Ana Maria Sutii" />
+      <property role="Wq1Bq" value="farcasia@gmail.com" />
     </node>
     <node concept="2f$52y" id="zh_Ys$lcoM" role="lGtFl" />
   </node>
@@ -959,24 +956,21 @@
     <property role="yApLE" value="1" />
     <property role="TrG5h" value="Notation" />
     <ref role="G9hjw" node="zh_Ys$l7Bs" resolve="MPSSolutionLWC2016Config" />
-    <node concept="Wq1Bs" id="6pYKx1vDIC9" role="Wq1Bf">
-      <property role="Wq1Bt" value="Remi Bosman" />
-      <property role="Wq1Bq" value="r" />
-    </node>
-    <node concept="Wq1Bs" id="6pYKx1vDICa" role="Wq1Bf">
-      <property role="Wq1Bt" value="Kolja Dummann" />
-    </node>
-    <node concept="Wq1Bs" id="6pYKx1vDICb" role="Wq1Bf">
-      <property role="Wq1Bt" value="Federico Tomassetti" />
-    </node>
     <node concept="Wq1Bs" id="6pYKx1vDICc" role="Wq1Bf">
       <property role="Wq1Bt" value="Eugen Schindler" />
+      <property role="Wq1Bq" value="eugenschindler@gmail.com" />
     </node>
     <node concept="Wq1Bs" id="6pYKx1vDICd" role="Wq1Bf">
       <property role="Wq1Bt" value="Klemens Schindler" />
+      <property role="Wq1Bq" value="klemensschindler@gmail.com" />
     </node>
-    <node concept="Wq1Bs" id="6pYKx1vDICe" role="Wq1Bf">
-      <property role="Wq1Bt" value="Markus Völter" />
+    <node concept="Wq1Bs" id="6pYKx1vDICb" role="Wq1Bf">
+      <property role="Wq1Bt" value="Federico Tomassetti" />
+      <property role="Wq1Bq" value="federico@tomassetti.me" />
+    </node>
+    <node concept="Wq1Bs" id="7wRjClzL9Zc" role="Wq1Bf">
+      <property role="Wq1Bt" value="Ana Maria Sutii" />
+      <property role="Wq1Bq" value="farcasia@gmail.com" />
     </node>
     <node concept="1mvXsy" id="zh_Ys$l7Ca" role="1_0VJ0">
       <property role="TrG5h" value="notation" />
@@ -1216,24 +1210,21 @@
     <property role="yApLE" value="1" />
     <property role="TrG5h" value="EvolutionAndReuse" />
     <ref role="G9hjw" node="zh_Ys$l7Bs" resolve="MPSSolutionLWC2016Config" />
-    <node concept="Wq1Bs" id="6pYKx1vDIBX" role="Wq1Bf">
-      <property role="Wq1Bt" value="Remi Bosman" />
-      <property role="Wq1Bq" value="r" />
-    </node>
-    <node concept="Wq1Bs" id="6pYKx1vDIBY" role="Wq1Bf">
-      <property role="Wq1Bt" value="Kolja Dummann" />
-    </node>
-    <node concept="Wq1Bs" id="6pYKx1vDIBZ" role="Wq1Bf">
-      <property role="Wq1Bt" value="Federico Tomassetti" />
-    </node>
-    <node concept="Wq1Bs" id="6pYKx1vDIC0" role="Wq1Bf">
+    <node concept="Wq1Bs" id="7wRjClzLbXf" role="Wq1Bf">
       <property role="Wq1Bt" value="Eugen Schindler" />
+      <property role="Wq1Bq" value="eugenschindler@gmail.com" />
     </node>
-    <node concept="Wq1Bs" id="6pYKx1vDIC1" role="Wq1Bf">
+    <node concept="Wq1Bs" id="7wRjClzLbXg" role="Wq1Bf">
       <property role="Wq1Bt" value="Klemens Schindler" />
+      <property role="Wq1Bq" value="klemensschindler@gmail.com" />
     </node>
-    <node concept="Wq1Bs" id="6pYKx1vDIC2" role="Wq1Bf">
-      <property role="Wq1Bt" value="Markus Völter" />
+    <node concept="Wq1Bs" id="7wRjClzLbXh" role="Wq1Bf">
+      <property role="Wq1Bt" value="Federico Tomassetti" />
+      <property role="Wq1Bq" value="federico@tomassetti.me" />
+    </node>
+    <node concept="Wq1Bs" id="7wRjClzLbXi" role="Wq1Bf">
+      <property role="Wq1Bt" value="Ana Maria Sutii" />
+      <property role="Wq1Bq" value="farcasia@gmail.com" />
     </node>
     <node concept="1mvXsy" id="zh_Ys$l7Cg" role="1_0VJ0">
       <property role="TrG5h" value="evolution" />
