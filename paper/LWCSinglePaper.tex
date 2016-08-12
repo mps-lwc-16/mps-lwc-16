@@ -29,9 +29,9 @@
 
 \begin{abstract}
     This paper describes a solution for the \href{http://2016.splashcon.org/track/lwc2016}{SPLASH 2016 Language Workbench Challenge (LWC)} workshop, using the \href{https://www.jetbrains.com/mps/}{JetBrains Meta Programming System (MPS)} language workbench.
-	As the main focus of the LWC is on implementation and not on writing a paper, we used the \href{http://mbeddr.com/}{mbeddr} documentation language to describe the solutions to the challenges posed in the LWC. In this way, the showcasing of a solution is co-located directly with its implementation, making it easier for the reader to directly try out the solutions to better understand them. Therefore we would encourage you to actually open \href{https://github.com/mps-lwc-16/mps-lwc-16}{the solution implementation} (see README.md for setting it up) and play around with it.
+	As the main focus of the LWC is on implementation and not on writing a paper, we used the \href{http://mbeddr.com/}{mbeddr} documentation language to describe the solutions to the challenges posed in the LWC. In this way, the showcasing of a solution is co-located with its implementation, making it easier for the reader to try out the solutions and to better understand them. Therefore we would encourage you to actually open \href{https://github.com/mps-lwc-16/mps-lwc-16}{the solution implementation} (see README.md for setting it up) and try it out.
 
-	We believe that JetBrains MPS has evolved into a powerful and flexible tool that can be used to address most of the Language Engineering challenges in the LWC. When using the mbeddr platform extensions as well as other plugins that have been made by the MPS community, the feature-richness, and with it, the scale of practical applicability of the tooling increases even more.
+	JetBrains MPS has evolved into a powerful and flexible tool that can be used to address most of the language engineering challenges in the LWC. The feature-richness, and the scale of practical applicability of Jetbrains MPS increases even more when using the mbeddr platform extensions and other plugins developed by the MPS community.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -49,8 +49,8 @@ Challenge 2016 (LWC'16).
 The JetBrains Meta Programming System (MPS) is a language workbench based
 on projectional editing. While other language workbenches are based on
 projectional editing (e.g. the Whole Platform \cite{solmi2005whole}, MetaEdit+
-\cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}) MPS is
-arguably the most feature-rich, with a fast growing user base.
+\cite{Tolvanen2006}, Intentional Domain Workbench \cite{Simonyi2006}), MPS is
+arguably one of the most feature-rich, with a fast growing user base.
 
 By using a powerful and flexible language workbench such as MPS, language
 engineers can provide languages and IDEs for programmers and non-programmers that support a significant redesign of the processes of an organization.
@@ -58,7 +58,6 @@ It is frequently the case that such processes involve various kinds of users wit
 could potentially encompass different aspects of the internal processes,
 providing different views and a variety of tools such as simulators, debuggers,
 code-generators, and more.
-
 For example, in MPS we could create a text-like DSL to be used by developers. The same code could be projected using a graphical representation, to support discussion with domain experts. Testers could use a simulator to verify the correct behavior of the applications and documentation including graphs and tables could be generated for other stakeholders.
 
 %The ability to support different notations, to process models in different
@@ -68,10 +67,9 @@ For example, in MPS we could create a text-like DSL to be used by developers. Th
 
 Considering the comparison of language workbench features presented by Erdweg et al.
 \cite{erdweg2015evaluating} we can see that MPS is among the most complete
-language workbenches. Most other well-known language workbenches are not as complete as MPS: for example \emph{MetaEdit+} is limited to graphical notations while \emph{Xtext} \cite{Eysholdt2010} is strictly confined to textual notations. A language workbench with a comparable level of completeness is the \emph{Whole
+language workbenches. A language workbench with a comparable level of completeness is the \emph{Whole
 Platform}.
-
-With respect to the feature model presented in \cite{erdweg2015evaluating} the
+With respect to the feature model presented in \cite{erdweg2015evaluating}, the
 only features missing in MPS are \emph{Free-form editing} and \emph{Live
 translation} (the second of which is currently being looked into by the mbeddr team).
 
@@ -243,7 +241,8 @@ are filled in with the appropriate properties, children and references of the \e
 
 \subsubsection{Support switching between multiple alternative notations for the same language}
 As shown in Sections \ref{sec:tabnot} and \ref{sec:dianot}, the notation for the same model written
-in the mbeddr statemachine language can be alternated between textual, tabular, and diagrammatic.
+in the mbeddr statemachine language can be alternated between textual, tabular, and diagrammatic (the
+textual notation is the default notation).
 MPS provides support for switching between alternative notations by means of so-called context hints.
 A context hint is defined for each new editor provided for a language.
 All the context hints defined for a language are added to a list that can be accessed from the viewer.
@@ -267,7 +266,7 @@ a Java method, as can be seen in Figure~\ref{fig:exampleGenericNote}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.50\textwidth]{screens/GenericNoteImpl.png}
+	\includegraphics[width=0.40\textwidth]{screens/GenericNoteImpl.png}
 	\caption{Structure of the generic note concept}
 	\label{fig:GenericNote}
 \end{figure}
@@ -330,7 +329,7 @@ Moreover, the changes to the viewer once the mode is changed via a menu action c
 	\centering
 	\includegraphics[width=0.50\textwidth]{screens/ProcessTrackpointSelectedVariant.png}
 	\caption{The \emph{process\_trackpoint} function after changing the editor mode to the selected
-variant}
+variant; compare this with Figure~\ref{fig:presenceCond}}
 	\label{fig:processTrackpointSelectedVariant}
 \end{figure}
 \subsubsection{Computed properties: read only annotations that are automatically derived form the main program}
@@ -398,7 +397,7 @@ build configuration is instantiated.
 \subsubsection{Embedding code in prose: mix structured code with free text}
 One of the most relevant examples of code embedding in prose is the documentation language in mbeddr.
 An example can be seen in Figure~\ref{fig:CodeInProse}. The figure shows an excerpt from the file
-that was used to document and implement the language workbench competition's requirements of this year.
+that was used to document and implement the language workbench challenge's requirements of this year.
 
 \begin{figure}[H]
 	\centering
@@ -407,7 +406,7 @@ that was used to document and implement the language workbench competition's req
 	\label{fig:CodeInProse}
 \end{figure}
 
-The documentation language has as a top-level concept the \emph{Document} concept. The document is formed of chapters. In turn, a chapter
+The documentation language has as a top-level concept, the \emph{Document} concept. The document is formed of chapters. In turn, a chapter
 is formed of sections and sections are formed of paragraphs. There are multiple types of paragraphs allowed in
 the documentation language. One of them is \emph{ModelContentAsTextParagraph}. This type of paragraph
 extends \emph{AbstractModelContentParagraph}, which contains model code pointers. Furthermore, a model code pointer contains
@@ -523,11 +522,11 @@ Some of the items described in the previous sections are trivial to address (in 
 \begin{itemize}
 \item The skeleton editing is provided by default in JetBrains MPS and is a natural consequence
 of how editors are created in JetBrains MPS.
-\item The switching between notations is a matter of introducing one context hint, that is one file and a name for the
+\item The switching between notations is a matter of introducing one context hint; that is, one file and a name for the
 context hint.
 \item The optional hiding is a matter of writing one condition in the editor cell
 that should be hidden.
-\item Embedding code in prose is trivial if we want to make references to elements defined in code in text, because
+\item Embedding code in prose is trivial if we want to make references to elements defined in code, because
 it requires implementing one interface and defining one operation.
 \item Computed structures and properties such as the one exemplified imply the implementation of a function that computes the
 necessary structures.
@@ -553,7 +552,7 @@ implemented.
 \end{itemize}
 
 \subsection{Artifact}
-The examples discussed about in this section can all be found in the documentation model in the \emph{Notation} section.
+The examples discussed in this section can all be found in the documentation model in the \emph{Notation} section.
 As for their implementation, that resides in the mbeddr code (see file \emph{README.md} for the version of mbeddr we used).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -634,17 +633,17 @@ where it is used. Figure \ref{fig:HFATab} shows the same state machine for fligh
 
 Moreover, the state machine itself embeds arbitrary code in the actions
 and in the guards. The actions are statement lists and the guards are expressions.
-For instance, look at the guards and actions in Figure \ref{fig:HFAT}; they contain mbeddr C expression.
+For instance, look at the guards and actions in Figure \ref{fig:HFAT}; they contain mbeddr C expressions.
 
 \subsubsection{Language embedding: embed a separate language inside another}
 \label{evr:langembed}
 
 We have implemented a simple toy language representing a subset of SQL. This language permits to define database schemas and simple SQL statements referring to such schemas.
 
-Typically SQL is used in combinations with General Purpose Languages (GPLs): from the GPLs queries are generated by filling SQL templates with variable elements. The results of these queries are then possibly processed using GPL code.
+Typically SQL is used in combination with General Purpose Languages (GPLs): from the GPLs, queries are generated by filling out SQL templates with variable elements. The results of these queries are then possibly processed using GPL code.
 
 In our example we implemented both embedding of C code into our MiniSQL and embedding of MiniSQL into C.
-By embedding C code in MiniSQL we can define SQL statements with variable elements. For example we can refer to a C variable containing an ID in our SQL statement. In this way we can vary the value of the variable to obtain parametric SQL queries. We can then execute those queries using libraries such as those based on ODBC\footnote{See \url{https://en.wikipedia.org/wiki/Open_Database_Connectivity}}. It is important to notice that the MiniSQL embedded in C can be still edited with proper support regarding validation and auto-completion. It is not \"just a string\".
+By embedding C code in MiniSQL we can define SQL statements with variable elements. For example we can refer to a C variable containing an ID in our SQL statement. In this way we can vary the value of the variable to obtain parametric SQL queries. We can then execute those queries using libraries such as those based on ODBC\footnote{See \url{https://en.wikipedia.org/wiki/Open_Database_Connectivity}}. It is important to notice that the MiniSQL embedded in C can still be edited with proper support regarding validation and auto-completion. It is not ``just a string".
 This technique is illustrated in \ref{fig:sqlembedding}.
 
 \begin{figure}[H]
@@ -668,9 +667,9 @@ To demonstrate the flexibility of this approach we have also embedded our MiniSQ
 
 The mbeddr project contains many examples of language composition. Different extensions have been developed during the years, not necessarily from the exact same persons or in the context of the same project. However all of these extensions can be combined and used together.
 
-A very interesting example is the Documentation language which permits to add references to other portions of code or to embed specify constructs into the documentation.
+A very interesting example is the Documentation language which permits to add references to other portions of code or to embed specific constructs into the documentation.
 
-In the example in \ref{fig:extensioncomposition} we can see a Documentation construct containing a table. The tables extensions have been developed separately, in a completely agnostic way, so that it could be reused in very different contexts. In this case it contains expressions from mbeddr language (C). So effectively three different extensions are combined in one single example.
+In the example in Figure~\ref{fig:extensioncomposition} we can see a Documentation construct containing a table. The tables extensions have been developed separately, in a completely agnostic way, so that it could be reused in very different contexts. In this case it contains expressions from mbeddr language (C). Thus, three different extensions are combined in one single example.
 
 \begin{figure}[H]
 	\centering
@@ -682,9 +681,9 @@ In the example in \ref{fig:extensioncomposition} we can see a Documentation cons
 \subsubsection{Beyond grammar restrictions: disallow constructs in certain scopes, without modeling this in the (abstract) syntax}
 \label{evr:beyondgrammar}
 
-MPS offers several mechanisms to limit where a certain construct can be used. In this respect it is not limited to the abstract syntax definition, but further logic can be added to additionally constraints the concepts usable in a given scope.
+MPS offers several mechanisms to limit where a certain construct can be used. In this respect it is not limited to the abstract syntax definition, but further logic can be added to additionally constraint the concepts usable in a given scope.
 
-For example, every \emph{AssertStatement} is technically an mbeddr \emph{Statement}, from the point of the abstract syntax. However, an additional rule has been defined to restricted all constructs marked as \emph{IRestrictToTests} to be used exclusively in tests or tests related helper functions. This rule is visible in \ref{fig:restrictedtotest}.
+For example, every \emph{AssertStatement} is technically an mbeddr \emph{Statement}, from the point of the abstract syntax. However, an additional rule has been defined to restricted all constructs marked as \emph{IRestrictToTests} to be used exclusively in tests or tests related helper functions. This rule is visible in Figure~\ref{fig:restrictedtotest}.
 
 \begin{figure}[H]
 	\centering
@@ -696,11 +695,11 @@ For example, every \emph{AssertStatement} is technically an mbeddr \emph{Stateme
 \subsubsection{Syntax migration: support migrating programs when concrete syntax changes}
 \label{evr:synmigr}
 
-Concrete syntax changes are supported by default with projectional editing without requiring any migration. Since only the AST is stored in the model, all concrete syntax elements purely exist in the editor. Therefore, updating an MPS editor, immediately changes the presentation (conrete syntax) without requiring a change in the stored model (AST).
+Concrete syntax changes are supported by default with projectional editing without requiring any migration. Since only the AST is stored in the model, all concrete syntax elements purely exist in the editor. Therefore, updating an MPS editor, immediately changes the presentation (concrete syntax) without requiring a change in the stored model (AST).
 
 \subsubsection{Structure migration: support migrating programs when abstract syntax changes}
 \label{evr:structmigr}
-Unfortunately, we didnt have enough time to work out a brief example inline of this document.
+Unfortunately, we didn't have enough time to work out a brief example inline of this document.
 
 Migrations in structure are handled in MPS by means of migration scripts. Whenever a metamodel for a language in the field needs to change, you can write a migration script to migrate models in order to comply with the updated metamodel. MPS automatically handles versioning of your language and detects when a model needs to be migrated.
 
@@ -714,9 +713,9 @@ Regarding the grammar restrictions (\ref{evr:beyondgrammar}), we implemented it 
 
 \subsection{Usability}
 
-From the point of view of usability \ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp} do not pose any issue. We simply used the mechanism of language extensions to add additional constructs to existing language. In one case we had done that for the specific goal to embed another language, while in the other cases we did not. In all cases the new constructs can be used exactly as the existing ones, so the new constructs are as usable as the previous ones with no different interactions required to the users.
+From the point of view of usability \ref{evr:langext}, \ref{evr:langembed}, and \ref{evr:langcomp} do not pose any issue. We simply used the mechanism of language extensions to add additional constructs to existing language. In one case we had done that for the specific goal to embed another language, while in the other cases we did not. In all cases the new constructs can be used exactly as the existing ones, so the new constructs are as usable as the previous ones with no different interactions required from the users.
 
-The grammar restriction presented in \ref{evr:beyondgrammar} does not pose any usability issue neither. The whole mechanism is transparent to the user: elements which cannot be used in a certain context are not offered by the auto-completion mechanism and there is no immediate way to use them when they are not supposed to be used.
+The grammar restriction presented in \ref{evr:beyondgrammar} does not pose any usability issue either. The whole mechanism is transparent to the user: elements which cannot be used in a certain context are not offered by the auto-completion mechanism and there is no immediate way to use them when they are not supposed to be used.
 
 Migrations are typically performed through wizard dialogs. Those migrations are proposed to the user when MPS is started or the user can trigger them manually.
 
@@ -726,7 +725,7 @@ Language composition does not require to change existing elements.
 
 \subsection{Composability}
 
-Language composition is well supported in MPS. It is very natural and it does not require any particular technique. The only possible issues could be caused by semantic conflicts: suppose an expression language defines only statically evaluable expressions such as literals and basic mathematical expressions. Furthermore, suppose a first extension is based on this consideration and adds the possibility to display the result of such expressions. Now, if a second extension would introduce non-statically evaluable expressions, the two extensions would not interact well together. This problem could be avoided by planning for extensibility in the original language: for example we could have required each \emph{Expression} concept to declare if it was statically evaluable or not. All the expressions of the original language would have declared themselves to be statically evaluable, while the Expressions from the first extension would have not. The extensions calculating result values could have used the method to verify that all Expressions for which it wanted to calculate a value were indeed statically evaluable and trigger an error when not-statically evaluable expressions were used in the wrong context. In this way the two extensions would interact nicely without being aware of each other.
+Language composition is well supported in MPS. It is very natural and it does not require any particular technique. The only possible issues could be caused by semantic conflicts: suppose an expression language defines only statically evaluable expressions such as literals and basic mathematical expressions. Furthermore, suppose a first extension is based on this consideration and adds the possibility to display the result of such expressions. Now, if a second extension would introduce non-statically evaluable expressions, the two extensions would not interact well together. This problem could be avoided by planning for extensibility in the original language: for example we could have required each \emph{Expression} concept to declare if it was statically evaluable or not. All the expressions of the original language would have declared themselves to be statically evaluable, while the Expressions from the second extension would have not. The extensions calculating result values could have used the method to verify that all Expressions for which it wanted to calculate a value were indeed statically evaluable and trigger an error when not-statically evaluable expressions were used in the wrong context. In this way the two extensions would interact nicely without being aware of each other.
 
 \subsection{Limitations}
 
@@ -736,7 +735,7 @@ The only limitation we see is with migrations, because they are not reversible. 
 
 \subsection{Uses and examples}
 
-Language extensibility and composition are used extensively in the two well-known MPS language families: the BaseLanguage and mbeddr. The BaseLanguage defines a core language and a set of independent extensions, mbeddr does the same.
+Language extensibility and composition are used extensively in the two well-known MPS language families: the BaseLanguage and mbeddr. The BaseLanguage defines a core language and a set of independent extensions, and mbeddr does the same.
 
 %\subsection{Effort (best-effort)}
 %\ana{Maybe it is easier to write this subsection in the same manner we have wrote about effort in the notation section.}
@@ -785,7 +784,7 @@ the implementation for each item of the Editing challenge.
 	\label{fig:IncompleteNode}
 \end{figure}
 
-It is possible to edit and persist an incomplete model, however there are some restrictions to this. A node, for example an if statement, must have a complete skeleton. It is possible to leave content out such as the guard and body in an if statement. The result can be considered syntactically incorrect since the guard missing from if statement. However, the construction is still structurally sound since it is a valid tree node, albeit with some gaps to be filled in. Figure~\ref{fig:IncompleteNode} shows an example of a function with omitted name containing an if statement missing the guard.
+It is possible to edit and persist an incomplete model, however there are some restrictions to this. A node, for example an if statement, must have a complete skeleton. It is possible to leave content out such as the guard and body in an if statement. The result can be considered syntactically incorrect since the guard is missing from the if statement. However, the construction is still structurally sound since it is a valid tree node, albeit with some gaps to be filled in. Figure~\ref{fig:IncompleteNode} shows an example of a function with omitted name containing an if statement missing the guard.
 
 \begin{figure}[H]
 	\centering
@@ -804,7 +803,7 @@ Removing arbitrary pieces of "text" from the model is not possible. For example 
 
 Designing language and editors in MPS can enable a text-like editing experience. For example,
  it is possible to design elements such as an "Unmatched Parenthesis" into your language which are not intended for the final model, but serve as an aid to enable a text-like editing experience.
- Figure~\ref{fig:UnmatchedParenthesis} shows an example of such scenario.
+ Figure~\ref{fig:UnmatchedParenthesis} shows an example of such a scenario.
 
 
 %\subsubsection{Referencing missing items: support referencing items that have not been defined}
@@ -826,8 +825,8 @@ The example in Figure~\ref{fig:UnmatchedParenthesis} shows a model with an "Unma
 \end{figure}
 Figure~\ref{fig:TypeAndRestructure} shows how a C function goes through various restructurings as you type.
 
-\subsubsection{Language demarcation: show how a combination multiple languages in one program are disambiguated}
-MPS does not parse text and try to reconstruct a structure. Instead every tree node creation binds a type to a node. In case of ambiguity the user can choose which type to create. For this reason, no disambiguation is needed for the type of a node and no special demarcation markers are needed.
+\subsubsection{Language demarcation: show how a combination of multiple languages in one program are disambiguated}
+MPS does not parse text and try to reconstruct a structure. Instead, every tree node creation binds a type to a node. In case of ambiguity the user can choose which type to create. For this reason, no disambiguation is needed for the type of a node and no special demarcation markers are needed.
 
 Similarly, reference disambiguation is ensured by default since every node has a unique ID. Although the presentation of the reference can show a human readable name/identifier, the reference refers to the node with the given ID. A side effect of this is that removing an element named "A" and creating a new element named "A" will count as a new node and existing references will be broken. If desired, these references can also be automatically be re-bound to the new node ID.
 
@@ -841,7 +840,7 @@ Similarly, reference disambiguation is ensured by default since every node has a
 Figure~\ref{fig:LanguageDemarcationAndAmbiguity} shows how various languages can be nested (c module, containing a state machine, containing c statements) and how references are resolved over these language boundaries. This example uses the same name ("some\_name") for a state, an integer, a function, and a statemachine event. But since reference insertion binds to specific ids, references over language boundaries are disambiguated by default. The screenshot does not show this, but ctrl+clicking on the references shows that all references point to the correct declaration.
 
 \subsubsection{Delayed decisions: show when the syntactic category of an expression is determined}
-At node insertion a defined concept must be inserted. However, it is possible to restructure the concepts as you type. Figure~Figure~\ref{fig:TypeAndRestructure} shows how the syntactic category changes as you type, effectively delaying the final decision and providing a text-like experience.
+At node insertion a defined concept must be inserted. However, it is possible to restructure the concepts as you type. Figure~\ref{fig:TypeAndRestructure} shows how the syntactic category changes as you type, effectively delaying the final decision and providing a text-like experience.
 
 If a user thinks in terms of the AST instead of linear text, it is also possible to immediately insert the desired concept by using code completion or typing the alias of the desired concept. In text terms this feels similar to using a template instead of typing sequentially.
 
